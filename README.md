@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## Nov 3
+More and more CSS. Going over things like variables, the specific heirerarchy of how the CSS works is pretty neat. I was working on a project last year that would have been quite a bit easier if I was a bit more familiar with the specifics of how these sheets worked at a deeper level, instead of trying to do research while solving problems!
+
 ## Nov 2
 Been a couple of days since I last commented here, but I have been doing a bit of learning every day, although not quite as much as I want to d. So far *most* things are a review. The `<form>` HTML was a bit weird, and I need to make sure that I check up on the differences between the `.class` selector and the `#id` attribute, but so far most stuff has been a review.
 
