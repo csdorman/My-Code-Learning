@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## Nov 5
+More CSS fun. Skewing, hsl() for color, hue, and shading, complimentary and tertiary colors. Fun times!
+
 ## Nov 4
 Lots more CSS today. This stuff is both logical and slightly confusing. I feel better and more secure about what's going on after spending even 15 minutes with it, but I'll be glad to get through more of this stuff and into the slightly more complex stuff that is going to be newer and (probably) harder to grok. Trying to make sure that I go slow enought to really comprehend what I'm doing now, though.
 
