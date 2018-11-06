@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## Nov 6
+Finished the CSS portion of the Freecodecamp and like normal, there seems to be a progression in the middle that I am not understanding as fast as they go through it. That's almost certainly since I'm doing this on my own (without lots of homework on constant immersion, but the idea of creating shapes out of divs with the `.Something::after` and `.something::before` sub-classes messes with my head. 
+
+The animation stuff was pretty neat, but also I feel like I just have to constantly stare at the code to figure out how it's all put together. Overall, though, I feel like I know more now, and I'm not totally underwater! Hooray!
+
 ## Nov 5
 More CSS fun. Skewing, hsl() for color, hue, and shading, complimentary and tertiary colors. Fun times!
 
