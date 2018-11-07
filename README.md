@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## Nov 7
+Moved on from the CSS crazy stuff to some accessability. Relatively easy to remember this stuff, since lots of this has SEO functionality or carryover (`<alt>` attributes are important for search engines to recognize pictures and context), so not to bad. Stopped right before the combination of accessability and `<form>` combination, so we'll see how it goes tomorrow!
+
 ## Nov 6
 Finished the CSS portion of the Freecodecamp and like normal, there seems to be a progression in the middle that I am not understanding as fast as they go through it. That's almost certainly since I'm doing this on my own (without lots of homework on constant immersion, but the idea of creating shapes out of divs with the `.Something::after` and `.something::before` sub-classes messes with my head. 
 
