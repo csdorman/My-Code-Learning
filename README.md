@@ -1,5 +1,11 @@
 # My-Code-Learning
 
+## Nov 8 
+Got in about 15 minutes at 6:30 this AM before working all day. Super glad that I made the time.
+
+Also, `<forms>` are still crazy to me for some reason. I'll need to do some more brushing up on them sometime soon.
+
+Getting into colorblindess accessability guidelines. Right in my wheelhouse!
 ## Nov 7
 Moved on from the CSS crazy stuff to some accessability. Relatively easy to remember this stuff, since lots of this has SEO functionality or carryover (`<alt>` attributes are important for search engines to recognize pictures and context), so not to bad. Stopped right before the combination of accessability and `<form>` combination, so we'll see how it goes tomorrow!
 
