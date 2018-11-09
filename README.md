@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## Nov 9
+More CSS fun!
+
+Finished up the relatively easy color/accessability work, and then moved on to some responsive design and flexbox CSS voodoo. A lot of this stuff is making quite a bit of sense (although there are still a few weird things), but I really need to go back and review some of the more basic layout fundamentals. I think I'm getting some of the moderate to advanced stuff, I think there's a bit of a gap in my understanding of the layout on a more fundamental level that is keeping me from really internalizing how some of this stuff is put together.
+
 ## Nov 8 
 Got in about 15 minutes at 6:30 this AM before working all day. Super glad that I made the time.
 
