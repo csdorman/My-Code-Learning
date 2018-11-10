@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
+
+## Nov 10
+Got done with the first section(s) of the FreeCodeCamp front-end learning! Now on to a few projects. I went ahead and made a CodePen.io account, but I'm not sure if I want to use that or dive into using Atom or another standard text editor. Torn between wanting some live-preview feedback and not trying to think things through *before* putting them down. So I don't learn bad habits anymore than necessary.
+
 ## Nov 9
 More CSS fun!
 
