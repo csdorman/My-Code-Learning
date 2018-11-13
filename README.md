@@ -2,8 +2,15 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Nov 13
+Started working on FreeCodeCamp project 2 - a form. Yay. some of these different fields and the syntax for them is confusing. 
+
+For example, having `<input type="text">` for a single-line text field, but `<textarea>` for a multi-line text field is one of those things I'll just have to do more to commit to memory (or just always look it up). Not the biggest deal, but I definitely need to review the `<id>` and `<name>` attributes and how they are used differently.
+
 ## Nov 12
-Got the first project out of the way. Needed to have a bit of help by looking at the framework of an already-completed one, but I got it done and was playing around with some of the layout and CSS at the end. It's certainly not great, but I think it's a good start, and starting from scratch is quite different than modifying already-existing code.
+Got the first project out of the way. Needed to have a bit of help by looking at the framework of an already-completed one, but I got it done and was playing around with some of the layout and CSS at the end. It's certainly not great, but I think it's a good start, and starting from scratch is quite different than modifying already-existing code. 
+
+You can see it [over at CodePen.com](https://codepen.io/csdorman/pen/QJKoMm). 
 
 ## Nov 10
 Got done with the first section(s) of the FreeCodeCamp front-end learning! Now on to a few projects. I went ahead and made a CodePen.io account, but I'm not sure if I want to use that or dive into using Atom or another standard text editor. Torn between wanting some live-preview feedback and not trying to think things through *before* putting them down. So I don't learn bad habits anymore than necessary.
