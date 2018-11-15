@@ -2,6 +2,9 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Nov 14
+Oh man. These `<form>` tags and the formatting CSS is just a bit more confusing than I thought it would be. I'm making progress, (I think), but it is a bit confusing at this point. One thing I need to be more proactive about is a much more liberal use of `<div>` tags to make sure that formatting is easier to do via CSS.
+
 ## Nov 13
 Started working on FreeCodeCamp project 2 - a form. Yay. some of these different fields and the syntax for them is confusing. 
 
