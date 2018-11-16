@@ -2,6 +2,11 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Nov 16
+Finished up the form page yesterday, but spent about an hour afterwards playing around with the CSS to see (more) of how it worked. The forms aren't quite as confusing now (although I'm still not 100% sure on them), but some of the different CSS functions are getting mixed up in my head. Glad that they have these projects, though, since actually starting from a blank slate is a great way to be pushed into the deep end.
+
+Starting now on the product landing page. Trying to see if I can make this one look at little bit more 2000's and less 1990's Geocities.
+
 ## Nov 14
 Oh man. These `<form>` tags and the formatting CSS is just a bit more confusing than I thought it would be. I'm making progress, (I think), but it is a bit confusing at this point. One thing I need to be more proactive about is a much more liberal use of `<div>` tags to make sure that formatting is easier to do via CSS.
 
