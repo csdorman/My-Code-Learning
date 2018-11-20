@@ -2,6 +2,9 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Nov 20
+Getting the hang of some of this stuff, but all the formatting and alignment commands and syntax is more than a little bit confusing for me. Hopefully plugging away at it will help, but I'm trying to not just fall back on the easiest "words on a page" look to force myself to improve.
+
 ## Nov 17
 Whew. `flexbox` plus the `@media` query is a tiny bit of a head trip. It's really interesting to me how I can think vertically fairly easily, but trying to pre-plan how I want stuff to be spaced horizontally (especially on different sized screens) is not one of my natural strengths.  It probably doesn't help that I'm trying to learn the syntax and the different commands all at the same time, but what's wrong with drinking from the firehose every now and then?
 
