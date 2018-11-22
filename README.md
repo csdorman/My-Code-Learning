@@ -2,6 +2,9 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Nov 21 
+Gradually seem to be getting better at getting my eye in as far as thinking about both *how* I want a layout to look and *how* to achieve that layout. Still have to consult the CSS and HTML references quite a bit (which will likely be the case for awhile until I get more used to the **incredibly wide array of commands and how they are all subtley different**, but for now, I'm seeing real progress with how much I understand and how much I can do by hand.
+
 ## Nov 20
 Getting the hang of some of this stuff, but all the formatting and alignment commands and syntax is more than a little bit confusing for me. Hopefully plugging away at it will help, but I'm trying to not just fall back on the easiest "words on a page" look to force myself to improve.
 
