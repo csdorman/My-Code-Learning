@@ -2,6 +2,11 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Nov 26
+Still on project #5. Getting most stuff done a bit easier. Things like setting width/height and the flexbox are getting just a tiny bit more natural. 
+
+I'm still looking up quite a bit of info, but at least now it takes me a lot less time to both **look up** and **implement** the things I don't know off the top of my head. Small progress for sure, but moving forward (however slowly) is still moving forward.
+
 ## Nov 22
 Finished projet number 4! Getting a bit better, but still feels like there is a long way to go before I am comfortable or know *how* to do some sort of layout before I try a few different commands and figure out how it works through trial and error. 
 
