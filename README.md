@@ -2,6 +2,11 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Nov 27
+**Finished the FreeCodeCamp Responsive Web Design course!** It says it's a 300 hour course, and while I'm not sure how long it actually took, I am proud of what I did. I may end up going back into the projects and updating them a bit, since they are somewhat messy, but looking at what I started with and ended up with is a pretty noticeable difference (at least to me) and the ease at which I was able to make that improvement is also nice.
+
+Started a bit on the Javascript course, but I think I should switch gears and still keep pushing the HTML/CSS stuff, so I've moved over to the Udemy course that I bought last month.
+
 ## Nov 26
 Still on project #5. Getting most stuff done a bit easier. Things like setting width/height and the flexbox are getting just a tiny bit more natural. 
 
