@@ -2,6 +2,9 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Nov 29
+More watching of the entry Udemy videos. Don't have a lot of time today, since I'm teaching mostly straight through from 9am to 7pm today. Glad that I got a litle bit in!
+
 ## Nov 28 
 Going on a bit more with Udemy. Since this is a 0-to-expert course, these first few lessons/videos are pretty basic and a little bit boring. Don't want to skip them and then need to backtrack, though, so doing them anyway!
 
