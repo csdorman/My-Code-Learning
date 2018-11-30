@@ -2,6 +2,13 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Nov 30
+Been doing this for a whole month and while I have been doing quite a bit of reviewing (since most of these courses assume no-to-very-little prior knowledge), I do feel like I've gotten a bit more comfortable with typing in raw HTML/CSS and having a pretty decent idea of what will come out.
+
+Today's Udemy course was still quite a bit of a review, but I got a first look at Sublime and some of it's shortcuts and they seem pretty nice. I'll need to do some research with syncing things up (in case I need to do this learning on multiple computers), but so far I like Sublime a bit more that Atom.
+
+Also, today I found about the Mozilla Developer Network web docs and resources. Those will likely be a much better resource than the W3C pages that have been a bit of a pain to load and browse.
+
 ## Nov 29
 More watching of the entry Udemy videos. Don't have a lot of time today, since I'm teaching mostly straight through from 9am to 7pm today. Glad that I got a litle bit in!
 
