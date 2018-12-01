@@ -2,6 +2,10 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 1
+I **knew** that there was a good reason to go over even the introductory videos for this Udemy course. Not only have I learned quite a bit about some of the shortcuts in Sublime (and they are pretty sweet!) but I *finally* get the difference betweent a `<div>` and a `<span>` element. Basic, but now I know!
+
+Also, finished the two Intro to HTML quizzes pretty easily. I know that they were quite basic, but I did feel even more ahead of the curve thanks to some of the prior FreeCodeCamp work and studying I've done. On to Intermediate HTML next!
 ## Nov 30
 Been doing this for a whole month and while I have been doing quite a bit of reviewing (since most of these courses assume no-to-very-little prior knowledge), I do feel like I've gotten a bit more comfortable with typing in raw HTML/CSS and having a pretty decent idea of what will come out.
 
