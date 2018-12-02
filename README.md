@@ -2,6 +2,9 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 2
+Going through tables in the Udemy course. Pretty easy. Looking forward(?) to *Forms: Part Deux* tomorrow. I wonder if it will be easier to follow along when it's a lecture/teacher instead of just trying to read and comprehend it myself.
+
 ## Dec 1
 I **knew** that there was a good reason to go over even the introductory videos for this Udemy course. Not only have I learned quite a bit about some of the shortcuts in Sublime (and they are pretty sweet!) but I *finally* get the difference betweent a `<div>` and a `<span>` element. Basic, but now I know!
 
