@@ -2,6 +2,20 @@
 
 ## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 4
+Doing the forms exam (at least the first one).
+
+Got pretty far without needing to look up stuff. The big confusing part at this point is the difference in `<for>, <id>,`and  `<name>`.
+
+Need to try and keep those straigh. Also, right now some of the data is not showing up in the address bar when submitted. Pretty much out of time to work on it today, but I'll try and do some debugging of it tomorrow.
+
+## Dec 3
+Starting on Udemy forms.
+
+This definitely makes a bit more sense. It's hard to tell if it's the subtely different explanation, the slower introduction, or the fact that they separated the front end (what you see) from the backend (which actually does the work) in the form.
+
+It was very interesting to see them submit a form to a URL (wikipedia.org) that they had no relationship with. That makes the design of it (and the code that goes into the design) totally separate from the backend stuff. This is, of course, the case, but I don't think I had realized quite the extent that they were separate.
+
 ## Dec 2
 Going through tables in the Udemy course. Pretty easy. Looking forward(?) to *Forms: Part Deux* tomorrow. I wonder if it will be easier to follow along when it's a lecture/teacher instead of just trying to read and comprehend it myself.
 
