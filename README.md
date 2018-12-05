@@ -1,6 +1,13 @@
 # My-Code-Learning
 
-## Review: `<form>`, `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
+## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
+
+## Dec 5
+Finished the Udemy form exercise, and I think that some of the `<form>` confusion finally clicked just now.
+
+The `<label for="">` tag is to link the text label with the `<input id="">`. The `name` attribute in the `<input>` tag is what is shown in the database or URL bar (or whereever the form's data goes). The `value` attribute is on the other side of the form data field. So in the database (or wherever) it is `name` = `value`. For whatever reason I assumed the HTML `id` attribute would be used in the database, but it looks like the `id` is only used to link up two HTML elements on the page (and also for CSS purposes).
+
+Phew!
 
 ## Dec 4
 Doing the forms exam (at least the first one).
