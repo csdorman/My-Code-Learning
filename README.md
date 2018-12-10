@@ -2,6 +2,11 @@
 
 ## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 10
+Been a few days since I've updated here, but I haven't (yet) missed a day of going through *something*. 39-day streak so far!
+
+Today was a trip through lots of font and text CSS, which I'm already familiar with. Tomorrow looks like it's going to be going over the box model, so I hope that I'm able to carve out a bnch of time, since that's still a bit confusing to me. The exercise/project that goes along with the box model, the tic-tac-toe board, looks pretty interesting, though, and so hopefully that will help me get my head around it!
+
 ## Dec 5
 Finished the Udemy form exercise, and I think that some of the `<form>` confusion finally clicked just now.
 
