@@ -2,6 +2,9 @@
 
 ## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 11
+The tic-tac-toe board wasn't too bad. I guess I figured it would be made of `<div>` and `<span>`, but instead it was just a *relatively* simple table with selective borders turned on. I was able to get it done without any help, and I don't know if I would have been able to do that quite so easily a month (or more) ago.
+
 ## Dec 10
 Been a few days since I've updated here, but I haven't (yet) missed a day of going through *something*. 39-day streak so far!
 
