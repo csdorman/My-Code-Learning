@@ -2,6 +2,11 @@
 
 ## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 12
+Started working with the CSS grid in today's lesson. It wasn't as difficult as I thought it might be. The CSS `float` property was a bit new, but it seemed to be much easier than the `flexbox` or whatever it was that I was doing earlier.
+
+This is a pretty strong case for having a person-to-person connection going on instead of just reading (and sometimes zoning out) web pages or reference docs. I feel like I'm actually getting better at some of this stuff, and Sublime is pretty neat as well.
+
 ## Dec 11
 The tic-tac-toe board wasn't too bad. I guess I figured it would be made of `<div>` and `<span>`, but instead it was just a *relatively* simple table with selective borders turned on. I was able to get it done without any help, and I don't know if I would have been able to do that quite so easily a month (or more) ago.
 
