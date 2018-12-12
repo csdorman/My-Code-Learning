@@ -7,6 +7,10 @@ Started working with the CSS grid in today's lesson. It wasn't as difficult as I
 
 This is a pretty strong case for having a person-to-person connection going on instead of just reading (and sometimes zoning out) web pages or reference docs. I feel like I'm actually getting better at some of this stuff, and Sublime is pretty neat as well.
 
+### Part 2!
+
+Finished up the minimalist blog in under an hour. Got stuck a couple of times but was able to do *almost* everything without any sort of help. Did things slightly differently than the "solution", but still got it all accomplished and it looks the same. Super cool. Looks like tomorrow starts Javascript stuff - that's when I'm definitely going to be more than a little bit underwater (maybe). We'll see!
+
 ## Dec 11
 The tic-tac-toe board wasn't too bad. I guess I figured it would be made of `<div>` and `<span>`, but instead it was just a *relatively* simple table with selective borders turned on. I was able to get it done without any help, and I don't know if I would have been able to do that quite so easily a month (or more) ago.
 
