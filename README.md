@@ -2,6 +2,9 @@
 
 ## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 13
+Getting started today with Bootstrap. So far it seems pretty dang easy! Glad I went through the rollercoaster of doing it by hand, but Bootstrap + its good docs make *hand-coding* so much less of a tedious job. Neat!
+
 ## Dec 12
 Started working with the CSS grid in today's lesson. It wasn't as difficult as I thought it might be. The CSS `float` property was a bit new, but it seemed to be much easier than the `flexbox` or whatever it was that I was doing earlier.
 
