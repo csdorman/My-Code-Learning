@@ -2,6 +2,11 @@
 
 ## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 14
+Whew! Got a lot of Bootstrap stuff today - `<form>`, navbars, and lots of copying and pasting. I've got a better idea of what is actually going on behind the scenes, though, and the copying and pasting isn't such a negative since it streamlines the work (and since I know what different attributes are doing (more or less)). 
+
+Also got a tiny bit of JS and JQuery - copying and pasting the scripts only - in order to make the navbar expandable (or not). So that was also pretty neat!
+
 ## Dec 13
 Getting started today with Bootstrap. So far it seems pretty dang easy! Glad I went through the rollercoaster of doing it by hand, but Bootstrap + its good docs make *hand-coding* so much less of a tedious job. Neat!
 
