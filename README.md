@@ -2,6 +2,11 @@
 
 ## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 16
+This Bootstrap stuff is definitely more complicated than the basic (and pretty ugly) CSS stuff I had been doing before, but it certainly does make it **so much easier** to easily(ish) make a website that doesn't look like trash and also doesn't take dozens of hours to put together. 
+
+Trying to do this learning in 25-minute chunks, and I had some extra time today after one of the lessons so I'm perusing through the documentation and there are a lot of typography things in Bootstrap (and HTML) that I never even considered. I wonder what other things I've just been obvlivious too - I should make a point to read more documentation with extra time.
+
 ## Dec 14
 Whew! Got a lot of Bootstrap stuff today - `<form>`, navbars, and lots of copying and pasting. I've got a better idea of what is actually going on behind the scenes, though, and the copying and pasting isn't such a negative since it streamlines the work (and since I know what different attributes are doing (more or less)). 
 
