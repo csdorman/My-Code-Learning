@@ -2,6 +2,11 @@
 
 ## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 19
+Damn. First time I missed a day since I started this was yesterday. Had to go out of town to get my horn worked on and I (mistakenly) decided to try and do my learning at the end of the day. But the repair went longer than I though and so I got back in town after 11pm with no energy and a bunch of stuff left to do. Oh well.
+
+This Bootstrap 4 addendum looks interesting. I wonder how much stuff has changed, and while I'm glad to put off Javascript for a little bit longer, I know that's going to be a real hurdle to start learning. At least I think it will be - time will tell.
+
 ## Dec 16
 This Bootstrap stuff is definitely more complicated than the basic (and pretty ugly) CSS stuff I had been doing before, but it certainly does make it **so much easier** to easily(ish) make a website that doesn't look like trash and also doesn't take dozens of hours to put together. 
 
