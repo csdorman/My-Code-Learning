@@ -2,6 +2,11 @@
 
 ## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 20
+More Bootstrap 4. It's almost comforting to still be in the land of HTML and CSS, even though lots of this stuff is new to me, it's a lot more familiar than I'm sure something like JS is going to be! 
+
+Going out of town today again for a family thing, hopefully I'll be able to maintain my 1 pomo a day (at least).
+
 ## Dec 19
 Damn. First time I missed a day since I started this was yesterday. Had to go out of town to get my horn worked on and I (mistakenly) decided to try and do my learning at the end of the day. But the repair went longer than I though and so I got back in town after 11pm with no energy and a bunch of stuff left to do. Oh well.
 
