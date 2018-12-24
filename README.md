@@ -2,6 +2,11 @@
 
 ## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 24
+I don't know whether it's because my knowledge of Bootstrap 3 was *relatively* low, or because Bootstrap 4 provides so many more options and more flexibility, but the sheer volume of different `classes` is getting a bit overwhelming. I imagine it will make more sense once I spend more time with it, but right now it's a back to drinking from a firehose again. 
+
+I know that actually doing the examples given (even though I'm mostly copying them instead of thinking through them myself) helps, but I have to remember to stay more active and not just let the videos wash over me.
+
 ## Dec 20
 More Bootstrap 4. It's almost comforting to still be in the land of HTML and CSS, even though lots of this stuff is new to me, it's a lot more familiar than I'm sure something like JS is going to be! 
 
