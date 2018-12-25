@@ -1,6 +1,11 @@
 # My-Code-Learning
 
-## Review: `<div>`, CSS flexbox, CSS grid `auto-fit` vs `auto-fill`
+## Review: CSS grid `auto-fit` vs `auto-fill`
+
+## Dec 25
+Got up and was able to get (at least) 1 pomo of work done today.
+
+Flexbox is crazy.
 
 ## Dec 24
 I don't know whether it's because my knowledge of Bootstrap 3 was *relatively* low, or because Bootstrap 4 provides so many more options and more flexibility, but the sheer volume of different `classes` is getting a bit overwhelming. I imagine it will make more sense once I spend more time with it, but right now it's a back to drinking from a firehose again. 
