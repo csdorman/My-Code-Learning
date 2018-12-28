@@ -2,6 +2,12 @@
 
 ## Review: CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 28
+Still hacking away at this BS4 stuff. Sometimes it feels relatively easy, and sometimes it feels like I'm just copying what's going on in the video and hanging on for dear life. 
+
+Was working on the "PatternProject" today though, and had to do a significant amount of debugging on a (relatively) simple problem, which I was able to figure out in the end. So that's good, I guess. I'm getting more comfortable using the tools and using them effectively.
+
+Progress!
 ## Dec 25
 Got up and was able to get (at least) 1 pomo of work done today.
 
