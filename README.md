@@ -2,6 +2,9 @@
 
 ## Review: CSS grid `auto-fit` vs `auto-fill`
 
+## Dec 30
+Ooof. I knew there was a bunch of stuff to Bootstrap, but after digging away at it for what feels like weeks it seems like I am a bit *more* underwater than I was in the beginning. That's not true, though, since now I'm able to anticipate some of the classes (and how to organize them) before they are actually put in. But it does feel that way a bit. There's just so much depth to it, and so many options, and that's before the possibility of modifying the BS source comes into play!
+
 ## Dec 28
 Still hacking away at this BS4 stuff. Sometimes it feels relatively easy, and sometimes it feels like I'm just copying what's going on in the video and hanging on for dear life. 
 
