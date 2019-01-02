@@ -2,6 +2,11 @@
 
 ## Review: CSS grid `auto-fit` vs `auto-fill`
 
+## Jan 2, 2019
+First entry in this log in 2019, but except for that one day in December I still haven't missed a day. Just finished up the BootStrap4 course, and although I think I was starting to get a handle on it, there are still a some (many) things that aren't as comfortable as I'd like them to be. But I don't know how often I'll be needing to actually build a site from scratch, so it may be that it's not as important as I think it should be, but I'm glad that I've gone through it.
+
+On a different but related note, I was able to pretty quickly and easily get both Jessica's and SBB's websites SSL-equipped today in about 30 minutes each. Messing around the .htaccess and wp-config.php was a bit stressful, but copying and pasting and following directions made it much easier than I thought it was going to be. Another win for InMotion!
+
 ## Dec 30
 Ooof. I knew there was a bunch of stuff to Bootstrap, but after digging away at it for what feels like weeks it seems like I am a bit *more* underwater than I was in the beginning. That's not true, though, since now I'm able to anticipate some of the classes (and how to organize them) before they are actually put in. But it does feel that way a bit. There's just so much depth to it, and so many options, and that's before the possibility of modifying the BS source comes into play!
 
