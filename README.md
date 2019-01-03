@@ -1,6 +1,10 @@
 # My-Code-Learning
 
-## Review: CSS grid `auto-fit` vs `auto-fill`
+
+## Jan 3
+First day with JavaScript, and most of it was a review of stuff I had done before in various fits and starts. 
+
+I'm curious to see how long before I start running into things that I don't understand (or don't understand well, at least), but it was a pleasant surprise to not feel like I'm completely out of my depth on the first few JS lessons.
 
 ## Jan 2, 2019
 First entry in this log in 2019, but except for that one day in December I still haven't missed a day. Just finished up the BootStrap4 course, and although I think I was starting to get a handle on it, there are still a some (many) things that aren't as comfortable as I'd like them to be. But I don't know how often I'll be needing to actually build a site from scratch, so it may be that it's not as important as I think it should be, but I'm glad that I've gone through it.
