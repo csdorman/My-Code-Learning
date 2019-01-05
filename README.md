@@ -1,6 +1,9 @@
 # My-Code-Learning
 
+## Jan 5
+First couple of sessions done with the *new to me* MBP, and so far I quite like it.
 
+JS is still just a bit over my head, but I was pleasantly surprised by how much of the last couple of exercises I was able to figure out on my own. Both in terms of the actual code to write and the syntax.
 ## Jan 3
 First day with JavaScript, and most of it was a review of stuff I had done before in various fits and starts. 
 
