@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## Jan 7
+Oof. Getting into some of the JS stuff that I remember as being a bit tricky. Functions, the various different kinds of statements (`if`, `if, else`, `while`, `for`,) and all that kind of stuff. Remembering the syntax and the differences between all the statements is going to be something that I'll need to definitely work on drilling and just doing more than I have in the past in order to get comfortable with it. 
+
 ## Jan 5
 First couple of sessions done with the *new to me* MBP, and so far I quite like it.
 
