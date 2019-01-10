@@ -1,5 +1,12 @@
 # My-Code-Learning
 
+## Jan 10
+Going back and forth on this Javascript learning. Sometimes I feel like I have a decent handle on some of the conceptual stuff, but when it comes to the down-and-dirty job of writing out the syntax I feel like I'm floundering. 
+
+Other times I feel like I'm totally underwater, but then when I look at the sample exercises, they look easy and (relatively) obvious. 
+
+All part of the process.
+
 ## Jan 7
 Oof. Getting into some of the JS stuff that I remember as being a bit tricky. Functions, the various different kinds of statements (`if`, `if, else`, `while`, `for`,) and all that kind of stuff. Remembering the syntax and the differences between all the statements is going to be something that I'll need to definitely work on drilling and just doing more than I have in the past in order to get comfortable with it. 
 
