@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## Jan 16
+Still chugging along on all this Javascript code. I haven't missed a day so far in 2019! I feel like I'm getting a much better handle on figuring out *how* stuff is done, and reading the code that has already been written, but I'm not super comfortable (or that good) at writing it out from scratch. 
+
+I don't know exactly how much longer the JS unit lasts, but this will almost certainly be something that I'll have to keep working on in order to get more comfortable with it after this unit is done.
+
 ## Jan 10
 Going back and forth on this Javascript learning. Sometimes I feel like I have a decent handle on some of the conceptual stuff, but when it comes to the down-and-dirty job of writing out the syntax I feel like I'm floundering. 
 
