@@ -1,5 +1,11 @@
 # My-Code-Learning
 
+## Jan 18
+Moved on from a really in-depth (at least to me) working with Javascript to working with the DOM. 
+
+There's starting to be a lot of information that I'm not very familiar with that I'm trying to hold in my head, and it's getting to be a bit much.
+
+One thing I need to remember is that *knowledge* is not as important as *skill*. It's better for me to actually try and do something actively than passively listen (and maybe zone out or not fully internalize the knowledge).
 ## Jan 16
 Still chugging along on all this Javascript code. I haven't missed a day so far in 2019! I feel like I'm getting a much better handle on figuring out *how* stuff is done, and reading the code that has already been written, but I'm not super comfortable (or that good) at writing it out from scratch. 
 
