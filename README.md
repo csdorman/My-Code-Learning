@@ -1,5 +1,11 @@
 # My-Code-Learning
 
+## Jan 24
+It's been a few days since I've updated, but I've not missed a day.
+
+The JS is still a bit of a brain twister sometimes, but I think I'm getting better at it than I ever have been before, so that's nice.
+
+I need to remember that even though it's **a lot** easier to just passively listen or read about the coding, I internalize it much better when I'm actually doing the typing (and the thinking). Don't settle for knowledge when I need hands-on experience.
 ## Jan 18
 Moved on from a really in-depth (at least to me) working with Javascript to working with the DOM. 
 
