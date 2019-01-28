@@ -1,5 +1,12 @@
 # My-Code-Learning
 
+## Jan 28
+Still plodding through the JS portion. I'm doing a better job at anticipating the way to solve some of these coding problems, but sometimes the syntax and some of the formatting or layout of the code is just a bit of a head scratcher. 
+
+For example, for whatever reason over the past couple of days the *for* loop just seems weird and arbitrary and I can't seem to ake sense of what's going on, even though I feel like I understood it quite well when it was introduced a few weeks ago. 
+
+I need to take some time today and do some extra reading about it, I think. The Udemy class, as good as it is, isn't necessarily going to be a 100% complete learning solution. 
+
 ## Jan 24
 It's been a few days since I've updated, but I've not missed a day.
 
