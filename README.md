@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## Jan 29
+Feeling pretty good about how things are going. But it's pretty extraordinary (to me, at least) at how quickly the styling comes together when someone knows *which* properties to change and *how best* to go about changing them. What would have probably taken me hours (or longer) took him about 20 minutes, and that's including him talking through things to explain what was going on and demonstrating how each change worked.
+
+I've definitely still got a ways to go before I'm that competent, but you've got to start somewhere!
+
 ## Jan 28
 Still plodding through the JS portion. I'm doing a better job at anticipating the way to solve some of these coding problems, but sometimes the syntax and some of the formatting or layout of the code is just a bit of a head scratcher. 
 
