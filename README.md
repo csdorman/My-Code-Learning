@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## Feb 7
+Been in jQuery for a bit and while I still feel *very* much adrift in a sea of functions that I don't completely grasp, every now and then I make a connection that surprises me (and means that I must be internalizing some of this.
+
+It's not always easy to do this early in the morning (before 7am right now), but I think the best way for me to learn and really know this stuff is to make sure that I am being as active as possible - don't sit back and listen, but make sure to type and get to know some of the syntax and how the code works.
+
 ## Jan 29
 Feeling pretty good about how things are going. But it's pretty extraordinary (to me, at least) at how quickly the styling comes together when someone knows *which* properties to change and *how best* to go about changing them. What would have probably taken me hours (or longer) took him about 20 minutes, and that's including him talking through things to explain what was going on and demonstrating how each change worked.
 
