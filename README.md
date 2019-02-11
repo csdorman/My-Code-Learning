@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## Feb 11
+Finished the todo list project. At times I was able to think ahead and figure out what needed to be done before hand. Although I felt like I was a step behind doing it the most efficient and least-verbose way. But the fact that I could (somewhat) know at all what to do is a good sign, I think!
+
+Progress!
+
 ## Feb 7
 Been in jQuery for a bit and while I still feel *very* much adrift in a sea of functions that I don't completely grasp, every now and then I make a connection that surprises me (and means that I must be internalizing some of this.
 
