@@ -1,5 +1,9 @@
 # My-Code-Learning
 
+## Feb 16
+Finished the front-end-only portion of the Udemy Course. This is definitely the longest I've stuck with trying to *really* learn coding and web development at a higher level, and I am really enjoying it. I wish I had a bit more time and energy to focus on it on a day-to-day basis, but with the progress I've made so far over the past few months, I think that I am doing a good job at getting some in just about every day.
+
+On to the backend portion!
 ## Feb 11
 Finished the todo list project. At times I was able to think ahead and figure out what needed to be done before hand. Although I felt like I was a step behind doing it the most efficient and least-verbose way. But the fact that I could (somewhat) know at all what to do is a good sign, I think!
 
