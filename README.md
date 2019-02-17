@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## Feb 17
+Day one of the backend (just about 30 minutes in) and I already feel like this is going to be one of those course sections that helps me morethan it probably should, considering how long I've been doing this kind of web development, I've gotten by on a pretty shallow and wide understanding of somethings. I think this will deepen that pool of knowledge significantly.
+
 ## Feb 16
 Finished the front-end-only portion of the Udemy Course. This is definitely the longest I've stuck with trying to *really* learn coding and web development at a higher level, and I am really enjoying it. I wish I had a bit more time and energy to focus on it on a day-to-day basis, but with the progress I've made so far over the past few months, I think that I am doing a good job at getting some in just about every day.
 
