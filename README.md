@@ -1,5 +1,12 @@
 # My-Code-Learning
 
+## Feb 24
+It's been a little while since my last update, but I haven't missed a day so far in 2019. 
+
+Gotten more into the server/backend side of things, and while I knew that there were some holes in my knowledge, it wasn't (quite) as bad as I was afraid it would be! Certainly doing some of the SEO learning (with all of the different kinds of requests and bots scraping various kinds of code) has helped in unexpected ways.
+
+There are about 150 more lessons or so, but the individual lessons are getting a bit more complex and I'm having to think and do research a bit more, but I think that I may be through this course before summer - then I need to find another course to keep going so I maintain and improve on what I've done!
+
 ## Feb 17
 Day one of the backend (just about 30 minutes in) and I already feel like this is going to be one of those course sections that helps me morethan it probably should, considering how long I've been doing this kind of web development, I've gotten by on a pretty shallow and wide understanding of somethings. I think this will deepen that pool of knowledge significantly.
 
