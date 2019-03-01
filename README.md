@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## Feb 25
+This full-stack stuff is definitely interesting. While I knew lots of stuff went on behind the scenes of the average website, I don't think I've really realized exactly how it was all put together until relatively recently (considering how long I've been working on this). Despite still feeling a little bit lost in some of the more detail-oriented code writing, I'm starting to feel a lot more comfortable with JS, and that is something that I've never really been able to say before.
+
 ## Feb 24
 It's been a little while since my last update, but I haven't missed a day so far in 2019. 
 
