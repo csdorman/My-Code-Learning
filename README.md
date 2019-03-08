@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## March 8
+Been doing a good job with regularity so far this year. Into Node and routes and some of the backend stuff now, and although I still feel like I'm sometimes just barely afloat, it's actually getting pretty interesting knowing some of the behind-the-scenes stuff that's going on. I'm definitely feeling more confident about what I do (and don't) know what to do!
+
 ## Feb 25
 This full-stack stuff is definitely interesting. While I knew lots of stuff went on behind the scenes of the average website, I don't think I've really realized exactly how it was all put together until relatively recently (considering how long I've been working on this). Despite still feeling a little bit lost in some of the more detail-oriented code writing, I'm starting to feel a lot more comfortable with JS, and that is something that I've never really been able to say before.
 
