@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## March 14
+Switching from Node and Express into the database side of things right now, and once again it's enlightening (and a little bit embarressing) how much stuff I've picked up over the years of skirting around the edges of doing "real" online work, and what sort of fundamentals I'm lacking knowledge in. I suppose being aware of these vulnerabilities is the first step to getting rid of them, though, so that's a good start.
+
 ## March 8
 Been doing a good job with regularity so far this year. Into Node and routes and some of the backend stuff now, and although I still feel like I'm sometimes just barely afloat, it's actually getting pretty interesting knowing some of the behind-the-scenes stuff that's going on. I'm definitely feeling more confident about what I do (and don't) know what to do!
 
