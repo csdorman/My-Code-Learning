@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## March 19
+Although I only last updated this 5 days ago, it feels like it's been much longer, considering all the (new to me) stuff that I've covered. This backend server stuff is definitely more than a little bit confusing at times (especially trying to keep track of variables and references that are flying all over the place) , but really good to know. I don't know how many web apps I'm going to be making (as opposed to web pages), but it's definitely been good to learn this kind of stuff, since it gives me more of an idea of what's going on in web sites in general. Once this course is over, I think I definitely need to take a look at PHP, since that doesn't seem to be covered at all in this course.
+
 ## March 14
 Switching from Node and Express into the database side of things right now, and once again it's enlightening (and a little bit embarressing) how much stuff I've picked up over the years of skirting around the edges of doing "real" online work, and what sort of fundamentals I'm lacking knowledge in. I suppose being aware of these vulnerabilities is the first step to getting rid of them, though, so that's a good start.
 
