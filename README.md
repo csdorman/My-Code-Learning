@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## May 17
+Now I've added the Thinkpad to the remote repo as well. Not quite as easy, and I don't think I've gotten it all setup completely, but not too bad for a half hour or so of work.
+
 ## May 16
 Been a long time since I've updated anything here, but I haven't missed a day. Finished the first Udemy course, and have since gotten the notice that Cloud9 is going under, so I've started setting up my own local dev environment on my own machine.
 
