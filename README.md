@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## May 20
+Starting to get more stuff working locally on the MBP. I feel like I'm starting to get more of a handle on things, which is good, but I still feel like I don't know what I don't know, which is never super comforting.
+
 ## May 17
 Now I've added the Thinkpad to the remote repo as well. Not quite as easy, and I don't think I've gotten it all setup completely, but not too bad for a half hour or so of work.
 
