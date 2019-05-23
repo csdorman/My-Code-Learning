@@ -113,3 +113,68 @@ MY_ARRAY.push('JAVASCRIPT');
 console.log(MY_ARRAY);
 
 //DATA STRUCTURES AND TYPES//
+// 8 Data types
+
+//7 Primitives
+// 1. Boolean - true & false
+// 2. null - special keyword devoting a null value
+// 3. undefined -  a top-level property whose value is not defined
+// 4. Number - an integer or floating point number
+// 5. BigInt - an integer with arbitrary precision
+// 6. String - a sequence of characters that represent a text value
+// 7. Symbol - a data type whose instances are unique and immutable
+
+// 8. Object - named containers for values, functions, and procedures
+
+//DATA TYPE CONVERSION
+
+//Variables are converted from numbers to strings automatically
+//The + operator will convert numbers to strings 
+h = 'The answer is ' + 42
+console.log(h);
+
+//Other operators do NOT get this conversion
+console.log('Subtraction:');
+console.log('37' - 7);
+console.log('Addition:');
+console.log('37' + 7);
+
+//CONVERT STRINGS TO NUMBERS
+
+//parseInt() returns only whoe numbers
+//parseFloat() will return decimals.
+
+//Also possible to use the + symbol to retrieve number from string
+console.log('String:');
+console.log('1.1' + '1.1');
+console.log('Number:');
+console.log(+'1.1' + +'1.1');
+
+//LITERALS
+
+//Literals represent values in JS. 
+//These represent fixed values, not variables, that you *literally* provide in your code.
+
+//ARRAY LITERALS
+
+//Array literal is zero or more expressions (array elements), enclosed in square brackets []. 
+//When initialized, it's length is set to the number of arguments/elements specified.
+
+//Array literals are also array objects
+
+//You may leave comma-separated spaced for additional elements:
+var fish = ['Lion,', , 'Angel', 'Sharknado'];
+
+//Trailing commas, however, are ignored. This list only has 3 elements (not 4):
+var myvar3 = ['home', ,'school', ];
+//Leading commas are NOT ignored. This list has 4 elements:
+var myvar4 = [, 'home', ,'school', ];
+
+//Best practice to explicitly declare missing elements as *undefined* to increase clarity
+
+//BOOLEAN LITERALS
+
+// Two values - true and false
+
+//NUMERIC LITERALS
+
