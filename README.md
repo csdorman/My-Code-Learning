@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## May 23
+Been working ONLY inside VSC and reading through the MDN docs, and while it was a bit more of a pain to set up, so far I really like this "workflow". It definitely moves faster and feels a bit more lightweight than using the C9 service, but only time will tell how it works out when I go back to the Udemy videos. I'd like to keep this development stuff more local, though (and backed up to Github).
+
 ## May 20
 Starting to get more stuff working locally on the MBP. I feel like I'm starting to get more of a handle on things, which is good, but I still feel like I don't know what I don't know, which is never super comforting.
 
