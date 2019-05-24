@@ -178,3 +178,37 @@ var myvar4 = [, 'home', ,'school', ];
 
 //NUMERIC LITERALS
 
+//Several different types of integers.
+//Base 10 (typical numbers), hexadecimal (base 16), octal (base 8), and binary (base 2)
+
+//FLOATING-POINT LITERALS
+
+//Syntax is:
+// [(+|-)] [digits].[digits] [E|e] [(+|-)] digits]
+//"E" or "e" is an exponent
+
+//Examples:
+// 3.1415926
+// -.12345678
+// -3.1E+12
+// .1e-23
+
+//OBJECT LITERALS
+
+//A list of zero or more pairs of property names and associated values enclosed in curly braces {}. Do not use object literal at beginning of a statement, since the opening brace will be misinterpreted as the beginning of a block.
+
+var sales = 'Toyota';
+
+function carTypes(name) {
+    if (name === 'Honda') {
+        return name;
+    } else {
+        return "Sorry, we don't sell " + name + ".";
+    }
+}
+
+var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+
+console.log(car.myCar);
+console.log(car.getCar);
+console.log(car.special);
