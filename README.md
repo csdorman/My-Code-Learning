@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## May 25 
+Trying to get some of this learning stuff done consistently on vacation, and while so far I've been getting it done, I'm not sure how much actual retention is getting done.
+
 ## May 23
 Been working ONLY inside VSC and reading through the MDN docs, and while it was a bit more of a pain to set up, so far I really like this "workflow". It definitely moves faster and feels a bit more lightweight than using the C9 service, but only time will tell how it works out when I go back to the Udemy videos. I'd like to keep this development stuff more local, though (and backed up to Github).
 
