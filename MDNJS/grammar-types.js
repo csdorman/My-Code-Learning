@@ -207,8 +207,33 @@ function carTypes(name) {
     }
 }
 
-var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+var car = { myCar: 'Saturn', getCar: carTypes('Nissan'), special: "We offer special financing on " + sales };
 
 console.log(car.myCar);
 console.log(car.getCar);
 console.log(car.special);
+
+//You can use numeric or string literal for the name of a property. OR next an object inside another.
+
+var car = { manyCars: { a: 'Saab', b: 'Jeep'}, 7: 'Mazda'};
+
+console.log(car.manyCars.b);
+console.log(car[7]);
+
+//Object property names can be ANY string (even empty string).
+//Syntax for calling objects from an array
+var foo2 = {a: 'alpha', 2: 'two'};
+console.log(foo2.a); //alpha
+console.log(foo2[2]); //two
+//console.log(foo2.2); SYNTAX ERROR: Missing ) after argument list
+//console.log(foo2[a]); REFERENCE ERROR: a is not defined
+console.group(foo2['a']); //alpha
+console.log(foo2['2']); //two
+
+//STRING LITERALS
+
+//Zero or more characters enclosed in double or single quotes. Quote types much match
+
+//You can call any method of the String object on a string literal value.
+console.log("John's cat is cute".length)
+//Will print the number of symbols in the string including whitespace.
