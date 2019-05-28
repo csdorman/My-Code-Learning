@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## May 27
+Back home. Did a pretty good job with not missing a day of learning over vacation, even though it certianly wasn't as effective as the work I am able to do early in the morning. At least I got *something* done!
+
 ## May 25 
 Trying to get some of this learning stuff done consistently on vacation, and while so far I've been getting it done, I'm not sure how much actual retention is getting done.
 
