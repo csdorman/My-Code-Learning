@@ -237,3 +237,8 @@ console.log(foo2['2']); //two
 //You can call any method of the String object on a string literal value.
 console.log("John's cat is cute".length)
 //Will print the number of symbols in the string including whitespace.
+
+//Using the back-tick (` `) character to enclose a template string literals.
+//These can be used to construct strings with (or without) tags:
+var name = 'Bob', time = 'today';
+console.log(`Hello ${name}, how are you doing ${time}?`)
