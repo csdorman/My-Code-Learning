@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## May 29
+The ```throw...catch``` was something I've never heard of (or at least something that I don't remember). I'm sure I'll need to come back to that, but I don't know what exactly is important to get out of that section, so I didn't want to just copy things without being able to think through them. 
+
+Starting on the loops now, and this is going to be an important section, and it's already getting a little bit confusing. Going to probably need to use multiple resources to get a full picture of how these things work.
+
 ## May 27
 Back home. Did a pretty good job with not missing a day of learning over vacation, even though it certianly wasn't as effective as the work I am able to do early in the morning. At least I got *something* done!
 
