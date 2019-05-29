@@ -165,3 +165,49 @@ switch(fruitType) {
 }
 console.log("Is there anything else you'd like?")
 ```
+
+## Exception handling statements
+
+### ```throw``` statement
+
+Use ```throw``` statement to throw and exception. When doing this, specific the expression containing the value to be thrown:
+
+```
+throw expression;
+```
+
+*Any* expression may be thrown, not just specific types.
+
+### ```try...catch``` statements
+
+This statement marks a block of statements to try, and then specificies one (or more) responses if an exception is thrown. If an exception is thrown, this statement will catch it.
+
+This statement consists of a ```try``` block, with one or more statements, and a ```catch``` block, which contains statements that will be run if an exception is thrown in the ```try``` block. 
+
+You **want the ```try``` block to succeed**, and if it doesn't, you want the control to pass to the ```catch``` block. 
+
+If **any statement** within the ```try``` block (or a function called from it) throws an exception, control **immediately** shifts to the ```catch``` block. 
+
+If no exception is thrown, the ```catch``` block is skipped. 
+
+The ```finally``` block executes after the ```try``` and ```catch``` blocks execute but before statements following the ```try...catch``` statement.
+
+```
+function getMonthName(mo) {
+    mo = mo -1;
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',    'Oct', 'Nov', 'Dec'];
+    if (months[mo]) {
+        return months[mo];
+    } else {
+        throw 'InvalidMonthNo';
+    }
+}
+
+try {
+    monthName = getMonthName(myMonth);
+}
+catch (e) {
+    monthName = 'unknown';
+    logMyErrors(e);
+}
+```
