@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## May 30
+Using a seperate file to try and see some of the differences between these different loop types. It really does help to try to type them out from scratch, since it shows how much (or little) I really get the syntax and how to *think programmatically*. A little bit demoralizing now, but I am confident it will help in the future.
+
 ## May 29
 The ```throw...catch``` was something I've never heard of (or at least something that I don't remember). I'm sure I'll need to come back to that, but I don't know what exactly is important to get out of that section, so I didn't want to just copy things without being able to think through them. 
 
