@@ -53,3 +53,54 @@ btn.addEventListener('click', function() {
 });
 </script>
 ```
+
+## ```do...while``` statement
+
+Similar to a ```for``` loop, the ```do...while``` statement repeats **until a specificied condition evaluates to false**. 
+
+```
+do
+    statement
+while (condition);
+```
+
+The ```statement``` is **always executed once** before the condition is checked (and again until the ```while (condition)``` returns false). 
+
+To **execute multiple statements**, use a block statement {...} to group them.
+
+If ```condition``` is true, the ```statement``` executes again. At the **end** of every execution, the ```condition``` is checked. When it is false, the execution stops and control passes to the statement following ```do...while```.
+
+In this example, the ```do...while``` loop iterates at least once and reiterates until *i* is no longer less than 5:
+
+```
+var i = 0;
+do {
+    i += 1;
+    console.log(i);
+} while (i < 5);
+```
+
+## ```while``` statement
+
+A ```while``` statement **executes its statements as long as a specified condition evaluates to true**. 
+
+```
+while(condition)
+    statement
+```
+
+If the ```condition``` becomes false, the ```statement``` stops executing and control passes to the statement following the loop.
+
+The ```condition``` test happens **before ```statement``` in the loop is executed**.  
+
+This ```while``` loop iterates as long as *n* is less than 3:
+```
+var n = 0;
+var x = 0;
+while (n < 3) {
+    n++;
+    x += n;
+}
+```
+
+## ```labeled``` statement
