@@ -104,3 +104,37 @@ while (n < 3) {
 ```
 
 ## ```labeled``` statement
+
+A ```label``` gives a statement an identifier that lets you refer to it elsewhere in the program. This lets you use ```break``` or ```continue``` statements to control whether the program should stop or continue the execution of the loop.
+
+```
+label : 
+    statement
+```
+
+The ```label``` can be any JS identifier that is not a reserved word. The ```statement`` can be any statement.
+
+### ```break``` statement
+
+The ```break``` statement terminates a loop, ```switch```, or is used with a ```labeled``` statement. 
+
+- Using ```break``` *without a label* terminates the *innermost enclosing* ```while```, ```do...while```, ```for```, or ```switch``` immediately and transfers control to the following statement.
+- When you use ```break``` *with a label* it terminates the labeled statement.
+
+```
+break [label];
+```
+
+### ```continue``` statement
+
+The ```continue``` statement can be used to restart a ```while```, ```do..while```, ```for```, or ```label``` statement.
+
+- When you use ```continue``` *without a label* it terminates the innermost enclosing ```while```, ```do..while```, or ```for``` statement and continues loop execution with the next iteration. **Unlike** the ```break``` statement, ```continue``` does not terminate the loop execution entirely.
+    - In a ```while``` loop, ```continue``` jumps back to the condition. In a ```for``` loop it jumps to the ```increment-expression```.
+- When you use ```continue``` *with a label* it applies to the looping statement identified with that label.
+
+```
+contine [label];
+```
+
+

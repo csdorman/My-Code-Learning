@@ -32,3 +32,16 @@ while ( c < 5){
 console.log("Variable c is now " + c);
 
 //Prints out similar to the do...while loop
+
+//******* continue
+
+var i = 0;
+var n = 0;
+while (i < 5) {
+    i++;
+    if (i === 3) {
+        continue;
+    }
+    n += i;
+    console.log(n);
+}
