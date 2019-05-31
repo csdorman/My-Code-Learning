@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## May 31
+Starting to be able to figure out what some programs are doing (slowly) without running them, and only following through the syntax. This is a minor victory, but it fees pretty neat since I don't think that I could do this (at least not as well) a few months ago.
+
 ## May 30
 Using a seperate file to try and see some of the differences between these different loop types. It really does help to try to type them out from scratch, since it shows how much (or little) I really get the syntax and how to *think programmatically*. A little bit demoralizing now, but I am confident it will help in the future.
 
