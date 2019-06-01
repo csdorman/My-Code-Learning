@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## June 1
+Finished the loops page, and while I don't know how well I can do all those things from "scratch", I was able to understand them pretty well at the end. 
+
+On to functions now!
+
 ## May 31
 Starting to be able to figure out what some programs are doing (slowly) without running them, and only following through the syntax. This is a minor victory, but it fees pretty neat since I don't think that I could do this (at least not as well) a few months ago.
 
