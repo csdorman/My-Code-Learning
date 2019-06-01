@@ -45,3 +45,16 @@ while (i < 5) {
     n += i;
     console.log(n);
 }
+
+//*********Difference in for...in and for...of 
+
+var arr = [3, 5, 7];
+arr.foo = 'hello';
+
+for (var i in arr) {
+    console.log(i);
+}
+
+for (var i of arr) {
+    console.log(i);
+}

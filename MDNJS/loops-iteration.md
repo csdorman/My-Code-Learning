@@ -137,4 +137,39 @@ The ```continue``` statement can be used to restart a ```while```, ```do..while`
 contine [label];
 ```
 
+## ```for...in``` statement
 
+The ```for...in``` statement iterates a specified variable over all the enumerable properties of an object. For *each property*, JS executes the specified statements.
+
+```
+for (variable in object) {
+    statements
+}
+```
+
+This is not great to iterate over ```array``` elements, since the ```for...in``` statement will return the name of the user-defined properties in addition to the numeric indexes.
+
+## ```for...of``` statement
+
+The ```for...of``` statement creates a loop iterating over iterable objects (inluding ```array```, ```map```, ```set```, ```arguments``` object, etc.) and invoking a custom iteration hook with statement to be executed for the value of each distinct property.
+
+```
+for (variable OF object) {
+    statement
+}
+```
+
+**Difference between ```for...of``` and ```for...in```**
+The ```for...in``` loop iterates of **property names**, while the ```for...of``` loop iterates of **property values**.
+
+```
+var arr = [3, 5, 7];
+arr.foo = 'hello';
+
+for (var i in arr) {
+    console.log(i); // logs "0", "1", "2", "foo"
+}
+
+for (var i of arr) {
+    console.log(i); // logs 3, 5, 7
+}
