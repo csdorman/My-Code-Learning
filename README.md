@@ -1,6 +1,11 @@
 # My-Code-Learning
 
-## June 1
+## June 3
+More on functions.
+
+The "function stack" seems super confusing - I'll need to dive into more on that in the future. Also the nested functions are making my brain hurt a bit, but I'll continue those tomorrow morning and maybe some space will help me to clarify things a bit.
+
+## June 2
 Finished the loops page, and while I don't know how well I can do all those things from "scratch", I was able to understand them pretty well at the end. 
 
 On to functions now!
