@@ -5,6 +5,9 @@ Finished the loops page, and while I don't know how well I can do all those thin
 
 On to functions now!
 
+## June 1
+Finished up my learning today at 10:10pm. Got sidetracked this morning with some work that I should have done last night. But at least I got it done!
+
 ## May 31
 Starting to be able to figure out what some programs are doing (slowly) without running them, and only following through the syntax. This is a minor victory, but it fees pretty neat since I don't think that I could do this (at least not as well) a few months ago.
 
