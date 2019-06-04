@@ -110,5 +110,33 @@ Nested functions inherit the arguments and variables of the containing function:
 
 The inner function can only be accessed from statements in the outer function.
 
+### Multiply-nested functions
+
+Functions can be multiply-nested. 
+
+A function (A) containing a function (B) containing a function (C). Both B and C form closures, so B can access A, and C can access B. But since C can access B which can also access A, C can also access A.
+
+## Closures
+
+JS allows for nesting of functions, and grants the inner function full access to all the variables and functions defined inside the outer funtion (and all the variables and functions the outer function has access to). However, the outer function does not have acess to the variables and functions defined in the inner function. 
+
+A *closure* is created when the inner function is somehow made available to any scope outside the outer function.
+```
+//outer function defines "name" variable
+var pet = function(name)  
+    var getName = function() {
+        //inner function has access to the name variable 
+        return name;
+
+    }
+    //return the inner function, exposing it to the outer scopes
+    return getName;
+}
+myPet = pet('Vivie');
+
+myPet();
+```
+
+
 
 

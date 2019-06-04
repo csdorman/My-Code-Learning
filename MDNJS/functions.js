@@ -49,11 +49,14 @@ loop(0);
 
 function addSquares(a, b) {
     function square(x) {
-        console.log(x);
-        console.log(x * x);
+        //console.log(x);
+        return x * x;
+
     }
-    return square(a) + square(b);
+    var squareSum = square(a) + square(b);
+    console.log(squareSum);
 }
 
 a = addSquares(2, 3);
 b = addSquares(4, 5);
+
