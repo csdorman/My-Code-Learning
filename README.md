@@ -1,5 +1,12 @@
 # My-Code-Learning
 
+## June 4
+After talking a bit with Emily last night, and getting some of my current work with a new website, I think I'm going to switch gears for a little bit.
+
+I'm moving from reading the MDN docs over to the MIT OpenCourseware Intro to Comp Sci. It focuses on Python, but it will also give a more fundamental knowledge of programming concepts and best practices that I don't have right now. 
+
+Should be fun!
+
 ## June 3
 More on functions.
 
