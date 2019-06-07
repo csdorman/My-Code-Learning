@@ -1,5 +1,10 @@
 # My-Code-Learning
 
+## June 7
+Working on figuring out how to import modules into VSC, mainly NumPy. Think that it should be working, but for whatever reason, it isn't. I'll come back to it later today or tomorrow.
+
+This should be somewhat frustrating, since I'm not doing any *learning* on programming, but reading all this documentation and trying to figure out what's going on (and learning how all this stuff is connected on the back end) is really useful.
+
 ## June 4
 After talking a bit with Emily last night, and getting some of my current work with a new website, I think I'm going to switch gears for a little bit.
 
