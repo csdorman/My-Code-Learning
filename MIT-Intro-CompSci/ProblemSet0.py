@@ -1,8 +1,14 @@
-#import numpy
 import sys
 sys.path.append('/user/local/lib/python3.7/site-packages/numpy/')
+print(sys.path)
 import numpy as np
-#print(sys.path)
+
+
+#Testing import syntax
+# import datetime
+# oTime = datetime.datetime.now()
+# print oTime.isoformat()
+
 
 x = input("Enter a number for x: ")
 
