@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## June 11
+Finally got the Python modules working. It was a pretty annoying process, but I'm glad that I finally got it done. It was certainly a good way to learn my way around the MacOS python backend.
+
 ## June 7
 Working on figuring out how to import modules into VSC, mainly NumPy. Think that it should be working, but for whatever reason, it isn't. I'll come back to it later today or tomorrow.
 
