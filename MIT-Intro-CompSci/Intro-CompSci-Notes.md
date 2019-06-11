@@ -1,4 +1,5 @@
 # Intro to Comp Sci
+
 ## Lecture 1 What is Computation
 
 Computers know two kinds of knowledge:
@@ -67,3 +68,36 @@ For the '+', '-', and '* ' operations, if *both* numbers are ```int``` the resul
 - This value is stored in the computer's memory, and binds the name to the value.
 - You can retrieve the value associated with the variable by *invoking* the name.
 - You can *re-bind* variable names using new assignment statements.
+
+## Lecture 2 Branching and Iteration
+
+### Strings
+- Letters, special characters, spaces, and digits
+- Enclose thing in *double* (" ") or *single* (' ') quotes
+- You can concatenate (combine) strings:
+``` 
+hi = "hello there"
+name = "ana"
+greet = hi + name
+greeting = hi + " " + name
+```
+
+### I/O  
+**```print()```**
+- Used to *output* to console.
+- format is: ```print(stuff-to-display-goes-here)```
+- You can print out strings (enclose in quotes), or variables (no quotes.)
+- Concatenating with commas (,) will automatically insert space. Using a plus (+) will not add a space.
+- You can use commas with strings, or number objects. All objects must be strings to use plus. (Use ```str()``` to convert numbers to strings.)
+
+**```input("")```**
+- Prints the string enclosed in quotes, and creates a text input for the user
+- Once the user types in something and hits enter, that input is bound to a variable:
+```text = input("Type anything...")
+print(5*text)
+```
+- ```input``` returns a string, so if you want to do math operations, you must convert it into a number using ```int()``` or ```float()```:
+``` num = int(input("Type a number..."))
+print(5*num)
+```
+Resume at 13:15: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
