@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## June 12
+Finished second lecture. On to more problems tomorrow!
+
 ## June 11
 Finally got the Python modules working. It was a pretty annoying process, but I'm glad that I finally got it done. It was certainly a good way to learn my way around the MacOS python backend.
 

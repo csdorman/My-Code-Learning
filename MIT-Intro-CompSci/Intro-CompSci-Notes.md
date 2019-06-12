@@ -100,4 +100,91 @@ print(5*text)
 ``` num = int(input("Type a number..."))
 print(5*num)
 ```
-Resume at 13:15: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
+
+**comparison operators** on ```int```, ```float```, ```string```
+- Comparisons below evaluate to a Boolean type:
+- i > j
+- i >= j
+- i < j
+- i <= j
+- i == j
+- i != j
+- Cannot compare a ```string``` to ```int``` or ```float`` types.
+
+**logic operators** on Boolean values
+- ```not a``` : True if ```a``` is False. False if ```a``` is True
+- ```a``` and ```b``` : True if *both* ```a``` and ```b``` are True
+-```a``` or ```b```: True if either or both are true
+
+### Branching
+- Let programs make "decisions"
+- The ```<condition>``` has a value of ```True``` or ```False```
+- The indented code block is run only if the ```<condition> is ```True```
+
+**```if```**
+```
+if <condition>
+    <expresssion>
+```
+
+**```if - else```**
+```
+if <condition>
+    <expression>
+else:
+    <expression>
+```
+
+**```else - if ```**
+```
+if <condition>
+    <expression>
+elif <condition>
+    <expression>
+else: 
+    <expression>
+```
+
+**Indentation matters in Python**
+- Indendtation is how you denote blocks of code
+
+**```while``` Loops**
+```
+while <condition>:
+    <expresssion>
+```
+- ```<condition>``` evalutates to Boolean
+- If ```True```, the steps inside the code block are run
+- The ```<condition>``` steps are checked again
+- This pattern is repeated until ```<condition>``` is ```False```
+
+**Iterating numbers with ```while``` and ```for``` loops**
+- More complicated with a ```while``` loop:
+```
+n = 0
+while n < 5:
+    print(n)
+    n = n+1
+```
+- ```for``` loop is much shorter:
+```
+for n in range(5):
+    print(n)
+```
+**```for``` loop**
+```
+for <variable> in range(<some_num>):
+    <expression>
+```
+The ```range()``` parameter can take extra arguments
+- ```range(start, stop, step)```
+- Default value for ```start```= 0 and ```step```= 1
+- ```range``` loops until it reaches ```stop``` - 1
+
+**```break``` statement**
+- Immediately exists whatever loop it is in
+- Skips remaining expressions in the code block
+- Only exits the *innermost* loop (not all loops)
+
+##Lecture 3: String Manipulation, Guess & Check, Approximations, Bisection
+
