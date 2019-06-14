@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## June 14
+A bummer today since I'm in Huntington and the hotel internet isn't working for me, but luckily I had some offline learning to do. Finished the one of the coding problems, and I feel like I learned a lot with my many (dumb) mistakes!
+
 ## June 12
 Finished second lecture. On to more problems tomorrow!
 
