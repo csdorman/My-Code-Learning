@@ -18,13 +18,19 @@ total_cost = float(input("How much does the house cost?"))
 portion_down_payment = total_cost * 0.25
 print("Your down payment will be $" + str(portion_down_payment))
 
-monthly_savings = monthly_salary / portion_saved
+monthly_savings = monthly_salary * portion_saved
+print("monthly savings =" + str(monthly_savings))
 
-if portion_saved >= portion_down_payment:
-    month_counter = 0
+month_counter = 0
+while float(current_savings) < float(portion_down_payment):
+    month_counter = month_counter + 1
+    print(month_counter)
     # add savings amount to current savings
     current_savings = current_savings + monthly_savings
+    print(current_savings)
     # add investment income to current savings
     current_savings = current_savings + (current_savings * (r/12))
-    month_counter = month_counter + 1
-    print("Number of months: " + str(month_counter))
+    print(current_savings)
+    
+
+print("Number of months: " + str(month_counter))
