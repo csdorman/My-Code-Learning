@@ -188,3 +188,27 @@ The ```range()``` parameter can take extra arguments
 
 ##Lecture 3: String Manipulation, Guess & Check, Approximations, Bisection
 
+### Strings
+- A sequence of case-sensitive characaters
+- You can compare strings to other strings with >, <, ==
+- ```len()``` is a function used to retrieve the length of the string in the parenthesis.
+- Square brackets ([...]) are used to perform indexing into a string to get the value at a certain position (or index)
+```
+s = "abc"
+s[0] = a
+s[2] = c
+s[3] = Index out of bounds - error
+s[-1] = c
+s[-3] = a
+```
+- You can **slice** strings using ```[start:stop:step]```
+- With two numbers, ```[start:stop], step = 1``` by default
+```
+s = "abcdefgh"
+s[3:6] = "def"
+s[3:6:2] = "df"
+s[::] = "abcdefgh"
+s[::-1] = "hgfedbca"
+s[4:1:-2] = "ec"
+```
+RESUME AT 10:55
