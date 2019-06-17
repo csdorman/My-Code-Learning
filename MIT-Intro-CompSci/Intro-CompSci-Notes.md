@@ -211,4 +211,57 @@ s[::] = "abcdefgh"
 s[::-1] = "hgfedbca"
 s[4:1:-2] = "ec"
 ```
-RESUME AT 10:55
+- strings are *immutable* (not able to be modified)
+
+```
+s = "hello"
+s[0] = "y"  -> gives an error
+s = "y" + s[1:len(s)] -> this is allowed
+```
+
+### Strings and Loops
+- These two code snippets do the *same thing*
+- The lower one is more "pythonic" (more easily understandable)
+```
+s = "abcdefgh"
+
+for index in range(len(s)):
+    if s[index] == "i" or s [index] == "u":
+        print("There is an i or u")
+
+for char in s:
+    if char == "i" or char == "u":
+        print("There is an i or u")
+```
+### Algorithms
+- Finding the cube root with the *guess-and-check* method
+``` 
+cube = 8
+for guess in range(abs(cube)+1):
+    if guess**3 >= abs(cube):
+        break
+if guess**3 != abs(cube):
+    print(cube, "is not a perfect cube")
+else:
+    if cube <0:
+        guess = -guess
+    print("Cube root of " +str(cube)+ " is "+str(guess))
+```
+- Finding the cube root the the *approximate solution* method
+- Start with a guess and increment by a *small* value.
+- Keep guessing if ```guess**3 - cube >= epsilon``` for a small epsilon. Epsilon value = close enough to the correct answer
+```
+cube = 27
+epsilon = 0.01
+guess = 0.0
+increment = 0.0001
+num_guesses = 0
+while abs(guess**3) - cube) >= epsilon and guess <= cube:
+    guess += increment
+    num_guesses += 1
+print ("num_guesses =", num_guesses)
+if abs(guess**3 - cube) >=epsilon:
+    print("Failed on cube root of", cube)
+else:
+    print(guess, "is close to the cube root of", cube)
+```
