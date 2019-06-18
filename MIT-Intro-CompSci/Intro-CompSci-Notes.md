@@ -247,7 +247,7 @@ else:
         guess = -guess
     print("Cube root of " +str(cube)+ " is "+str(guess))
 ```
-- Finding the cube root the the *approximate solution* method
+- Finding the cube root with the *approximate solution* method
 - Start with a guess and increment by a *small* value.
 - Keep guessing if ```guess**3 - cube >= epsilon``` for a small epsilon. Epsilon value = close enough to the correct answer
 ```
@@ -265,3 +265,25 @@ if abs(guess**3 - cube) >=epsilon:
 else:
     print(guess, "is close to the cube root of", cube)
 ```
+- Finding the cube root with *bisection search* method
+- Half interval each iteration - new guess is halfway in between
+```
+cube = 27
+epsilon = 0.01
+num_guesses = 0
+low = 0
+high = cube
+guess = (high + low) / 2.0
+while abs(guess**3 - cube) >= epsilon:
+    if guess**3 < cube :
+        low = guess
+    else:
+        high = guess
+    guess = (high + low)/2.0
+    num_guesses += 1
+print("Number of guesses = " + num_guesses)
+```
+- Search space: 1st guess (N/2), 2nd guess (N/4), kth guess (N/2**k)
+- Guess converges on the order of log2 N steps
+- Bisection search works when the value of a function varies monotonically with input
+- Above code only works for positive cubes > 1
