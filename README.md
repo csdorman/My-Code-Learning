@@ -1,5 +1,8 @@
 # My-Code-Learning
 
+## June 22
+Been working on the MIT Problem Set 1C for the past few days, and I think I finally had a major breakthrough. The big problem didn't seem to be the code I was writing (shock!), but in the indentation that I had done. Whoops!
+
 ## June 15
 Finished problem set 1b today surprisingly quickly. Felt good!
 
