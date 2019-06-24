@@ -173,7 +173,7 @@ for n in range(5):
 ```
 **```for``` loop**
 ```
-for <variable> in range(<some_num>):
+for <variable> in range(<some_num_or_var>):
     <expression>
 ```
 The ```range()``` parameter can take extra arguments
@@ -287,3 +287,67 @@ print("Number of guesses = " + num_guesses)
 - Guess converges on the order of log2 N steps
 - Bisection search works when the value of a function varies monotonically with input
 - Above code only works for positive cubes > 1
+
+ ## Lecture 4 Decomposition, Abstraction, and Functions
+
+ **Abstraction**
+ - You don't need to know *how* something works in order to know how to work it.
+ In programming:
+ - A piece of code is similar to a black box:
+    - Cannot see details
+    - Do not want/need to see details
+- Abstraction is achieved with *function specifications* or *docstrings* (input, output, what it does)
+
+ **Decomposition**
+ - Different devices work together to achieve an end goal
+ In programming:
+- Divide code into modules that are:
+    - Self-contained
+    - Used to break up code
+    - Intended to be reuseable
+    - Help keep code organized and coherent.
+- You can achieve this with *functions* and *classes*
+
+### Functions
+- Reusable chunks of code
+- Functionare are not run until they are *called* or *invoked*
+- Characteristics: Name, parameters (0 or more), docstring (recommended), body, returns something.
+```
+def is_even( i ):
+    """
+    Input: i, a positive int
+    Returns True if i is even, otherwise False
+    """
+    print("inside is_even")
+    return i%2 == 0
+
+is_even(3)
+```
+
+
+**Variable Scope**
+- A **formal parameter** gets bound to the value of an **actual parameter** when the a function is called.
+- A new scope/frame/environment is created when you enter a function
+- **scope** is mapping of names to objects.
+- Inside a function, you *can access* a variable defined outside, but you *cannot modify* a variable defined outside.
+- You can modify global variables, but it is not recommended.
+
+For Scope questions, check out pythontutor.com
+
+If there is *not* a return statement at the end of a function, Python will return the value ```none``` - a special type that represents the absence of a value.
+
+Arguments in functions can take on any type, *including other functions*
+```
+def func_a():
+    print 'inside func_a'
+def func_b(y):
+    print 'inside func_b'
+    return y
+def func_c(z):
+    print 'inside func_c'
+    return z()
+print func_a()
+print 5 + func_b(2)
+print func_c(func_a)
+```
+
