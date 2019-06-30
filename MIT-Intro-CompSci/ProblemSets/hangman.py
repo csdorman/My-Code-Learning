@@ -60,18 +60,11 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    secret_word = choose_word(wordlist) # set chosen word to secret word
-    secret_word_letters = list(secret_word) # split secret word into individual letters
-    letters_guessed = []  # keep track of letters that are guessed
-    # match letters that are guessed to letters in secret word
-    # have all the letters been matched? then word has been guessed
-    # return True when all letters guessed
- 
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-
-    pass
-
-
+    for char in range(secret_word):
+      if char in letters_guessed:
+        return True
+      else:
+        return False
 
 def get_guessed_word(secret_word, letters_guessed):
     '''
@@ -80,10 +73,14 @@ def get_guessed_word(secret_word, letters_guessed):
     returns: string, comprised of letters, underscores (_), and spaces that represents
       which letters in secret_word have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
-
-
+    word_display_list = []
+    for char in secret_word:   # iterate through each character in secret word (list)
+      if char in letters_guessed:
+        word_display_list.append(char)     # if it's been guessed, append the character
+      else:
+        word_display_list.append("_ ")     # if it has not been guessed, print "_ "
+      word_display = str(word_display_list)
+    return word_display
 
 def get_available_letters(letters_guessed):
     '''
@@ -91,8 +88,9 @@ def get_available_letters(letters_guessed):
     returns: string (of letters), comprised of letters that represents which letters have not
       yet been guessed.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+
+    unguessed_letters = string.ascii_lowercase - letters_guessed
+    return(unguessed_letters)
     
     
 
@@ -121,6 +119,35 @@ def hangman(secret_word):
     
     Follows the other limitations detailed in the problem write-up.
     '''
+    guesses_left = 6
+    letter_warnings = 4
+    letters_guessed = []
+    print("Welcome to Hangman. You have been sentenced to die. Unless you correctly guess the word I am thinking of.")
+    print("You have " + guesses_left + "guesses left. Use them wisely")
+    print("The mystery word has " + len(secret_word) + " letters.")
+    print("Letters to choose: " + get_available_letters(letters_guessed))
+    print("-----")
+    
+   
+    new_guess = input("What letter do you choose?")
+    for char in new_guess:
+      if char.isalpha:
+        new_guess = new_guess.lower
+      else:
+        print("That isn't a letter.")
+        print("You've got " + letter_warnings + "warnings left. Don't push me.")
+        letter_warnings -= 1
+        if letter_warnings <= 0:
+          guesses_left -= 1
+    letters_guessed.append(new_guess)
+    is_word_guessed(secret_word, letters_guessed)
+    get_guessed_word(secret_word, letters_guessed)
+    # NOT SURE IF RIGHT> STEP THROUGH MENTALLY NEXT TIME
+
+
+
+
+
     # FILL IN YOUR CODE HERE AND DELETE "pass"
     pass
 
@@ -217,5 +244,5 @@ if __name__ == "__main__":
     # To test part 3 re-comment out the above lines and 
     # uncomment the following two lines. 
     
-    #secret_word = choose_word(wordlist)
+    #secret_word = total #choose_word(wordlist)
     #hangman_with_hints(secret_word)
