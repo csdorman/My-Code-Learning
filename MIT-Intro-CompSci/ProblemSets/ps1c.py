@@ -50,24 +50,4 @@ while savings_amount <= (down_payment - epsilon):
         print("Your starting salary is " + str(annual_salary))
         print("Your best savings rate is " + str((guess * .01)))
         print("It took me " + str(steps) + " tries to find this answer")
-    
-
-#Got loop working (kind of), but it's not outputting the correct answer yet.
-       
-
-#pseudo code - looking to find the best savings rate to save down payment (within 100) in 36 months
-#for loop run 36 times
-#pick savings percentage
-#every month, add monthly savings percentage to savings account
-#check if savings amount within down payment epsilon
-#if it takes fewer than 36 months, shrink savings percent
-#if it takes more than 36 months, increase savings percent
-
-        
-
-# find the BEST SAVINGS RATE to get to DOWN PAYMENT amount
-# Savings should be within 100 of down payment amount (not exact amount)
-
-
-
-
+           

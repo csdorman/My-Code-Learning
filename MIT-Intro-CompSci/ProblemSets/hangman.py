@@ -155,7 +155,7 @@ def hangman(secret_word):
     get_guessed_word(secret_word, letters_guessed)
     get_available_letters(letters_guessed)
 
-    #LETTERS TO CHOOSE NOT PRINTING IN ABC ORDER
+
     #AFTER INITIAL LETTER GUESS, program ends.
 
 
