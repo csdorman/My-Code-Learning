@@ -94,7 +94,47 @@ def get_available_letters(letters_guessed):
     unguessed_letters.sort()
     return(print("Available letters: " + ''.join(unguessed_letters)))
     
-    
+def guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed):
+    '''
+    new_guess: the newest letter that is guessed
+    guesses_left: the number of incorrect guesses remaining
+    letter_warnings: the number of non-letter warnings left
+    letters_guessed: all of the letters that have been guessed so far
+
+    Takes the new guess and makes sure that it is a letter.
+    '''
+    for char in new_guess:
+      if char.isalpha():
+        new_guess = new_guess.lower()
+        print("You guessed " + str(new_guess))
+      else:
+        print("That isn't a letter.")
+        print("You've got " + str(letter_warnings) + " warnings left. Don't push me.")
+        letter_warnings -= 1
+        if letter_warnings <= 0:
+          guesses_left -= 1
+    letters_guessed.append(new_guess)
+    return new_guess, guesses_left, letter_warnings, letters_guessed
+
+def guess_result(new_guess, guesses_left):
+    '''
+    Takes the newest guess and sees if it is in the secret_word
+
+    new_guess: the newest letter that is guessed
+    guesses_left: the number of incorrect guesses remaining
+    letter_warnings: the number of non-letter warnings left
+    letters_guessed: all of the letters that have been guessed so far
+
+    returns
+    '''
+    if new_guess in secret_word: # Is the new guess in the word?
+      print("There is a " + str(new_guess) + " in the word!")
+    else:
+      print("Sorry. There is not a " + str(new_guess) + " in the word.")
+      guesses_left -= 1
+
+    return new_guess, guesses_left
+
 
 def hangman(secret_word):
     '''
@@ -129,33 +169,24 @@ def hangman(secret_word):
     print("The mystery word has " + str(len(secret_word)) + " letters.")
     print("Letters to choose: " + string.ascii_lowercase)
     print("-----")
-    
-   
-    new_guess = input("What letter do you choose?")
-    for char in new_guess:
-      if char.isalpha():
-        new_guess = new_guess.lower()
-        print("You guessed " + str(new_guess))
-      else:
-        print("That isn't a letter.")
-        print("You've got " + str(letter_warnings) + " warnings left. Don't push me.")
-        letter_warnings -= 1
-        if letter_warnings <= 0:
-          guesses_left -= 1
-    letters_guessed.append(new_guess)
+
+    # First turn logic
     print(secret_word) # print secret word to see if code is correct
+    new_guess = input("What letter do you choose?")
+    guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed)
+    guess_result(new_guess, guesses_left) # See if guess is correct
+    is_word_guessed(secret_word, letters_guessed) # See if word is guessed
+    
+    while is_word_guessed == False: #Successive turns
+      print("You now have " + str(guesses_left) + " guesses left.")
+      get_available_letters(letters_guessed) # Show letters not guessed
+      new_guess = input("What letter do you choose?")
+      guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed)
+      guess_result(new_guess, guesses_left) # See if guess is correct
+      is_word_guessed(secret_word, letters_guessed) # See if word is guessed
+      get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
 
-    if new_guess in secret_word:
-      print("There is a " + str(new_guess) + " in the word!")
-    else:
-      print("Sorry. There is not a " + str(new_guess) + " in the word.")
-    guesses_left -= 1
-    is_word_guessed(secret_word, letters_guessed)
-    print("You now have " + str(guesses_left) + " guesses left.")
-    get_guessed_word(secret_word, letters_guessed)
-    get_available_letters(letters_guessed)
-
-
+    
     #AFTER INITIAL LETTER GUESS, program ends.
 
 
@@ -258,5 +289,5 @@ if __name__ == "__main__":
     # To test part 3 re-comment out the above lines and 
     # uncomment the following two lines. 
     
-    #secret_word = total #choose_word(wordlist)
+    #secret_word = choose_word(wordlist)
     #hangman_with_hints(secret_word)
