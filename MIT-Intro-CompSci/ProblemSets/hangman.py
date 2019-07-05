@@ -79,8 +79,8 @@ def get_guessed_word(secret_word, letters_guessed):
         word_display_list.append(char)     # if it's been guessed, append the character
       else:
         word_display_list.append("_ ")     # if it has not been guessed, print "_ "
-      word_display = str(word_display_list)
-    return word_display
+    word_display = str(word_display_list)
+    print(word_display) 
 
 def get_available_letters(letters_guessed):
     '''
@@ -106,7 +106,7 @@ def guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed):
     for char in new_guess:
       if char.isalpha():
         new_guess = new_guess.lower()
-        print("You guessed " + str(new_guess))
+        print("Your guess: " + str(new_guess))
       else:
         print("That isn't a letter.")
         print("You've got " + str(letter_warnings) + " warnings left. Don't push me.")
@@ -128,9 +128,9 @@ def guess_result(new_guess, guesses_left):
     returns
     '''
     if new_guess in secret_word: # Is the new guess in the word?
-      print("There is a " + str(new_guess) + " in the word!")
+      print("There is a letter " + str(new_guess) + " in the word!")
     else:
-      print("Sorry. There is not a " + str(new_guess) + " in the word.")
+      print("Sorry. There is no letter " + str(new_guess) + " in the word.")
       guesses_left -= 1
 
     return new_guess, guesses_left
@@ -176,8 +176,9 @@ def hangman(secret_word):
     guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed)
     guess_result(new_guess, guesses_left) # See if guess is correct
     is_word_guessed(secret_word, letters_guessed) # See if word is guessed
+    get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
     
-    while is_word_guessed == False: #Successive turns
+    while is_word_guessed != True: #Successive turns
       print("You now have " + str(guesses_left) + " guesses left.")
       get_available_letters(letters_guessed) # Show letters not guessed
       new_guess = input("What letter do you choose?")
@@ -186,11 +187,9 @@ def hangman(secret_word):
       is_word_guessed(secret_word, letters_guessed) # See if word is guessed
       get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
 
-    
-    #AFTER INITIAL LETTER GUESS, program ends.
-
-
-
+    # get_guessed_word returning LIST not string
+    # need to better format returns to visually distinguish turns
+    # turn counter not counting down when wrong guess is made
 
 
     # FILL IN YOUR CODE HERE AND DELETE "pass"
