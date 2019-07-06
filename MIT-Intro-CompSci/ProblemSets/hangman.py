@@ -79,8 +79,7 @@ def get_guessed_word(secret_word, letters_guessed):
         word_display_list.append(char)     # if it's been guessed, append the character
       else:
         word_display_list.append("_ ")     # if it has not been guessed, print "_ "
-    word_display = str(word_display_list)
-    print(word_display) 
+    print(''.join(word_display_list))
 
 def get_available_letters(letters_guessed):
     '''
@@ -131,7 +130,8 @@ def guess_result(new_guess, guesses_left):
       print("There is a letter " + str(new_guess) + " in the word!")
     else:
       print("Sorry. There is no letter " + str(new_guess) + " in the word.")
-      guesses_left -= 1
+      guesses_left = int(guesses_left) - 1
+      print("From guess_result else " + str(guesses_left))
 
     return new_guess, guesses_left
 
@@ -161,8 +161,9 @@ def hangman(secret_word):
     
     Follows the other limitations detailed in the problem write-up.
     '''
+
     guesses_left = 6
-    letter_warnings = 4
+    letter_warnings = 3
     letters_guessed = []
     print("Welcome to Hangman. You have been sentenced to die. Unless you correctly guess the word I am thinking of.")
     print("You have " + str(guesses_left) + " guesses left. Use them wisely")
@@ -170,26 +171,37 @@ def hangman(secret_word):
     print("Letters to choose: " + string.ascii_lowercase)
     print("-----")
 
+    turn = 1
     # First turn logic
     print(secret_word) # print secret word to see if code is correct
+    print("==================")
+    print("Turn Number: " + str(turn))
     new_guess = input("What letter do you choose?")
     guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed)
     guess_result(new_guess, guesses_left) # See if guess is correct
     is_word_guessed(secret_word, letters_guessed) # See if word is guessed
     get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
+    turn = int(turn) + 1
     
     while is_word_guessed != True: #Successive turns
+      print("==================")
+      print("Turn Number: " + str(turn))
       print("You now have " + str(guesses_left) + " guesses left.")
       get_available_letters(letters_guessed) # Show letters not guessed
       new_guess = input("What letter do you choose?")
       guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed)
       guess_result(new_guess, guesses_left) # See if guess is correct
+      print("From hangman turn " + str(guesses_left))
       is_word_guessed(secret_word, letters_guessed) # See if word is guessed
       get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
+      turn = int(turn) + 1
 
-    # get_guessed_word returning LIST not string
-    # need to better format returns to visually distinguish turns
+
+
     # turn counter not counting down when wrong guess is made
+    # Counter is getting reset (never drops below 5) in returning from guess_result func
+
+    # is_word_guessed needs to take into account turn counter (once fixed)
 
 
     # FILL IN YOUR CODE HERE AND DELETE "pass"
