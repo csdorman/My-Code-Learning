@@ -130,10 +130,10 @@ def guess_result(new_guess, guesses_left):
       print("There is a letter " + str(new_guess) + " in the word!")
     else:
       print("Sorry. There is no letter " + str(new_guess) + " in the word.")
-      guesses_left = int(guesses_left) - 1
-      print("From guess_result else " + str(guesses_left))
+      guesses_left -= 1
+      print("From guess_result else: " + str(guesses_left))
 
-    return new_guess, guesses_left
+    return  guesses_left #new_guess
 
 
 def hangman(secret_word):
@@ -178,7 +178,7 @@ def hangman(secret_word):
     print("Turn Number: " + str(turn))
     new_guess = input("What letter do you choose?")
     guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed)
-    guess_result(new_guess, guesses_left) # See if guess is correct
+    guesses_left = guess_result(new_guess, guesses_left) # See if guess is correct
     is_word_guessed(secret_word, letters_guessed) # See if word is guessed
     get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
     turn = int(turn) + 1
@@ -190,7 +190,7 @@ def hangman(secret_word):
       get_available_letters(letters_guessed) # Show letters not guessed
       new_guess = input("What letter do you choose?")
       guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed)
-      guess_result(new_guess, guesses_left) # See if guess is correct
+      guesses_left = guess_result(new_guess, guesses_left) # See if guess is correct
       print("From hangman turn " + str(guesses_left))
       is_word_guessed(secret_word, letters_guessed) # See if word is guessed
       get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
@@ -198,11 +198,13 @@ def hangman(secret_word):
 
 
 
-    # turn counter not counting down when wrong guess is made
-    # Counter is getting reset (never drops below 5) in returning from guess_result func
 
+
+    # Turn counter not decrementing below 1 
+    
     # is_word_guessed needs to take into account turn counter (once fixed)
 
+    # Game doesn't end even when correct word is guessed
 
     # FILL IN YOUR CODE HERE AND DELETE "pass"
     pass
