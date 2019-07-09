@@ -158,7 +158,7 @@ def hangman(secret_word):
 
     * After each guess, you should display to the user the 
       partially guessed word so far.
-    
+    i
     Follows the other limitations detailed in the problem write-up.
     '''
 
@@ -183,7 +183,7 @@ def hangman(secret_word):
     get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
     turn = int(turn) + 1
     
-    while is_word_guessed != True: #Successive turns
+    while is_word_guessed != True & guesses_left >= 0 : #Successive turns
       print("==================")
       print("Turn Number: " + str(turn))
       print("You now have " + str(guesses_left) + " guesses left.")
@@ -191,20 +191,19 @@ def hangman(secret_word):
       new_guess = input("What letter do you choose?")
       guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed)
       guesses_left = guess_result(new_guess, guesses_left) # See if guess is correct
-      print("From hangman turn " + str(guesses_left))
-      is_word_guessed(secret_word, letters_guessed) # See if word is guessed
       get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
+      is_word_guessed(secret_word, letters_guessed) # See if word is guessed
+      print(letters_guessed) # show guessed letters
+      print(secret_word)
       turn = int(turn) + 1
-
-
-
-
-
-    # Turn counter not decrementing below 1 
+      if guesses_left <= 0:
+        print("Sorry, you ran out of turns. It's been nice knowing you.")
+        break
+      if is_word_guessed == True:
+        print("Congratulations! You won! Unfortunately, you are still doomed.")
     
-    # is_word_guessed needs to take into account turn counter (once fixed)
 
-    # Game doesn't end even when correct word is guessed
+    # Game doesn't end even when correct word is guessed - fix is_word_guessed
 
     # FILL IN YOUR CODE HERE AND DELETE "pass"
     pass
