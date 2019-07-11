@@ -61,10 +61,16 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     for char in secret_word:
+      word_guessed = "unk"
       if char in letters_guessed:
-        return True
-      else:
-        return False
+        word_guessed = "yes"
+      elif char not in letters_guessed:
+        word_guessed = "no"
+        break
+    if word_guessed == "yes":
+      return True
+    else:
+      return False
 
 def get_guessed_word(secret_word, letters_guessed):
     '''
@@ -131,7 +137,6 @@ def guess_result(new_guess, guesses_left):
     else:
       print("Sorry. There is no letter " + str(new_guess) + " in the word.")
       guesses_left -= 1
-      print("From guess_result else: " + str(guesses_left))
 
     return  guesses_left #new_guess
 
@@ -173,7 +178,7 @@ def hangman(secret_word):
 
     turn = 1
     # First turn logic
-    print(secret_word) # print secret word to see if code is correct
+    #print(secret_word) # print secret word to see if code is correct
     print("==================")
     print("Turn Number: " + str(turn))
     new_guess = input("What letter do you choose?")
@@ -183,27 +188,35 @@ def hangman(secret_word):
     get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
     turn = int(turn) + 1
     
-    while is_word_guessed != True & guesses_left >= 0 : #Successive turns
+    while is_word_guessed != True or guesses_left > 0 : #Successive turns
       print("==================")
       print("Turn Number: " + str(turn))
       print("You now have " + str(guesses_left) + " guesses left.")
       get_available_letters(letters_guessed) # Show letters not guessed
+      get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
       new_guess = input("What letter do you choose?")
       guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed)
       guesses_left = guess_result(new_guess, guesses_left) # See if guess is correct
-      get_guessed_word(secret_word, letters_guessed) #Display letters + spaces
-      is_word_guessed(secret_word, letters_guessed) # See if word is guessed
-      print(letters_guessed) # show guessed letters
-      print(secret_word)
-      turn = int(turn) + 1
+      word_guessed = is_word_guessed(secret_word, letters_guessed) # See if word is guessed
       if guesses_left <= 0:
-        print("Sorry, you ran out of turns. It's been nice knowing you.")
+        print("==================")
+        print("Uh-oh. You ran out of turns. It's been nice knowing you.")
+        print("The word you were looking for was", secret_word)
+        print("==================")
         break
-      if is_word_guessed == True:
-        print("Congratulations! You won! Unfortunately, you are still doomed.")
-    
-
-    # Game doesn't end even when correct word is guessed - fix is_word_guessed
+      if word_guessed == True:
+        print("==================")
+        print("Congratulations! You won!")
+        for char in secret_word:
+          player_score = 0
+          player_score = guesses_left * len(secret_word)
+        print("Your score is", player_score)
+        print("==================")
+        break
+      turn = int(turn) + 1
+      print(letters_guessed) # show guessed letters
+      
+  
 
     # FILL IN YOUR CODE HERE AND DELETE "pass"
     pass
