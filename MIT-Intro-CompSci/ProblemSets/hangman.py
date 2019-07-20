@@ -112,6 +112,8 @@ def guess_validation(new_guess, guesses_left, letter_warnings, letters_guessed, 
     for char in new_guess:
       if char == "*":
         #INITIALIZES show_possible_matches
+        my_word = "".join(my_word)
+        my_word = my_word.replace(" ", "")
         show_possible_matches(my_word)
         continue
       elif char.isalpha(): # Check if character is a letter
@@ -141,7 +143,7 @@ def guess_result(new_guess, guesses_left):
     if new_guess in secret_word: # Is the new guess in the word?
       print("There is a letter " + str(new_guess) + " in the word!")
     elif new_guess == "*":
-      print("Here are some possible words!")
+      pass
     else:
       print("Sorry. There is no letter " + str(new_guess) + " in the word.")
       guesses_left -= 1
@@ -236,11 +238,10 @@ def match_with_gaps(my_word, other_word):
         _ , and my_word and other_word are of the same length;
         False otherwise: 
     '''
-
     if len(my_word) == len(other_word): # Check if lengths match
       for char in range(len(my_word)): 
-        if my_word[char] == "_": # Check for the "_" symbol 
-          continue
+        if my_word[char] != "_": # Check for the "_" symbol 
+          pass
         if my_word[char] == other_word[char]: # Do the letters match
           letters_match = True
         else: 
@@ -250,7 +251,7 @@ def match_with_gaps(my_word, other_word):
       letters_match = False
     return letters_match
 
-
+# NOT RETURING MATCHING WORDDS (FOR SOME REASON). Only returning empty list from show_poss_matches
 
 def show_possible_matches(my_word):
     '''
@@ -260,15 +261,13 @@ def show_possible_matches(my_word):
              at which that letter occurs in the secret word are revealed.
              Therefore, the hidden letter(_ ) cannot be one of the letters in the word
              that has already been revealed.
-
     '''
-
     possible_words = [] #initial empty list of matches
+    print("Here are some possible matches")
     for word in wordlist: #iterate through wordlist var
       other_word = word #set other_word to the current word
-      match_with_gaps(my_word, other_word) #pass words match_with_gaps func
-      if match_with_gaps == True: #if other_word could be a match
-        possible_words.append #add to list
+      if match_with_gaps(my_word, other_word) == True: #pass words to match_with_gaps func
+        possible_words.append(other_word) #add to list
       else:
         continue
     print(" ".join(possible_words)) #print out list of possible matches
@@ -354,7 +353,12 @@ def hangman_with_hints(secret_word):
       turn = int(turn) + 1
 
 
-# ToDo: Need to strip out spaces after "_" in my_word var
+# ToDo: Need to strip out spaces after "_" in my_word var -> DOESNT APPEAR TO BE AN ISSUE
+# match_with_gaps IS ITERATING through the list
+# match_with_gaps IS MATCHING THE LENGTH CORRECTLY
+# match_with_gaps IS NOT MATCHING LETTERS CORRECTLY
+# fixed skipping over the "_" symbol
+# continue fixing match_with_gaps
 
 
 # When you've completed your hangman_with_hint function, comment the two similar
