@@ -240,16 +240,19 @@ def match_with_gaps(my_word, other_word):
     '''
     if len(my_word) == len(other_word): # Check if lengths match
       for char in range(len(my_word)): 
-        if my_word[char] != "_": # Check for the "_" symbol 
-          pass
+        if my_word[char] == "_": # Check for the "_" symbol 
+          continue
         if my_word[char] == other_word[char]: # Do the letters match
           letters_match = True
         else: 
           letters_match = False
           break
+      return letters_match
     else:
-      letters_match = False
-    return letters_match
+      length_match = False
+      if length_match == False:
+        letters_match = False
+        return letters_match
 
 # NOT RETURING MATCHING WORDDS (FOR SOME REASON). Only returning empty list from show_poss_matches
 
@@ -263,7 +266,7 @@ def show_possible_matches(my_word):
              that has already been revealed.
     '''
     possible_words = [] #initial empty list of matches
-    print("Here are some possible matches")
+    print("Here are some possible matches:")
     for word in wordlist: #iterate through wordlist var
       other_word = word #set other_word to the current word
       if match_with_gaps(my_word, other_word) == True: #pass words to match_with_gaps func
