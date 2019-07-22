@@ -351,3 +351,27 @@ print 5 + func_b(2)
 print func_c(func_a)
 ```
 
+## Lecture 5 Tuples, Lists, Aliasing, Mutability, & Cloning
+
+**Tuples** - sequence of *some type of data*. It can contain *elements* that are data types (```string```, ```int```, ```float```). You can mix element types in a single tuple
+
+Tuples are immutable (like strings). Tuples are represented by parenthesis ().
+
+Tuples can be used to swap variables:
+```(x, y) = (y, x)```
+Instead of (without tuples):
+```
+temp = x
+x = y
+y = temp
+```
+
+Used to ```return``` multiple values from a single function. 
+Elements in a tuple can be tuples themselves.
+You can iterate over tuples.
+
+**Lists** are similar to tuples. They can contain elements of any type.
+
+Denoted with [].
+Unlike tuples, **lists are mutable**.
+RESUME AT 17:10: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-5-tuples-lists-aliasing-mutability-and-cloning/
