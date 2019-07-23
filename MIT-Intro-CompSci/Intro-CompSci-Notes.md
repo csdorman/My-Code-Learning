@@ -374,4 +374,30 @@ You can iterate over tuples.
 
 Denoted with [].
 Unlike tuples, **lists are mutable**.
-RESUME AT 17:10: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-5-tuples-lists-aliasing-mutability-and-cloning/
+
+When iterating through list, it's more pythonic to iterate through list elements directly. This means that:
+```
+L = [some list of things]
+for i in L:
+    total += 1
+print (total)
+```
+is MORE Pythonic (and more readable) than:
+```
+for i in range(len(L)):
+    total += :[i]
+print (total)
+```
+**List Operations**
+- You can *add* elements with ```L-name.append(element)```. This mutates the list - same list but with additional element.
+- You can *combine* lists with the ```+``` operator. This creates a new list with the combined elemnts of both.
+- You can *extend* a list with ```L-name.extend(some-list)```. This mutates the list.
+- You can *delete specific elements* from a list with ```del(L-name[index])```. This mutates the list.
+- You can *remove elements at the end of a list* with ```L-name.pop()```. This returns the removed elements. This mutates the list.
+- You can *remove a specific element* with ```L-name.remove(element)```. If the element occurs multiple times, this only removes the first instance. If element is not in list, it gives an error. This mutates the list.
+- You can *convert a string to list* with ```list(s)```. Returns a list with every character from ```s``` as an element in ```L-name```.
+- You can *split a string on a character* with ```s.split()```. Will split on spaces if no parameter given.
+- You can turn a *list of characters into a string* with ```''join(L-name)```. Give character in quotes to add between every element.
+
+RESUME AT 28:45: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-5-tuples-lists-aliasing-mutability-and-cloning/
+
