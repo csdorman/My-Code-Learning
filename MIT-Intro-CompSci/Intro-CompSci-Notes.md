@@ -398,6 +398,11 @@ print (total)
 - You can *convert a string to list* with ```list(s)```. Returns a list with every character from ```s``` as an element in ```L-name```.
 - You can *split a string on a character* with ```s.split()```. Will split on spaces if no parameter given.
 - You can turn a *list of characters into a string* with ```''join(L-name)```. Give character in quotes to add between every element.
+- Two ways to sort lists: ```sort``` and ```sorted```. ```L-name.sort()``` will mutate the list. ```sorted(L-name)``` will *not*.
+- Many other ways to change lists found in python docs.
 
-RESUME AT 28:45: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-5-tuples-lists-aliasing-mutability-and-cloning/
+**Lists are mutable**. Since you can refer to the same list with different variables (aliases), you can also ```clone``` a list. 
+- **Cloning** a list creates a new list under a different variable, but *will not* copy alterations made to the original list. You can copy by ```list = cloned_list[:]```
+
+LOOK AT LECTURE SLIDES (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-slides-code/MIT6_0001F16_Lec5.pdf) AND PUT SOME IN PYTHON TUTOR TO FOLLOW ALONG WITH LIST MUTABILITY. Didn't understand during lecture.
 
