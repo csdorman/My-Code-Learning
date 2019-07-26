@@ -403,6 +403,8 @@ print (total)
 
 **Lists are mutable**. Since you can refer to the same list with different variables (aliases), you can also ```clone``` a list. 
 - **Cloning** a list creates a new list under a different variable, but *will not* copy alterations made to the original list. You can copy by ```list = cloned_list[:]```
+- To **sort** a list, you can call ```sort()```. This mutates the list, but *returns nothing*. Or you can call ```sorted()``` which does *not* mutate the list, but you must assign the result to a variable to use it.
+- When *iterating over a list* (with a ```for``` loop, for example), **do not** modify the list directly in the loop. Python uses an internal counter to keep track of current element index in loop, and when length of list changes the counter *does not update*. This can skip elements.
 
-LOOK AT LECTURE SLIDES (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-slides-code/MIT6_0001F16_Lec5.pdf) AND PUT SOME IN PYTHON TUTOR TO FOLLOW ALONG WITH LIST MUTABILITY. Didn't understand during lecture.
+START Reading through PS 3 details and maybe start initial coding.
 
