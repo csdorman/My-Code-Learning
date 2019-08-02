@@ -179,8 +179,20 @@ def update_hand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-
-    pass  # TO DO... Remove this line when you implement this function
+    #create copy of hand to keep original
+    new_hand = dict(hand)
+    word = word.lower()
+    #convert word string to dictionary
+    get_frequency_dict(word)
+    #iterate through letters in word
+    for char in word:
+        #if word letter in hand dictionary
+        if char in new_hand:
+            #remove one instance from new_hand
+            new_hand[char] -= 1
+        else:
+            continue
+    return new_hand
 
 #
 # Problem #3: Test word validity
