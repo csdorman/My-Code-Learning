@@ -149,6 +149,8 @@ def deal_hand(n):
     num_vowels = int(math.ceil(n / 3))
 
     for i in range(num_vowels):
+        #NEED TO MODIFY CONSTANT AT TOP
+        #ADD IN ONE WILDCARD TO REPLACE ONE VOWEL
         x = random.choice(VOWELS)
         hand[x] = hand.get(x, 0) + 1
     
@@ -208,6 +210,32 @@ def is_valid_word(word, hand, word_list):
     word_list: list of lowercase strings
     returns: boolean
     """
+    word = word.lower()  # convert word into lower case
+    valid_letter = None
+    valid_word = None
+    
+    if word in word_list:
+        valid_word = True #check if word in word_list
+        word = get_frequency_dict(word) #convert word into a dict
+        for char in word:
+            if char in hand.keys() and hand[char] >= word[char]: #is char in hand and are their enough
+                valid_letter = True
+            else:
+                valid_letter = False
+                break
+    else: 
+        valid_word = False
+
+    if valid_letter == True and valid_word == True:
+        #print("Valid letter is", valid_letter, "and valid word is", valid_word)
+        return True
+    else:
+        #print("Valid letter is", valid_letter, "and valid word is", valid_word)
+        return False
+
+        
+    # check if word is in word_list
+    #return true or false depending
 
     pass  # TO DO... Remove this line when you implement this function
 
