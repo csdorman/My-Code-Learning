@@ -149,8 +149,9 @@ def deal_hand(n):
     num_vowels = int(math.ceil(n / 3))
 
     for i in range(num_vowels):
-        #NEED TO MODIFY CONSTANT AT TOP
-        #ADD IN ONE WILDCARD TO REPLACE ONE VOWEL
+        #NEED TO MODIFY CONSTANT AT TOP?
+        if "*" not in hand: #check for a wildcard
+            hand["*"] = 1 #add one if not present
         x = random.choice(VOWELS)
         hand[x] = hand.get(x, 0) + 1
     
@@ -214,8 +215,13 @@ def is_valid_word(word, hand, word_list):
     valid_letter = None
     valid_word = None
     
-    if word in word_list:
-        valid_word = True #check if word in word_list
+    if "*" in word: #Is wildcard support needed?
+        for letter in VOWELS: #Yes
+            wildcard_word_valid = word.replace("*", letter)
+            if wildcard_word_valid in word_list:
+                valid_word = True
+            else:
+                continue
         word = get_frequency_dict(word) #convert word into a dict
         for char in word:
             if char in hand.keys() and hand[char] >= word[char]: #is char in hand and are their enough
@@ -223,8 +229,19 @@ def is_valid_word(word, hand, word_list):
             else:
                 valid_letter = False
                 break
-    else: 
-        valid_word = False
+    
+    else: #No
+        if word in word_list: 
+            valid_word = True #check if word in word_list
+            word = get_frequency_dict(word) #convert word into a dict
+            for char in word:
+                if char in hand.keys() and hand[char] >= word[char]: #is char in hand and are their enough
+                    valid_letter = True
+                else:
+                    valid_letter = False
+                    break
+        else: 
+            valid_word = False
 
     if valid_letter == True and valid_word == True:
         #print("Valid letter is", valid_letter, "and valid word is", valid_word)
