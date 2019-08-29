@@ -421,7 +421,30 @@ def play_game(word_list):
 
     word_list: list of lowercase strings
     """
-    
+    #set game score and hand score to zero
+    #set game counter to zero
+    #set sub_letter and replay_hand to False
+    #ask player for desired number of hands
+    #deal_hand function
+    #display_hand function
+    #check if sub_letter has been used
+    #if not used yet, ask if user would like to sub letter
+    # LOOP BEGIN
+    #ask user to play a word
+    #is_valid_word function to validate word and get score
+    #display word score to user
+    #add word score to hand score and game score
+    #display new hand
+    #ask user to play a word
+    # LOOP END - when "!!" entered or letters run out
+    #increment game counter +1
+    #display hand score to user
+    #add hand score to game score
+    #reset game score to 0
+    #check if game counter = number of games
+    #if more games needed, continue
+    #if games done, print out game score
+
     print("play_game not implemented.") # TO DO... Remove this line when you implement this function
     
 
