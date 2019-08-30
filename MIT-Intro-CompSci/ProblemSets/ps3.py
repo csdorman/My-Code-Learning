@@ -250,12 +250,6 @@ def is_valid_word(word, hand, word_list):
         #print("Valid letter is", valid_letter, "and valid word is", valid_word)
         return False
 
-        
-    # check if word is in word_list
-    #return true or false depending
-
-    pass  # TO DO... Remove this line when you implement this function
-
 #
 # Problem #5: Playing a hand
 #
@@ -421,20 +415,48 @@ def play_game(word_list):
 
     word_list: list of lowercase strings
     """
-    #set game score and hand score to zero
+    #set game score, word score, and hand score to zero
+    game_score = 0
+    hand_score = 0
+    word_score = 0
     #set game counter to zero
+    game_counter = 0
     #set sub_letter and replay_hand to False
+    sub_letter = False
+    replay_hand = False
     #ask player for desired number of hands
+    game_number = input("How many hands would you like to play?")
     #deal_hand function
+    hand = deal_hand(HAND_SIZE)
     #display_hand function
+    display_hand(hand)
     #check if sub_letter has been used
     #if not used yet, ask if user would like to sub letter
-    # LOOP BEGIN
+    if sub_letter == False:
+        sub_letter_conf = input("Would you like to substite a letter, yes/no?")
+        if sub_letter_conf.lower() == yes:
+            letter = input("What letter would you like to replace?")
+            hand = substitute_hand(hand, letter)
+        else:
+            pass
+    else:
+        pass
+    # GAME LOOP BEGIN
     #ask user to play a word
-    #is_valid_word function to validate word and get score
-    #display word score to user
-    #add word score to hand score and game score
+    word = input("Please enter a word, or '!!' to indicate you are done.")
+    #is_valid_word function to validate word
+    is_valid_word(word, hand, word_list)
+    #if is_valid_word returns True, send to get_word_score
+    if is_valid_word == True:
+        word_score = get_word_score(word, calculate_handlen)
+        #add word score to hand score
+        hand_score += word_score
+        #display word score to user
+        print(word, "earned", word_score, "points. Total", hand_score, "points.")
+    #update hand to remove the used letters
+    hand = update_hand(hand, word)
     #display new hand
+    display_hand(hand)
     #ask user to play a word
     # LOOP END - when "!!" entered or letters run out
     #increment game counter +1
