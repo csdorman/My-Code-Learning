@@ -105,8 +105,7 @@ def get_word_score(word, n):
         return letter_sum * length_sum
     else:
         return letter_sum * 1
-
-        #WORD SCORING NOT WORKING!!!!!!!
+    
 #
 # Make sure you understand how this function works and what it does!
 #
@@ -123,7 +122,7 @@ def display_hand(hand):
     hand: dictionary (string -> int)
     """
     
-    for letter in hand.keys():
+    for letter in hand:
         for j in range(hand[letter]):
              print(letter, end=' ')      # print all on the same line
     print()                              # print an empty line
@@ -225,7 +224,7 @@ def is_valid_word(word, hand, word_list):
                 continue
         word = get_frequency_dict(word) #convert word into a dict
         for char in word:
-            if char in hand.keys() and hand[char] >= word[char]: #is char in hand and are their enough
+            if char in hand and hand[char] >= word[char]: #is char in hand and are their enough
                 valid_letter = True
             else:
                 valid_letter = False
@@ -235,8 +234,9 @@ def is_valid_word(word, hand, word_list):
         if word in word_list: 
             valid_word = True #check if word in word_list
             word = get_frequency_dict(word) #convert word into a dict
+            hand = get_frequency_dict(hand)
             for char in word:
-                if char in hand.keys() and hand[char] >= word[char]: #is char in hand and are their enough
+                if char in hand and hand[char] >= word[char]: #is char in hand and are their enough
                     valid_letter = True
                 else:
                     valid_letter = False
@@ -297,41 +297,62 @@ def play_hand(hand, word_list):
       
     """
     
-    # Keep track of the total score
-    total_score = 0
-    
-    print_hand = []
-    # As long as there are still letters left in the hand
-    if calculate_handlen > 0:
-        # Display the hand
-        for char, num in hand.items():
-            while num > 0:
-                print_hand.append(char)
-                num -= 1
-        " ".join(print_hand)
-        print(print_hand)
+    # Keep track of the word and hand score
+    word_score = 0
+    hand_score = 0
+    current_hand_size = calculate_handlen(hand)
+    #if hand is empty, end 
+    if current_hand_size > 0:
+        display_hand(hand)
+        #ask user to input word
+        word = input("Enter word, or '!!' to finish this hand: ")
+        #check to see if '!!' is entered
+        while word != "!!":
+            #update hand to remove used letters
+            hand = update_hand
+            #use is_valid_word to test word
+            is_valid_word(word, hand, word_list)
+            if is_valid_word == True:
+                #get and display word score
+                word_score = get_word_score(word,  HAND_SIZE)
+                print("Good job. That word earned", word_score, "points.")
+                hand_score += word_score
+                word = input("Enter word, or '!!' to finish this hand: ")
+            if is_valid_word == False:
+                print("That is not a valid word. Try again")
+                word = input("Enter word, or '!!' to finish this hand: ")
+            #show updated hand
+            display_hand(hand)
+    else:
+        pass
+    print("Good game. Your total score for this hand was", hand_score)
+        
 
+    
+
+#OLD VERSON
     # Ask user for input
-    user_word = input("Enter word, or \"!!\" to indidcate that you are finished") 
-    # If the input is two exclamation points
-    if user_word == "!!":  # End the game (break out of the loop)
-        print("Game over!") #Game over, return score
-        print("Total score:", total_score, "points")
-        return(total_score) # Return the total score as result of function
-    else: # Otherwise (the input is not two exclamation points):
-         # If the word is valid:
-        is_valid_word(user_word, hand, word_list)
-        if is_valid_word == True:
-            word_score = 0
-            for char in user_word:
-                word_score += get(char)
-            total_score = word_score + total_score
-                            # Tell the user how many points the word earned, and the total score
-            print(user_word, "earned", word_score, "points. Total:", total_score)
-        else:  # Otherwise (the word is not valid):
-            print("That is not a valid word. Please choose another word") # Reject invalid word (print a message)
-        # update the user's hand by removing the letters of their inputted word
-        hand = update_hand(hand, user_word)
+    # word = input("Enter word, or '!!' to indicate that you are finished: ") 
+    # # If the input is two exclamation points
+    #  word == "!!":  # End the game (break out of the loop)
+    #     print("Game over!") #Game over, return score
+    #     print("Total score:", total_score, "points")
+    #     return(total_score) # Return the total score as result of function
+    # else: # Otherwise (the input is not two exclamation points):
+    #      # If the word is valid:
+    #     is_valid_word(word, hand, word_list)
+    #     print("Is_valid_word function returns", is_valid_word)
+    #     if is_valid_word == True:
+    #         word_score = 0
+    #         for char in word:
+    #             word_score += dict.get(char)
+    #         total_score = word_score + total_score
+    #                         # Tell the user how many points the word earned, and the total score
+    #         print(word, "earned", word_score, "points. Total:", total_score)
+    #     else:  # Otherwise (the word is not valid):
+    #         print("That is not a valid word. Please choose another word") # Reject invalid word (print a message)
+    #     # update the user's hand by removing the letters of their inputted word
+    #     hand = update_hand(hand, word)
 #
 # Problem #6: Playing a game
 # 
@@ -442,25 +463,24 @@ def play_game(word_list):
             pass
     else:
         pass
-    #ask user to play a word
-    word = input("Please enter a word, or '!!' to indicate you are done.")
     #GAME LOOP BEGINS
-    while word != "!!":
-        #is_valid_word function to validate word
-        is_valid_word(word, hand, word_list)
-        #if is_valid_word returns True, send to get_word_score
-        if is_valid_word == True:
-            word_score = get_word_score(word, calculate_handlen)
-            #add word score to hand score
-            hand_score += word_score
-            #display word score to user
-            print(word, "earned", word_score, "points. Total", hand_score, "points.")
-        #update hand to remove the used letters
-        hand = update_hand(hand, word)
-        #display new hand
-        display_hand(hand)
-        #ask user to play a word
-        word = input("Please entera word, or '!!' to indicate you are done.")
+    play_hand(hand, word_list)
+    # while word != "!!":
+    #     #is_valid_word function to validate word
+    #     is_valid_word(word, hand, word_list)
+    #     #if is_valid_word returns True, send to get_word_score
+    #     if is_valid_word == True:
+    #         word_score = get_word_score(word, calculate_handlen)
+    #         #add word score to hand score
+    #         hand_score += word_score
+    #         #display word score to user
+    #         print(word, "earned", word_score, "points. Total", hand_score, "points.")
+    #     #update hand to remove the used letters
+    #     hand = update_hand(hand, word)
+    #     #display new hand
+    #     display_hand(hand)
+    #     #ask user to play a word
+    #     word = input("Please entera word, or '!!' to indicate you are done.")
     # LOOP END - when "!!" entered or letters run out
     #increment game counter +1
     game_counter += 1
