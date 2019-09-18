@@ -91,7 +91,30 @@ def get_word_score(word, n):
     n: int >= 0
     returns: int >= 0
     """
-    
+    #convert word string into lower case
+    word = word.lower()
+    #get word length
+    wordlen = len(word)
+    #create empty variables
+    word_score = 0
+    letter_sum = 0
+    second_component = 0
+    #iterate through word letters 
+    for char in word:
+        # for char in SCRABBLE_LETTER_VALUES:
+        #     letter_sum +=
+        #add values of letters together
+        letter_sum += SCRABBLE_LETTER_VALUES.get(char)
+    #find value of second component
+    second_component = 7 * wordlen - 3 *(n - wordlen)
+    #take greater of second component value or 1, multiple two comp together
+    if second_component > 0:
+        word_score = letter_sum * second_component
+    else: 
+        word_score = letter_sum * 1
+    #return product
+    return word_score
+
     pass  # TO DO... Remove this line when you implement this function
 
 #
