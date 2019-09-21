@@ -113,8 +113,6 @@ def get_word_score(word, n):
     #return product
     return word_score
 
-    pass  # TO DO... Remove this line when you implement this function
-
 #
 # Make sure you understand how this function works and what it does!
 #
@@ -188,6 +186,19 @@ def update_hand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
+    # copy hand into new_hand variable (dict.copy)
+    new_hand = hand.copy()
+    #convert word into lowercase
+    word = word.lower()
+    # convert word into dict
+    word = get_frequency_dict(word)
+    # iterate through letters in word
+    for char in word:
+        # get value of each letter - save to variable
+        # iterate through letters in new_hand
+            # get value of each letter
+        # subtract word value from new_hand value
+    #return new_hand
 
     pass  # TO DO... Remove this line when you implement this function
 
