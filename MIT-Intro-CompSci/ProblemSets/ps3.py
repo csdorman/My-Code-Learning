@@ -101,10 +101,8 @@ def get_word_score(word, n):
     second_component = 0
     #iterate through word letters 
     for char in word:
-        # for char in SCRABBLE_LETTER_VALUES:
-        #     letter_sum +=
         #add values of letters together
-        letter_sum += SCRABBLE_LETTER_VALUES.get(char)
+        letter_sum += SCRABBLE_LETTER_VALUES.get(char, 0)
     #find value of second component
     second_component = 7 * wordlen - 3 *(n - wordlen)
     #take greater of second component value or 1, multiple two comp together
