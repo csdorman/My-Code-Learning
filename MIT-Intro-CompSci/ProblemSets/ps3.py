@@ -193,12 +193,21 @@ def update_hand(hand, word):
     # convert word into dict
     word = get_frequency_dict(word)
     # iterate through letters in word
-    for char in word:
+    for word_char in word:
+        char_value = 0
+        hand_value = 0
         # get value of each letter - save to variable
+        char_value = word.get(word_char, 0)
+        print(word_char, type(char_value))
         # iterate through letters in new_hand
+        for hand_char in hand:
             # get value of each letter
+            hand_value = hand.get(hand_char, 0)
+            print(type(hand_value))
         # subtract word value from new_hand value
+        new_hand[word_char] = hand_char - word_char
     #return new_hand
+    return new_hand
 
     pass  # TO DO... Remove this line when you implement this function
 
