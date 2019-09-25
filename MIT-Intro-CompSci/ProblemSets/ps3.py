@@ -198,18 +198,19 @@ def update_hand(hand, word):
         hand_value = 0
         # get value of each letter - save to variable
         char_value = word.get(word_char, 0)
-        print(word_char, type(char_value))
         # iterate through letters in new_hand
-        for hand_char in hand:
+        if word_char in hand:
             # get value of each letter
-            hand_value = hand.get(hand_char, 0)
-            print(type(hand_value))
+            hand_value = hand.get(word_char, 0)
+        else: 
+            continue
         # subtract word value from new_hand value
-        new_hand[word_char] = hand_char - word_char
+        new_hand[word_char] = hand_value - char_value
+        #if letter value falls below 0, set it to 0
+        if new_hand[word_char] < 0:
+            new_hand[word_char] = 0
     #return new_hand
     return new_hand
-
-    pass  # TO DO... Remove this line when you implement this function
 
 #
 # Problem #3: Test word validity
