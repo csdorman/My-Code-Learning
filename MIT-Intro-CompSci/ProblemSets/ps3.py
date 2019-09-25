@@ -226,8 +226,31 @@ def is_valid_word(word, hand, word_list):
     word_list: list of lowercase strings
     returns: boolean
     """
-
-    pass  # TO DO... Remove this line when you implement this function
+    #convert word to lowercase
+    word = word.lower()
+    #make sure word (as a string) is in word_list
+    if word in word_list:
+        #convert word string to word dict
+        word = get_frequency_dict(word)
+        #iterate through word letters
+        for word_char in word:
+            word_value = 0
+            hand_value = 0
+            #get value of each char
+            word_value = word.get(word_char, 0)
+            #make sure each letter in word is in hand
+            if word_char in hand:
+                #get value of hand letter
+                hand_value = hand.get(word_char, 0)
+            else:
+                break
+            #compare hand value with word value
+            if hand_value >= word_value:
+                return True
+            else:
+                return False
+    else:
+        return False
 
 #
 # Problem #5: Playing a hand
