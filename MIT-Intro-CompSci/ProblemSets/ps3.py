@@ -231,6 +231,12 @@ def is_valid_word(word, hand, word_list):
     """
     #convert word to lowercase
     word = word.lower()
+    #check for presence of wildcard
+    if '*' in word:
+        #find position of *
+        #slice string at * position
+        #iterate through VOWELS string, replacing * with vowel
+        #run through rest of the function for word checK
     #make sure word (as a string) is in word_list
     if word in word_list:
         #convert word string to word dict
