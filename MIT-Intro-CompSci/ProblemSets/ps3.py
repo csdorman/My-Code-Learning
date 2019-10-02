@@ -233,11 +233,15 @@ def is_valid_word(word, hand, word_list):
     word = word.lower()
     #check for presence of wildcard
     if '*' in word:
-        #find position of *
-        #slice string at * position
-        #iterate through VOWELS string, replacing * with vowel
-        #run through rest of the function for word checK
-    #make sure word (as a string) is in word_list
+        #iterate through vowels
+        for char in VOWELS:
+            #replace '*' with vowels from list
+            wildcard_guess = word.replace('*', char)
+            #check if wildcard_guess in word_list
+            if wildcard_guess in word_list:
+                #if yes, convert to dict (for scoring)
+                word = get_frequency_dict(word)
+                #need to make sure the char vowel is NOT added to the score
     if word in word_list:
         #convert word string to word dict
         word = get_frequency_dict(word)
