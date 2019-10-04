@@ -194,13 +194,13 @@ def update_hand(hand, word):
     #convert word into lowercase
     word = word.lower()
     # convert word into dict
-    word = get_frequency_dict(word)
+    word_dict = get_frequency_dict(word)
     # iterate through letters in word
-    for word_char in word:
+    for word_char in word_dict:
         char_value = 0
         hand_value = 0
         # get value of each letter - save to variable
-        char_value = word.get(word_char, 0)
+        char_value = word_dict.get(word_char, 0)
         # iterate through letters in new_hand
         if word_char in hand:
             # get value of each letter
@@ -241,7 +241,6 @@ def is_valid_word(word, hand, word_list):
             if wildcard_guess in word_list:
                 #if yes, convert to dict (for scoring)
                 word = get_frequency_dict(word)
-                #need to make sure the char vowel is NOT added to the score
     if word in word_list:
         #convert word string to word dict
         word = get_frequency_dict(word)
