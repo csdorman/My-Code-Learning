@@ -231,38 +231,65 @@ def is_valid_word(word, hand, word_list):
     """
     #convert word to lowercase
     word = word.lower()
+    print(word) #FOR TESTING
     #check for presence of wildcard
-    if '*' in word:
-        #iterate through vowels
-        for char in VOWELS:
-            #replace '*' with vowels from list
-            wildcard_guess = word.replace('*', char)
-            #check if wildcard_guess in word_list
-            if wildcard_guess in word_list:
-                #if yes, convert to dict (for scoring)
-                word = get_frequency_dict(word)
-    if word in word_list:
-        #convert word string to word dict
-        word = get_frequency_dict(word)
-        #iterate through word letters
-        for word_char in word:
-            word_value = 0
-            hand_value = 0
-            #get value of each char
-            word_value = word.get(word_char, 0)
-            #make sure each letter in word is in hand
-            if word_char in hand:
-                #get value of hand letter
-                hand_value = hand.get(word_char, 0)
-            else:
-                break
-            #compare hand value with word value
-            if hand_value >= word_value:
+    if "*" in word:
+        wildcard_integration(word, word_list)
+        if wildcard_integration == True:
+            are_char_in_hand(word, hand)
+            if are_char_in_hand == True:
                 return True
-            else:
-                return False
+    if word in word_list:
+        are_char_in_hand(word, hand)
+        if are_char_in_hand == True:
+            return True
     else:
         return False
+
+def wildcard_integration(word, word_list):
+    """
+    If wildcard found in guess, iterate through possible vowel substitutions to see if the word is is_valid_word
+
+    word = string
+    word_list = list of lowercase strings
+    return = boolean
+    """
+    is_wildcard_guess_valid = False
+    for char in VOWELS:
+        wildcard_guess = word.replace("*", char)
+        if wildcard_guess in word_list:
+            is_wildcard_guess_valid = True
+            break
+        else:
+            is_wildcard_guess_valid = False
+    return is_wildcard_guess_valid
+
+def are_char_in_hand(word, hand):
+    """
+    Checking to make sure all the letters in the played word are in the player's hand
+
+    word = string
+    hand = dict
+    return = boolean
+    """
+    word_value = 0
+    hand_value = 0
+    valid_play = False
+    #convert word string into dict
+    word = get_frequency_dict(word)
+    #iterate through word char
+    for word_char in word:
+        #get value of each char in played word
+        word_value = word.get(word_char, 0)
+        #get value of same char in hand
+        hand_value = hand.get(word_char, 0)
+        #make sure hand contains enough char to play the word
+        if hand_value >= word_value:
+            valid_play = True
+        else: 
+            valid_play = False
+            break
+    return valid_play
 
 #
 # Problem #5: Playing a hand
