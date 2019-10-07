@@ -231,17 +231,16 @@ def is_valid_word(word, hand, word_list):
     """
     #convert word to lowercase
     word = word.lower()
-    print(word) #FOR TESTING
     #check for presence of wildcard
     if "*" in word:
-        wildcard_integration(word, word_list)
-        if wildcard_integration == True:
-            are_char_in_hand(word, hand)
-            if are_char_in_hand == True:
+        wildcard_valid = wildcard_integration(word, word_list)
+        if wildcard_valid == True:
+            char_in_hand = are_char_in_hand(word, hand)
+            if char_in_hand == True:
                 return True
     if word in word_list:
-        are_char_in_hand(word, hand)
-        if are_char_in_hand == True:
+        char_in_hand = are_char_in_hand(word, hand)
+        if char_in_hand == True:
             return True
     else:
         return False
@@ -254,7 +253,7 @@ def wildcard_integration(word, word_list):
     word_list = list of lowercase strings
     return = boolean
     """
-    is_wildcard_guess_valid = False
+    is_wildcard_guess_valid = None
     for char in VOWELS:
         wildcard_guess = word.replace("*", char)
         if wildcard_guess in word_list:
@@ -272,17 +271,17 @@ def are_char_in_hand(word, hand):
     hand = dict
     return = boolean
     """
-    word_value = 0
-    hand_value = 0
-    valid_play = False
+    valid_play = None
     #convert word string into dict
     word = get_frequency_dict(word)
     #iterate through word char
-    for word_char in word:
+    for char in word:
+        word_value = 0
+        hand_value = 0
         #get value of each char in played word
-        word_value = word.get(word_char, 0)
+        word_value = word.get(char, 0)
         #get value of same char in hand
-        hand_value = hand.get(word_char, 0)
+        hand_value = hand.get(char, 0)
         #make sure hand contains enough char to play the word
         if hand_value >= word_value:
             valid_play = True
