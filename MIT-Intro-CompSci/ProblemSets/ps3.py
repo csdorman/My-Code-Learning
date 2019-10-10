@@ -364,7 +364,6 @@ def play_hand(hand, word_list):
                 print("Your word is not valid. Please enter another word or enter '!!' to quit.")
             # update the user's hand by removing the letters of their inputted word
             hand = update_hand(hand, word)
-            
     # Game is over (user entered '!!' or ran out of letters),
     print("Game over!")
     # so tell user the total score
@@ -405,7 +404,24 @@ def substitute_hand(hand, letter):
     letter: string
     returns: dictionary (string -> int)
     """
-    
+    # ask user if they want to sub a letter
+    want_letter_sub = input("Would you like to substitute a letter? (yes/no)")
+    # if yes
+    if want_letter_sub == "yes":
+        # ask which letter to substitute
+        letter_to_sub = input("Which letter would you like to substitute?")
+        # if letter is in their hand
+        if letter_to_sub in hand:
+            # pick a new letter from VOWELS and CONSONANTS at random
+            full_alphabet = list append VOWELS and CONSONANTS
+            # while letter is in hand
+                # draw a new letter
+            # save updated hand to new variable
+            # return new hand
+        # if letter is not in their hand
+            # do nothing
+    # if no
+        #end
     pass  # TO DO... Remove this line when you implement this function
        
     
