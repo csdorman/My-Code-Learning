@@ -411,18 +411,25 @@ def substitute_hand(hand, letter):
         # ask which letter to substitute
         letter_to_sub = input("Which letter would you like to substitute?")
         # if letter is in their hand
-        if letter_to_sub in hand:
+        #create updated_hand variable for modified hand
+        updated_hand = hand
+        if letter_to_sub in updated_hand:
             # pick a new letter from VOWELS and CONSONANTS at random
-            full_alphabet = list append VOWELS and CONSONANTS
+            full_alphabet = VOWELS + CONSONANTS
+            new_letter = random.choice(full_alphabet)
             # while letter is in hand
+            while new_letter in updated_hand:
                 # draw a new letter
-            # save updated hand to new variable
+                new_letter = random.choice(full_alphabet)
+            updated_hand[new_letter] = updated_hand.pop(letter_to_sub)
             # return new hand
+            return updated_hand
         # if letter is not in their hand
-            # do nothing
+        else:
+            pass
     # if no
-        #end
-    pass  # TO DO... Remove this line when you implement this function
+    else:
+        pass
        
     
 def play_game(word_list):
