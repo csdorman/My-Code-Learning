@@ -462,7 +462,40 @@ def play_game(word_list):
 
     word_list: list of lowercase strings
     """
-    
+    # ask user for total number of hands
+    number_of_hands = int(input("How many hands would you like to play?"))
+    # set game score to 0
+    game_score = 0
+    # set letter substitution to 1
+    letter_sub_left = 1
+    # set replay hand to 1
+    hand_replay_left = 1
+    # while hands < total hands
+    while number_of_hands < 0:
+        # set hand score to 0
+        hand_score = 0
+        hand = deal_hand(HAND_SIZE)
+        # does player have a letter substitution left 
+        if letter_sub_left < 0:
+                # ask if player wants to substitute letter
+                want_sub = input("Do you want to substitute a letter?")
+                if want_sub == "yes":
+                    letter = input("Which letter would you like to substitute?")
+                    substitute_hand(hand, letter)
+                # set letter sub to 0
+        # play hand
+        # once hand is over
+        # does player have a game replay left?
+            # if yes:
+                # do you want to replay the hand?
+                #if yes:
+                    # set letter substitute to no
+                    # replay hand 
+                    # set replay hand to 0
+        # save hand score to hand score
+        # add hand score to game score
+        # add 1 to hand counter
+    # return game score to player
     print("play_game not implemented.") # TO DO... Remove this line when you implement this function
     
 
