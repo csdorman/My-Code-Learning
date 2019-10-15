@@ -367,7 +367,7 @@ def play_hand(hand, word_list):
     # Game is over (user entered '!!' or ran out of letters),
     print("Game over!")
     # so tell user the total score
-    print("Good game. Your final score was", total_score)
+    print("Good game. Your score for the hand was", total_score)
 
     # Return the total score as result of function
     return total_score
@@ -404,30 +404,22 @@ def substitute_hand(hand, letter):
     letter: string
     returns: dictionary (string -> int)
     """
-    # ask user if they want to sub a letter
-    want_letter_sub = input("Would you like to substitute a letter? (yes/no)")
-    # if yes
-    if want_letter_sub == "yes":
-        # ask which letter to substitute
-        letter_to_sub = input("Which letter would you like to substitute?")
-        # if letter is in their hand
-        #create updated_hand variable for modified hand
-        updated_hand = hand
-        if letter_to_sub in updated_hand:
-            # pick a new letter from VOWELS and CONSONANTS at random
-            full_alphabet = VOWELS + CONSONANTS
+    letter_to_sub = letter
+    # if letter is in their hand
+    #create updated_hand variable for modified hand
+    updated_hand = hand
+    if letter_to_sub in updated_hand:
+        # pick a new letter from VOWELS and CONSONANTS at random
+        full_alphabet = VOWELS + CONSONANTS
+        new_letter = random.choice(full_alphabet)
+        # while letter is in hand
+        while new_letter in updated_hand:
+            # draw a new letter
             new_letter = random.choice(full_alphabet)
-            # while letter is in hand
-            while new_letter in updated_hand:
-                # draw a new letter
-                new_letter = random.choice(full_alphabet)
-            updated_hand[new_letter] = updated_hand.pop(letter_to_sub)
-            # return new hand
-            return updated_hand
-        # if letter is not in their hand
-        else:
-            pass
-    # if no
+        updated_hand[new_letter] = updated_hand.pop(letter_to_sub)
+        # return new hand
+        return updated_hand
+    # if letter is not in their hand
     else:
         pass
        
@@ -471,34 +463,45 @@ def play_game(word_list):
     # set replay hand to 1
     hand_replay_left = 1
     # while hands < total hands
-    while number_of_hands < 0:
+    while number_of_hands > 0:
         # set hand score to 0
         hand_score = 0
         hand = deal_hand(HAND_SIZE)
         # does player have a letter substitution left 
-        if letter_sub_left < 0:
+        if letter_sub_left > 0:
                 # ask if player wants to substitute letter
-                want_sub = input("Do you want to substitute a letter?")
+                want_sub = input("Do you want to substitute a letter? yes/no ")
                 if want_sub == "yes":
+                    # get letter to substitute
                     letter = input("Which letter would you like to substitute?")
-                    substitute_hand(hand, letter)
-                # set letter sub to 0
+                    # pass to substitute_hand function
+                    hand = substitute_hand(hand, letter)
+                    # set letter sub to 0
+                    letter_sub_left -= 1
         # play hand
+        hand_score = play_hand(hand, word_list)
         # once hand is over
-        # does player have a game replay left?
+        # does player have a game replay left
+        if hand_replay_left > 0:
+            # do you want to replay the hand?
+            want_replay = input("Do you want to replay the hand? yes/no ")
             # if yes:
-                # do you want to replay the hand?
-                #if yes:
-                    # set letter substitute to no
-                    # replay hand 
-                    # set replay hand to 0
-        # save hand score to hand score
+            if want_replay == "yes":
+                # replay hand
+                hand_score_replay = play_hand(hand, word_list) 
+                # set replay hand to 0
+                hand_replay_left -= 1
+                # compare hand_score to hand_score_replay. Take greater of the two
+                if hand_score_replay > hand_score:
+                    hand_score = hand_score_replay
+                else:
+                    hand_score = hand_score
         # add hand score to game score
-        # add 1 to hand counter
+        game_score += hand_score
+        # minus 1 to hand counter
+        number_of_hands -= 1
     # return game score to player
-    print("play_game not implemented.") # TO DO... Remove this line when you implement this function
-    
-
+    print("All hands done! Your total score was", game_score)
 
 #
 # Build data structures used for entire session and play game
