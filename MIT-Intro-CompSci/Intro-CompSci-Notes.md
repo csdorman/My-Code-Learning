@@ -408,3 +408,78 @@ print (total)
 
 START Reading through PS 3 details and maybe start initial coding.
 
+## Lecture 6
+
+### Recursion
+**Recursion is the process of repeating ideas in a self-similar way**
+
+- *Algorithmically*: a way to design solutions to problems by divide-and-conquer (or decrease-and-conquer). *Reduce a problem to a simpler version of the same problem*
+- *Semantically*: a programming technique where a function calls itself. Must have 1 (or more) base cases that are easy to solve, and must solve the smae problem on some other input, with the goal of simplifying the larger problem input.
+
+**Mathematical Induction** 
+
+## Lesson 7: Testing, Debugging, Exceptions and Assertions
+
+**3 types of testing**
+- Unit testing:
+- - Validate each piece of a program
+- - Testing each function separately
+
+- Regression testing:
+- - Add tests for bugs as you find them
+- - Catch reintroduced errors that were previously fixed
+
+- Integration testing:
+- - Does the overall program work?
+- - We tend to rush to this too soon
+
+## Testing approaches
+- **Intuition** about natural boundries or partitions to the problem. *Works especially for numbers*.  
+- **Random testing** works for some problems, although you need more random tests to ensure the program is working correctly.
+- **Black box testing** assumes you have the specs for the code, and you derive tests from those doc specs. You *don't* need to see the actual code to derive tests.
+- **Glass box testing** uses the code itself, and tries to find possible test cases looking at that. This kind of testing is called *path-complete* when it covers every potential path through the code. 
+- **Glass box guidelines**:
+- - *Branches*: must exercises all parts of a conditional
+- - *For loops*: must cover: loop not entered, body of loop executed exactly 1 time, body of loop exercises more than 1 time.
+- - *While loops*: must cover similar to for loops. Catch all ways to exit loop.
+
+## Debugging Approaches
+- **Study** program code
+- - Don't ask *what* is wrong
+- - Ask *how* did I get the unexpected result
+
+- **Scientific method**
+- - Study available data
+- - Form hypothesis
+- - Repeatable experiments
+- - Pick simplest input to test with
+
+## Handling Exceptions
+- You can use a ```try``` block to catch potential ```exception``` errors (especially in user input).
+```
+try:
+    a = int(input("Tell me one number:"))
+    b = int(input("Tell me another number:"))
+    print(a/b)
+except:
+    print("Bug in user input")
+```
+- You can raise your own exceptions if user supplies bad data input
+
+## Assertions
+- Stop errors from propogating throughout program
+Use assertions to
+- Check types of arguments or values
+- Check that invariants on data structure are met
+- Check constraints on return values
+- Check for violations of constraints on procedure (no duplicates in a list).
+
+
+
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-7-testing-debugging-exceptions-and-assertions/
+
+
+
+
+
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
