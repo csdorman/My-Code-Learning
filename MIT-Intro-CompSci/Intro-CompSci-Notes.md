@@ -418,7 +418,7 @@ START Reading through PS 3 details and maybe start initial coding.
 
 **Mathematical Induction** 
 
-## Lesson 7: Testing, Debugging, Exceptions and Assertions
+# Lesson 7: Testing, Debugging, Exceptions and Assertions
 
 **3 types of testing**
 - Unit testing:
@@ -474,12 +474,49 @@ Use assertions to
 - Check constraints on return values
 - Check for violations of constraints on procedure (no duplicates in a list).
 
+# Lecture 8 - Oject Oriented Programming
+- Python supports many different kinds of data. (interger, string, floats, lists, dictionaries, functions).
+- **Everything in python is an *object***, and every object has 
+    - A type
+    - An *internal data representation* (primitive or composite)
+    - A set of procedures for *interaction*
+- With any object you can
+    - *Create* new objects of some type
+    - *Manipulate* objects
+    - *Destroy* objects (using ``del`` or just forget about them)
 
+## What are Objects?
+- Objects are *data abstraction* that captures:
+    - An *internal representation* through data attributes
+    - An *interface* for interacting with objects (either through methods (procedures/functions) or through definig behaviors).
 
-https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-7-testing-debugging-exceptions-and-assertions/
+### Advantages of OOP
+- *Bundle data into packages* with procedures that work on them with logical interfaces.
+- *Divide and conquer* development allows testing and implemntation of classes separately. This increased modularity and reduces complexity.
+- Classes make *reusing code* much easier.
+    - Each class has a *separate environment* (no function name collision)
 
+## Creating and Using Your Own Classes
+- There is a distinction between *creating* a class and *using* an instance of a class.
+- *Creating a class* involves:
+    - Defining the class name
+    - Defining the class attributes
+- *Using a class* involves:
+    - Creating new instances of objects
+    - Doing operations on those instances
 
+### Define Your Own Types
 
+Use the *class* keyword to define a new type:
+```
+class Coordinate(object):
+    # define attributes here
+```
+- Similar to ```def```, indent code to indicate which statements are part of the *class definition*.
+- The word ```object``` means that ```Coordinate``` is a Python object and *inherits all its attributes.
+    - ``Coordinate`` is a *subclass* of ``object``
+    - ``object`` is a *superclass* of ``Coordinate``
 
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-8-object-oriented-programming/
 
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
