@@ -508,14 +508,62 @@ Use assertions to
 ### Define Your Own Types
 
 Use the *class* keyword to define a new type:
+
 ```
 class Coordinate(object):
     # define attributes here
 ```
 - Similar to ```def```, indent code to indicate which statements are part of the *class definition*.
-- The word ```object``` means that ```Coordinate``` is a Python object and *inherits all its attributes.
+- The word ```object``` means that ```Coordinate``` is a Python object and *inherits all its attributes. ```Object``` is the *most basic type* in Python.
     - ``Coordinate`` is a *subclass* of ``object``
     - ``object`` is a *superclass* of ``Coordinate``
+
+*Attributes*
+- These are data and procedures that belong to the class.
+*Data Attributes*
+- Think of data as other objects that make up the class
+*Methods (Procedural Attributes)*
+- Think of methods as functions that *only work with this class*
+- This is *how to interact* with the object
+
+### How to create an instance of a class
+- You first have to define *how to create an instance of object*
+- Use a special method called ```__init__``` to initialize some data attributes
+```
+class Coordinate(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+```
+The ```self``` parameter in () refers to an instance of the class.
+First parameter after the __init__ is *always* (by convention) named self.  
+*Creating the first example*
+```
+c = Coordinate(3,4)
+origin = Coordinate(0,0)
+print(c.x) #prints out "3" (x value for c)
+print(origin.x) #prints out "0" (x value for origin)
+```
+- Data attributes of an instance are called *instance variables*
+- *Don't provide argument for ``self``*,Python does the automatically.
+
+### Adding Methods to a Class
+- Methods are procedural attributes - functions that work only with this class
+- The "." operator is used to access any attribute (data or method attribute)
+**Defining a Method**
+```
+class Coordinate(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def distance(self, other)
+        x_diff_sq = (self.x-other.x)**2
+        y_diff_sq = (self.y-other.y)**2
+        return (x_diff_sq + y_diff_sq)**0.5
+```
+Other than the ``self`` parameter and dot notation, methods behave just like functions.
+
+Resume Lecture 8 at 22:20
 
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-8-object-oriented-programming/
 
