@@ -557,13 +557,50 @@ class Coordinate(object):
         self.x = x
         self.y = y
     def distance(self, other)
-        x_diff_sq = (self.x-other.x)**2
-        y_diff_sq = (self.y-other.y)**2
+        x_diff_sq = (self.x - other.x)**2
+        y_diff_sq = (self.y - other.y)**2
         return (x_diff_sq + y_diff_sq)**0.5
 ```
-Other than the ``self`` parameter and dot notation, methods behave just like functions.
+- Other than the ``self`` parameter and dot notation, methods behave just like functions.
+- Use dot notation in def (self.x and other.x) to access data
 
-Resume Lecture 8 at 22:20
+**Using a Method**
+
+*Method definition*
+```
+def distance(self, other):
+    # code here
+```
+*Using the class the conventional way*
+```
+c = Coordinate (3,4)
+zero = Coordinate(0,0)
+print(c.distance(zero))
+```
+*Equivalent to:*
+```
+c = Coordinate(3,4)
+zero = Coordinate(0,0)
+print(Coordinate.distance(c, zero))
+```
+**Print Representation of an Object**
+By default using the following ```print``` statement to debug is unhelfpul when dealing with Classes:
+```
+>>> c = Coordinate(3,4)
+>>> print(c)
+<__main__.Coordinate object at 0x7fa918519488>
+```
+- This is *not helpful*
+- But you can define a ```__str__method``` for a class
+- Python calls the __str__ method when used with ```print``` on your class object.
+- **You choose** what it does! If we want to print out the coordinates inside of ```<>``` we can do this:
+```
+...Previous Coordinate class code...
+    def __str__(self):
+        return "<"+str(self.x)+","+str(self.y)+">"
+```
+
+Resume Lecture 8 at 32:20
 
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-8-object-oriented-programming/
 
