@@ -599,6 +599,21 @@ By default using the following ```print``` statement to debug is unhelfpul when 
     def __str__(self):
         return "<"+str(self.x)+","+str(self.y)+">"
 ```
+**Special Operators**
+- ```+, -, ==, <, >, len(), print```, and many others
+- These can be overidden like ```print```
+- Define them with double underscores (__) before & after:
+```
+__add__(self, other) -> self + other
+__sub__(self, other) -> self - other
+__eq__(self, other)  -> self == other
+__lt__(self, other)  -> self < other
+__len__(self)        -> len(self)
+__str__(self)        -> print(self)
+etc...
+```
+
+
 
 Resume Lecture 8 at 32:20
 
