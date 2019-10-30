@@ -22,12 +22,21 @@ def get_permutations(sequence):
     Note: depending on your implementation, you may return the permutations in
     a different order than what is listed here.
     '''
+    # if string list is 1, return single character
     if len(sequence) == 1:
-        sequence = list(sequence)
-        return sequence
-    else:
-        # convert string into list
-        # get number of characters
+        return [sequence]
+    # create empty list
+    perm_list = []
+    # slice list from 2nd character to end
+    for permutation in get_permutations(sequence[1:]):
+        # iterate through each character in string
+        for index in range(len(sequence)):
+            # assemble permutation list
+            perm_list.append()
+       
+        # add to end of string
+        # code examples here: https://stackoverflow.com/questions/13109274/python-recursion-permutations
+        # recursive
         # take index 1 (2nd char) of list, add +1 to index num (WHY 2nd char?)
         # 
         #
