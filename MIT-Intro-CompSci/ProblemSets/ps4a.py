@@ -32,26 +32,31 @@ def get_permutations(sequence):
         # iterate through each character in string
         for index in range(len(sequence)):
             # assemble permutation list
-            perm_list.append()
+            perm_list.append(permutation[:1] + sequence[0:1] + permutation[1:])
+        # pass list to next function call or return result
+        return perm_list
        
-        # add to end of string
-        # code examples here: https://stackoverflow.com/questions/13109274/python-recursion-permutations
-        # recursive
-        # take index 1 (2nd char) of list, add +1 to index num (WHY 2nd char?)
-        # 
-        #
-    pass #delete this line and replace with your code here
-
+        
 if __name__ == '__main__':
 #    #EXAMPLE
 #    example_input = 'abc'
 #    print('Input:', example_input)
 #    print('Expected Output:', ['abc', 'acb', 'bac', 'bca', 'cab', 'cba'])
 #    print('Actual Output:', get_permutations(example_input))
-    
-#    # Put three example test cases here (for your sanity, limit your inputs
-#    to be three characters or fewer as you will have n! permutations for a 
-#    sequence of length n)
 
-    pass #delete this line and replace with your code here
+# Test cases
+example_1 = "cat"
+print("Input:", example_1)
+print("Expected Output:", ['cat', 'act', 'atc', 'cta', 'tca', 'tac'])
+print("Actual Output:", get_permutations(example_1))
+
+example_2 = "tag"
+print("Input:", example_2)
+print("Expected Output:", ['tag', 'tga', 'atg', 'agt', 'gta', 'gat'])
+print("Actual Output:", get_permutations(example_2))
+
+example_3 = "bad"
+print("Input:", example_3)
+print("Expected Output:", ['bad', 'bda', 'abd', 'adb', 'dab', 'dba'])
+print("Actual Output:", get_permutations(example_3))
 
