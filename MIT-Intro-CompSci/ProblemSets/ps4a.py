@@ -32,9 +32,9 @@ def get_permutations(sequence):
         # iterate through each character in string
         for index in range(len(sequence)):
             # assemble permutation list
-            perm_list.append(permutation[:1] + sequence[0:1] + permutation[1:])
+            perm_list.append(permutation[:index] + sequence[0:1] + permutation[index:])
         # pass list to next function call or return result
-        return perm_list
+    return perm_list
        
         
 if __name__ == '__main__':
@@ -45,18 +45,18 @@ if __name__ == '__main__':
 #    print('Actual Output:', get_permutations(example_input))
 
 # Test cases
-example_1 = "cat"
-print("Input:", example_1)
-print("Expected Output:", ['cat', 'act', 'atc', 'cta', 'tca', 'tac'])
-print("Actual Output:", get_permutations(example_1))
+    example_1 = "cat"
+    print("Input:", example_1)
+    print("Expected Output:", ['cat', 'act', 'atc', 'cta', 'tca', 'tac'])
+    print("Actual Output:", get_permutations(example_1))
 
-example_2 = "tag"
-print("Input:", example_2)
-print("Expected Output:", ['tag', 'tga', 'atg', 'agt', 'gta', 'gat'])
-print("Actual Output:", get_permutations(example_2))
+    example_2 = "tag"
+    print("Input:", example_2)
+    print("Expected Output:", ['tag', 'tga', 'atg', 'agt', 'gta', 'gat'])
+    print("Actual Output:", get_permutations(example_2))
 
-example_3 = "bad"
-print("Input:", example_3)
-print("Expected Output:", ['bad', 'bda', 'abd', 'adb', 'dab', 'dba'])
-print("Actual Output:", get_permutations(example_3))
+    example_3 = "bad"
+    print("Input:", example_3)
+    print("Expected Output:", ['bad', 'bda', 'abd', 'adb', 'dab', 'dba'])
+    print("Actual Output:", get_permutations(example_3))
 
