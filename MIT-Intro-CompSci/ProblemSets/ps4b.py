@@ -107,9 +107,16 @@ class Message(object):
         '''
         # import string library functions and letter 
         import string
-       alphabet_list = string.ascii_lowercase + string.ascii_uppercase
+        alphabet_list = []
+        alphabet_list = string.ascii_lowercase + string.ascii_uppercase
         shift = input("What is your shift amount?")
-
+        if letter in alphabet_list:
+            #find index of current letter
+            letter_index = alphabet_list.index(letter)
+            #add shift to current letter index
+            letter = letter_index + letter[shift]
+            new_letter = alphabet_list(new_letter)
+        return new_letter
         pass #delete this line and replace with your code here
 
     def apply_shift(self, shift):
