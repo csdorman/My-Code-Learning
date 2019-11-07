@@ -80,7 +80,7 @@ class Message(object):
         
         Returns: self.message_text
         '''
-        print(get_message_text)
+        print(self.message_text)
 
     def get_valid_words(self):
         '''
@@ -89,7 +89,7 @@ class Message(object):
         
         Returns: a COPY of self.valid_words
         '''
-        self.get_valid_words = valid_words.copy()
+        self.get_valid_words = self.valid_words.copy()
 
     def build_shift_dict(self, shift):
         '''
