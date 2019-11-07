@@ -105,19 +105,30 @@ class Message(object):
         Returns: a dictionary mapping a letter (string) to 
                  another letter (string). 
         '''
-        # import string library functions and letter 
+        # import string library  
         import string
+        # create empty alphabet_list variable
         alphabet_list = []
+        # save lower and upper case to list
         alphabet_list = string.ascii_lowercase + string.ascii_uppercase
         shift = input("What is your shift amount?")
-        if letter in alphabet_list:
-            #find index of current letter
-            letter_index = alphabet_list.index(letter)
-            #add shift to current letter index
-            letter = letter_index + letter[shift]
-            new_letter = alphabet_list(new_letter)
-        return new_letter
-        pass #delete this line and replace with your code here
+        #create empty dictionary
+        shift_dict = {}
+        #for each letter in alphabet_list
+        for letter in alphabet_list:
+            #start at index 0 in alphabet_list
+            alpha_position = 0
+            #get the real letter
+            real_letter = alphabet_list[alpha_position] 
+            #find cipher letter position 
+            cipher_position = alpha_position - shift
+            if cipher_position < 0:
+                cipher_position = cipher_position + 52
+            if cipher_position > 52:
+                cipher_position = cipher_position - 52
+            cipher_letter = alpha_position[cipher_position]
+            shift_dict[real_letter] = cipher_letter
+        return shift_dict
 
     def apply_shift(self, shift):
         '''
