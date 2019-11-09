@@ -111,7 +111,6 @@ class Message(object):
         alphabet_list = []
         # save lower and upper case to list
         alphabet_list = string.ascii_lowercase + string.ascii_uppercase
-        shift = input("What is your shift amount?")
         #create empty dictionary
         shift_dict = {}
         #for each letter in alphabet_list
@@ -142,6 +141,18 @@ class Message(object):
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
         '''
+        #ask user for shift amount
+        shift = input("What is your shift amount?")
+        # convert message string into list
+        shifted_message = []
+        # for each character in the message list
+            # if character is a space or punctuation
+                # send directly to list
+            # else send to build_shift_dict
+                #add to empty shifted_message list
+        # convert shifted_message list into string
+            
+
         pass #delete this line and replace with your code here
 
 class PlaintextMessage(Message):
