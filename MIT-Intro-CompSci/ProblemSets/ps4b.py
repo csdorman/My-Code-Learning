@@ -70,8 +70,8 @@ class Message(object):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
-        self.message_text = message_text
-        self.valid_words = valid_words
+        self.message_text = text
+        self.valid_words = load_words('words.txt')
 
 
     def get_message_text(self):
@@ -90,6 +90,7 @@ class Message(object):
         Returns: a COPY of self.valid_words
         '''
         self.get_valid_words = self.valid_words.copy()
+        return self.get_valid_words
 
     def build_shift_dict(self, shift):
         '''
@@ -141,19 +142,22 @@ class Message(object):
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
         '''
-        #ask user for shift amount
-        shift = input("What is your shift amount?")
+        import string
+        alphabet_list = string.ascii_lowercase + string.ascii_uppercase
         # convert message string into list
         shifted_message = []
         # for each character in the message list
+        for char in message:
             # if character is a space or punctuation
-                # send directly to list
+            if char not in alphabet_list:
+                shifted_message.append(char)
             # else send to build_shift_dict
-                #add to empty shifted_message list
+            else:
+                char = build_shift_dict(char)
+                shifted_message.append(char)
         # convert shifted_message list into string
+        shifted_message_string = ''.join(shifted_message)
             
-
-        pass #delete this line and replace with your code here
 
 class PlaintextMessage(Message):
     def __init__(self, text, shift):
