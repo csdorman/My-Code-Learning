@@ -109,26 +109,26 @@ class Message(object):
         # import string library  
         import string
         # create empty alphabet_list variable
-        alphabet_list = []
+        self.alphabet_list = []
         # save lower and upper case to list
-        alphabet_list = string.ascii_lowercase + string.ascii_uppercase
+        self.alphabet_list = string.ascii_lowercase + string.ascii_uppercase
         #create empty dictionary
-        shift_dict = {}
+        self.shift_dict = {}
         #for each letter in alphabet_list
-        for letter in alphabet_list:
+        for letter in self.alphabet_list:
             #start at index 0 in alphabet_list
-            alpha_position = 0
+            self.alpha_position = 0
             #get the real letter
-            real_letter = alphabet_list[alpha_position] 
+            self.real_letter = self.alphabet_list[alpha_position] 
             #find cipher letter position 
-            cipher_position = alpha_position - shift
-            if cipher_position < 0:
-                cipher_position = cipher_position + 52
-            if cipher_position > 52:
-                cipher_position = cipher_position - 52
-            cipher_letter = alpha_position[cipher_position]
-            shift_dict[real_letter] = cipher_letter
-        return shift_dict
+            self.cipher_position = self.alpha_position - shift
+            if self.cipher_position < 0:
+                self.cipher_position = self.cipher_position + 52
+            if self.cipher_position > 52:
+                self.cipher_position = self.cipher_position - 52
+            self.cipher_letter = self.alpha_position[self.cipher_position]
+            self.shift_dict[real_letter] = self.cipher_letter
+        return self.shift_dict
 
     def apply_shift(self, shift):
         '''
@@ -143,20 +143,21 @@ class Message(object):
              down the alphabet by the input shift
         '''
         import string
-        alphabet_list = string.ascii_lowercase + string.ascii_uppercase
+        self.alphabet_list = string.ascii_lowercase + string.ascii_uppercase
         # convert message string into list
-        shifted_message = []
+        self.shifted_message = []
         # for each character in the message list
-        for char in message:
+        for char in self.message_text : 
             # if character is a space or punctuation
-            if char not in alphabet_list:
-                shifted_message.append(char)
+            if char not in self.alphabet_list:
+                self.shifted_message.append(char)
             # else send to build_shift_dict
             else:
-                char = build_shift_dict(char)
-                shifted_message.append(char)
+                char = self.build_shift_dict(char)
+                self.shifted_message.append(char)
         # convert shifted_message list into string
-        shifted_message_string = ''.join(shifted_message)
+        self.shifted_message_string = ''.join(self.shifted_message)
+        return self.shifted_message_string
             
 
 class PlaintextMessage(Message):
