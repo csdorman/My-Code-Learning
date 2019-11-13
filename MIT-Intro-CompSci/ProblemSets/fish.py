@@ -39,6 +39,8 @@ class Clownfish(Fish):
     def live_with_anemone(self):
         print("The clownfish named", self.first_name, "is living in peace with the sea anemone.")
 
+##RESUME WITH OVERRIDING PARENT METHODS: 
+# https://www.digitalocean.com/community/tutorials/understanding-class-inheritance-in-python-3
 # Begin code
 print("---====---")
 #create a Trout
