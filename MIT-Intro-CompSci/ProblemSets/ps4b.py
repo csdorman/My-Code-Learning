@@ -176,7 +176,8 @@ class PlaintextMessage(Message):
             self.message_text_encrypted (string, created using shift)
 
         '''
-        # Don't need message_text and valid_words since they are in Parent
+        # Don't need message_text since it is in Message class
+        self.valid_words = load_words('words.txt')
         self.shift = shift
         self.encryption_dict = Message.build_shift_dict(shift)
         self.message_text_encrypted = Message.apply_shift(shift)
@@ -219,7 +220,7 @@ class PlaintextMessage(Message):
         Returns: nothing
         '''
         self.change_shift = input("What is your shift amount?")
-        self.shift = self.change_shift
+        self.shift = self.change_shiftgq
 
 
 class CiphertextMessage(Message):
@@ -233,7 +234,7 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
-        pass #delete this line and replace with your code here
+        self.valid_words = load_words('words.txt')
 
     def decrypt_message(self):
         '''
