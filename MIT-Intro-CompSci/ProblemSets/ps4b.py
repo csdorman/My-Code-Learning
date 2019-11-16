@@ -80,7 +80,8 @@ class Message(object):
         
         Returns: self.message_text
         '''
-        print(self.message_text)
+        self.get_message_text = message_text
+        return self.get_message_text
 
     def get_valid_words(self):
         '''
@@ -89,7 +90,7 @@ class Message(object):
         
         Returns: a COPY of self.valid_words
         '''
-        self.get_valid_words = self.valid_words.copy()
+        self.get_valid_words = valid_words.copy()
         return self.get_valid_words
 
     def build_shift_dict(self, shift):
@@ -111,23 +112,20 @@ class Message(object):
         # create empty alphabet_list variable
         self.alphabet_list = []
         # save lower and upper case to list
-        self.alphabet_list = string.ascii_lowercase + string.ascii_uppercase
+        self.alphabet_list = string.ascii_lowercase
         #create empty dictionary
         self.shift_dict = {}
         #for each letter in alphabet_list
         for letter in self.alphabet_list:
-            #start at index 0 in alphabet_list
-            self.alpha_position = 0
-            #get the real letter
-            self.real_letter = self.alphabet_list[alpha_position] 
-            #find cipher letter position 
-            self.cipher_position = self.alpha_position - shift
-            if self.cipher_position < 0:
-                self.cipher_position = self.cipher_position + 52
-            if self.cipher_position > 52:
-                self.cipher_position = self.cipher_position - 52
-            self.cipher_letter = self.alpha_position[self.cipher_position]
-            self.shift_dict[real_letter] = self.cipher_letter
+            #save real letter to variable
+            self.real_letter = self.alphabet_list[letter]
+            #find cipher letter
+            if letter + shift > 26:
+                self.cipher_letter = self.alphabet_list[letter + (shift - 26)]
+            else:
+                self.cipher_letter = self.alphabet_list[letter + shift]
+            #save real and cipher letters to shift_dict
+            self.shift_dict[self.real_letter] = self.cipher_letter
         return self.shift_dict
 
     def apply_shift(self, shift):
@@ -143,18 +141,19 @@ class Message(object):
              down the alphabet by the input shift
         '''
         import string
-        self.alphabet_list = string.ascii_lowercase + string.ascii_uppercase
+        self.alphabet_list = string.ascii_lowercase
         # convert message string into list
         self.shifted_message = []
         # for each character in the message list
-        for char in self.message_text : 
+        for letter in self.message_text : 
             # if character is a space or punctuation
-            if char not in self.alphabet_list:
-                self.shifted_message.append(char)
-            # else send to build_shift_dict
+            if letter not in self.alphabet_list:
+                self.shifted_message.append(letter)
+            # else send to shift_dict
             else:
-                char = self.build_shift_dict(char)
-                self.shifted_message.append(char)
+                for letter in self.shift_dict.keys():
+                    cipher_letter = self.shift_dict[letter]
+                    self.shifted_message.append(cipher_letter)
         # convert shifted_message list into string
         self.shifted_message_string = ''.join(self.shifted_message)
         return self.shifted_message_string
