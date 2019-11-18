@@ -187,7 +187,7 @@ class PlaintextMessage(Message):
         
         Returns: self.shift
         '''
-        self.get_shift = self.shift.copy()
+        self.get_shift = self.shift
         return self.get_shift
 
     def get_encryption_dict(self):
@@ -205,7 +205,7 @@ class PlaintextMessage(Message):
         
         Returns: self.message_text_encrypted
         '''
-        self.get_message_text_encrypted = self.get_message_text_encrypted.copy()
+        self.get_message_text_encrypted = self.message_text_encrypted
         return self.get_message_text_encrypted
 
     def change_shift(self, shift):
@@ -219,7 +219,7 @@ class PlaintextMessage(Message):
         Returns: nothing
         '''
         self.change_shift = input("What is your shift amount?")
-        self.shift = self.change_shiftgq
+        self.shift = self.change_shift
 
 
 class CiphertextMessage(Message):
