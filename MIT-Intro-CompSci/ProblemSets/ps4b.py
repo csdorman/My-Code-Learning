@@ -145,7 +145,7 @@ class Message(object):
         # convert message string into list
         self.shifted_message = []
         # for each character in the message list
-        for letter in self.message_text : 
+        for letter in self.message_text: 
             # if character is a space or punctuation
             if letter not in self.alphabet_list:
                 self.shifted_message.append(letter)
@@ -251,6 +251,10 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
+        # pass encrypted text through
+        # for shift_num in range(27) 
+            # apply_shift( 26 - shift_num)
+            
         pass #delete this line and replace with your code here
 
 if __name__ == '__main__':
