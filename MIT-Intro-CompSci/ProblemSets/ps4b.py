@@ -142,7 +142,7 @@ class Message(object):
         '''
         import string
         self.alphabet_list = string.ascii_lowercase
-        # convert message string into list
+        # empty list for converted message
         self.shifted_message = []
         # for each character in the message list
         for letter in self.message_text: 
@@ -251,10 +251,15 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        # pass encrypted text through
+        # set shift_num = 1
         # for shift_num in range(27) 
-            # apply_shift( 26 - shift_num)
-            
+            # decrypt_try = apply_shift( 26 - shift_num)
+            # BELOW NOT RIGHT
+            # split decrypt_try at spaces
+            # for word in decrypt_try
+            # send to is_word(word_list, word)
+            # count number of real words
+
         pass #delete this line and replace with your code here
 
 if __name__ == '__main__':
