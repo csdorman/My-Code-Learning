@@ -251,14 +251,31 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        # set shift_num = 1
-        # for shift_num in range(27) 
-            # decrypt_try = apply_shift( 26 - shift_num)
-            # BELOW NOT RIGHT
+        #start shift testing at 1 (not 0)
+        shift_num = 1
+        # iterate from 1 to 26
+        for shift_num in range(26):
+            #send to apply_shift (this def iterates through letters)
+            decrypt_try = Message.apply_shift(26 - shift_num)
+            print(decrypt_try) #print for testing
             # split decrypt_try at spaces
-            # for word in decrypt_try
-            # send to is_word(word_list, word)
-            # count number of real words
+            word_check = decrypt_try.split()
+            #iterate through (potential) words
+            word_counter = 0
+            for word in word_check:
+                # check if they are real words
+                is_word(self.valid_words, word)
+                if is_word == True:
+                    #count the number of real words
+                    word_counter += 1
+            #store results in a dict
+            decrypt_dict = {}
+            decrypt_dict["shift"] = shift_num
+            decrypt_dict["message"] = decrypt_try
+            decrypt_dict["valid_words"] = word_counter
+        #COMPARE VALID WORDS TO FIND MAX
+            
+
 
         pass #delete this line and replace with your code here
 
