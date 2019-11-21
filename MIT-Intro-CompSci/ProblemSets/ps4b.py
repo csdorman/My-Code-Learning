@@ -253,8 +253,10 @@ class CiphertextMessage(Message):
         '''
         #start shift testing at 1 (not 0)
         shift_num = 1
+        #list for decryption dicts
+        decrypt_lists = []
         # iterate from 1 to 26
-        for shift_num in range(26):
+        for shift_num in range(27):
             #send to apply_shift (this def iterates through letters)
             decrypt_try = Message.apply_shift(26 - shift_num)
             print(decrypt_try) #print for testing
@@ -268,12 +270,18 @@ class CiphertextMessage(Message):
                 if is_word == True:
                     #count the number of real words
                     word_counter += 1
-            #store results in a dict
-            decrypt_dict = {}
-            decrypt_dict["shift"] = shift_num
-            decrypt_dict["message"] = decrypt_try
-            decrypt_dict["valid_words"] = word_counter
-        #COMPARE VALID WORDS TO FIND MAX
+            #store results in dict
+            new_shift = {
+                'shift' : shift_num,
+                'message' : decrypt_try,
+                'valid_words' : word_counter,
+            }
+            #store dict result in a list
+            decrypt_lists.append(new_shift)
+        max_word_count = 0
+        for entry_dict in decrypt_lists:
+            for valid_word_amt in entry_dict.values():
+                #COMPARE VALID WORDS TO FIND MAX
             
 
 
