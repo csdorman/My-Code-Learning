@@ -278,14 +278,11 @@ class CiphertextMessage(Message):
             }
             #store dict result in a list
             decrypt_lists.append(new_shift)
-        max_word_count = 0
-        for entry_dict in decrypt_lists:
-            for valid_word_amt in entry_dict.values():
-                #COMPARE VALID WORDS TO FIND MAX
-            
+        max_word_count = max(decrypt_lists, key=lambda x:x['valid_words'])
+        max_word_shift = max_word_count.get('shift')
+        max_word_message = max_word_count.get('message')
+        return max_word_message, max_word_shift
 
-
-        pass #delete this line and replace with your code here
 
 if __name__ == '__main__':
 
@@ -300,6 +297,14 @@ if __name__ == '__main__':
 #    print('Actual Output:', ciphertext.decrypt_message())
 
     #TODO: WRITE YOUR TEST CASES HERE
+    #Test cases
+    plaintext_1 = PlaintextMessage('hello', 4)
+    print('Expected output: lipps')
+    print('Actual output:', plaintext_1.get_message_text_encrypted)
+
+    plaintext_2 = PlaintextMessage('hello word', 4)
+    print('Expected output: lipps asvh')
+    print('Actual output:', plaintext_2.get_message_text_encrypted)
 
     #TODO: best shift value and unencrypted story 
     
