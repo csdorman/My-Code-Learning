@@ -58,8 +58,18 @@ class Shark(Fish):
     def swim_backwards(self):
         print("The", self.last_name, "cannot swim backwards, but it can sink backwards.")
 
+class Coral:
+    def community(self):
+        print("Coral lives in a community")
 
-##RESUME WITH OVERRIDING PARENT METHODS: 
+class Anemone:
+    def protect_clowfish(self):
+        print("The anemone is protecting the clownfish")
+
+class CoralReef(Coral, Anemone):
+    pass
+
+##RESUME WITH Multiple Inheritance
 # https://www.digitalocean.com/community/tutorials/understanding-class-inheritance-in-python-3
 # Begin code
 print("---====---")
@@ -88,5 +98,10 @@ print(sammy.first_name, sammy.last_name)
 sammy.swim()
 sammy.swim_backwards()
 print(sammy.first_name, "has", sammy.skeleton, "for bones.")
+
+print("---")
+great_barrier = CoralReef()
+great_barrier.community()
+great_barrier.protect_clowfish()
 
 print("---===---")

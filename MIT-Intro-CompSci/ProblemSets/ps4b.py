@@ -57,11 +57,14 @@ def get_story_string():
     f.close()
     return story
 
-### END HELPER CODE ###
+# END HELPER CODE
 
 WORDLIST_FILENAME = 'words.txt'
 
 class Message(object):
+    '''
+    Docstring
+    '''
     def __init__(self, text):
         '''
         Initializes a Message object
@@ -171,6 +174,9 @@ class Message(object):
 
 
 class PlaintextMessage(Message):
+    '''
+    Docstring
+    '''
     def __init__(self, text, shift):
         '''
         Initializes a PlaintextMessage object
@@ -190,7 +196,8 @@ class PlaintextMessage(Message):
         self.valid_words = load_words('words.txt')
         self.shift = shift
         self.encryption_dict = Message.build_shift_dict(self, shift)
-        self.message_text_encrypted = Message.apply_shift(shift)
+        print("Shift =", shift)
+        self.message_text_encrypted = Message.apply_shift(self, shift)
 
     def get_shift(self):
         '''
