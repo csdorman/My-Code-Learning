@@ -731,3 +731,4 @@ etc...
 - [ ] Resume at Lecture 9 at 3:51
 - [Lecture videos](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-8-object-oriented-programming/)
 - [MIT Intro to Computer Science course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/)
+- [Git commit via VI](https://stackoverflow.com/questions/16122234/how-to-commit-a-change-with-both-message-and-description-from-the-comma)
