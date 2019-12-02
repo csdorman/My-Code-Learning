@@ -717,18 +717,49 @@ etc...
 
 **Remember difference between implementing and using classes:**
 
-## Implementing Class
+### Implementing Class
 
 - Define the class
 - Define *data attribution* (what **is** the object)
 - Define *methods* (how to **use** the object)
 
-## Using Classes
+### Using Classes
 
 - Create instance of the object type
 - Do operations with them
 
-- [ ] Resume at Lecture 9 at 3:51
+### Class Definition of Object Type vs  Instance of a Class
+
+| Class Def of Object | Instance of Class |
+| --- | --- |
+| Class name is the **type** | Instance is **one specific** object |
+| - ```class Coordinate(object)``` | - ```coord = Coordinate(1,2)```
+| Class is defined generically | Data attribute values vary between instances |
+| - use ```self``` to refer to some instance while defining the class: (```self.x - self.y) **2``` | - ```c1 = Coordinate(1,2)```
+| | - ```c2 = Coordinate(3,4)```
+| - ```self``` is a parameter to methods in class definition | - ```c1``` and ```c2``` have different data attribute values ```c1.x``` and ```c2.x``` because they are different objects |
+| Class defines data and methods **common across all instances** | Instance has the **structure of the class** |
+
+### Why Use Object-Oriented Programming and Classes of Objects
+
+- OOP allows your code to mimic real life.
+- You can more easily group objects as part of the same (or similar) type.
+
+#### Groups of Objects have Same Attributes
+
+Data attributes
+
+- How can you represent your object with data?
+- You must *tell* what it is.
+
+Procedural attributes (Behaviours, operations, *methods*)
+
+- How can someone interact with the object
+- You must *tell* what it can do (and how to do it)
+--- 
+# Reminders
+- [ ] Resume at Lecture 9 at 10:00
 - [Lecture videos](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/lecture-8-object-oriented-programming/)
 - [MIT Intro to Computer Science course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/)
 - [Git commit via VI](https://stackoverflow.com/questions/16122234/how-to-commit-a-change-with-both-message-and-description-from-the-comma)
+- Open/close VSCode terminal with "ctrl + ~"
