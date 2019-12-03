@@ -120,26 +120,22 @@ class Message(object):
         self.alphabet_list = string.ascii_lowercase
         # create empty dictionary
         self.shift_dict = {}
-        letter_index = 1
+        letter_index = 0
         # for each letter in alphabet_list
         for letter in self.alphabet_list:
-
-
-
-
-
             # save real letter to variable
             self.real_letter = letter
             # find cipher letter
             if letter_index + shift >= 26:
                 self.cipher_letter = self.alphabet_list[letter_index + (shift - 26)]
             else:
-                print("Letter index =", letter_index)
-                print("Shift =", shift)
+                # print("Letter index =", letter_index)
+                # print("Shift =", shift)
                 self.cipher_letter = self.alphabet_list[letter_index + shift]
             # save real and cipher letters to shift_dict
             self.shift_dict[self.real_letter] = self.cipher_letter
             letter_index += 1
+        # print(self.shift_dict)
         return self.shift_dict
 
     def apply_shift(self, shift):
@@ -159,7 +155,10 @@ class Message(object):
         # empty list for converted message
         self.shifted_message = []
         # for each character in the message list
+        print(self.message_text)
+        print(self.shift)
         for letter in self.message_text:
+            print(letter)
             # if character is a space or punctuation
             if letter not in self.alphabet_list:
                 self.shifted_message.append(letter)
@@ -192,7 +191,10 @@ class PlaintextMessage(Message):
             self.message_text_encrypted (string, created using shift)
 
         '''
-        # Don't need message_text since it is in Message class
+        # Use super() method to use Message parent class defs
+        #super().__init__(Message)
+        # Other defs
+        self.message_text = text
         self.valid_words = load_words('words.txt')
         self.shift = shift
         self.encryption_dict = Message.build_shift_dict(self, shift)
