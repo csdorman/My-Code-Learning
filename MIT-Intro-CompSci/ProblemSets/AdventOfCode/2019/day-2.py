@@ -23,34 +23,40 @@ opcodes_list = opcodes_raw.split(",")
 # use enumerate in order to relate a specific opcode to its index
 for index, opcode in enumerate(opcodes_list):
     opcode = int(opcode)
-    # look at index pos 0
-    if index == 0:
-        print(index)
-        print(opcode)
-        print(opcodes_list[0:5])
+    # look at index pos 0 and every 4th index
+    if index % 4 == 0:
+        print("Index is", index)
+        print("Opcode is", opcode)
         # opcode 1 means addition
         if opcode == 1:
-            num1 = int(opcodes_list[int(opcodes_list[index + 1])])
-            num2 = int(opcodes_list[int(opcodes_list[index + 2])])
+            # get the values is opcode pos 1 and pos 2
+            num1 = int(opcodes_list[index + 1])
+            num2 = int(opcodes_list[index + 2])
             print("Num 1 is", num1)
             print("Num 2 is", num2)
+            # calculate sum of opcode 1
             opcode_result = num1 + num2
             print("Opcode result", opcode_result)
-            save_pos = int(opcodes_list[int(opcodes_list[index + 3])])
+            # find opcode save pos
+            save_pos = int(opcodes_list[index + 3])
             print(save_pos)
+            # save opcode sum in save pos
             opcodes_list[save_pos] = opcode_result
-            print(opcodes_list[0:5])
         # opcdoe 2 means multiplication
         if opcode == 2:
+            # get the values in opcode pos 1 and pos 2
+            num1 = int(opcodes_list[index + 1])
+            num2 = int(opcodes_list[index + 2])
+            print("Num 1 is", num1)
+            print("Num 2 is", num2)
+            # calculate product of opcode 2
+            opcode_result = num1 * num2
+            print("Opcode result", opcode_result)
+            # find opcode save pos
+            save_pos = int(opcodes_list[index + 3])
+            print(save_pos)
+            # save opcode product in save pos
+            opcodes_list[save_pos] = opcode_result
+        if opcode == 99:
             quit
-        #if opcodes_list[1] == 1
-        #print("Opcode at index", index, "is", opcode)
-        #run opcode_calc function
-        # NEED TO PASS IT CURRENT OPCODE AND NEXT FEW ALSO
-        #func_result = opcode_calc()
-        #func_result = opcodes_list[3]
-        #print(opcodes_list[0:5])
-    #else:
-    #   quit
-    #elif (index % 4) == 0: 
-        #run opcode_calc function
+print(opcodes_list)
