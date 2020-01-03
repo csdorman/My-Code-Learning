@@ -1,5 +1,5 @@
 
-def password_options_adjacent(low, high):
+def password_options_adjacent(pw_options_increasing):
     '''
     Find the password options between the two numbers
     
@@ -9,27 +9,39 @@ def password_options_adjacent(low, high):
     - digits only increase going from L to R (0 is low)
     '''
     pw_adjacent_options = []
-    for pw_options in range(146810, 612564):
-        num_string = str(pw_options)
-        index = 0
-        for n in num_string:
-            while index < 5:
-                if num_string[int(index)] == num_string[int(index) + 1]:
-                    pw_adjacent_options.append(num_string)
+    duplicate = True
+    adjacent_digits = 1
+    adjacent_high = 0
+    for option in pw_options_increasing:
+        num_str = str(option)
+        i = 0
+        for n in num_str:
+            while i < 5:
+                if int(num_str[i]) == int(num_str[i + 1]):
+                    duplicate = True
+                    adjacent_digits += 1
+                    if adjacent_digits > adjacent_high:
+                        adjacent_high = adjacent_digits
+                    #print("Num 1 is", str(num_str[i]), "and Num 2 is", (str(num_str[i+1])), "they are equal. Duplicate =", duplicate)
+                    i += 1
                 else:
-                    pass
-                index = int(index)
-                index += 1
-    print(len(pw_adjacent_options))
-    pw_options_increasing(pw_adjacent_options)
+                    #print("Num 1 is", str(num_str[i]), "and Num 2 is", (str(num_str[i+1])), "they are NOT equal. Duplicate =", duplicate)
+                    duplicate = False
+                    adjacent_digits = 1
+                    i += 1
+        if duplicate == True and adjacent_digits > 2:
+            pw_adjacent_options.append(int(num_str))
+    return pw_adjacent_options
+    #print(pw_adjacent_options)
+    #print(len(pw_adjacent_options))
                 
-def pw_options_increasing(pw_adjacent_options):
+def pw_options_increasing(low, high):
     '''
     - Take the list from the previous problem
     - Check to make sure all numbers are increasing
     '''
-    pw_possibilities = []
-    for option in pw_adjacent_options:
+    pw_num_increasing = []
+    for option in range(low, high + 1):
         num_str = str(option)
         i = 0
         increasing = True
@@ -40,31 +52,11 @@ def pw_options_increasing(pw_adjacent_options):
             else:
                 i += 1
         if increasing == True:
-            pw_possibilities.append(num_str)
-    print(len(pw_possibilities))
+            pw_num_increasing.append(int(num_str))
+    #print(len(pw_num_increasing))
+    return password_options_adjacent(pw_num_increasing)
+    #return pw_num_increasing
 
-
-
-
-
-    #     index = 0
-    #     for num in range(len(num_string)):
-    #         #print("Index", index, type(index), "and num", num, type(num))
-    #         if num < num[index + 1]:
-    #             index += 1
-    #             print(num_string)
-    # #         while index < 6:
-    # #             if int(num[index]) > int(num[index + 1]):
-    # #                 increasing = False
-    # #                 pass
-    # #             else:
-    # #                 index += 1
-    # #         if increasing != False:
-    # #             increasing = True
-    # #             pw_possibilities.append(option)
-    # # print(len(pw_possibilities))
-                
-
-# pw_options_increasing should run first. It will eliminate more options quicker
-
-password_options_adjacent(146810, 612564)
+num_list = pw_options_increasing(146810, 612564)
+print(num_list)
+print(len(num_list))
