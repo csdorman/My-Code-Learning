@@ -1,10 +1,26 @@
 # https://www.reddit.com/r/adventofcode/comments/e6carb/2019_day_5_solutions/
 
-def open_file(file):
-    opcodes = open(file)
-    opcodes_raw = opcodes.read()
-    opcodes_list = map(int, opcodes_raw.split(','))
-    return list(opcodes_list)
+# open the diagnostic code file and load it into an array
+input1 = open("diagnostic-code.txt")
+code = input1.read()
+input1.close()
+code = code.split(",")
+
+# turn array elements into intergers
+for i in range(len(code)):
+    code[i] = int(code[i])
+
+# return a five-elemtn array to represent opcode
+def opcodeArray(int1):
+    opcode = list(str(int1))
+    if len(opcode) < 5:
+        for i in range(5-(len(opcode))):
+            opcode.insert(0,"0")
+    # turn back into intergers
+    for i in range(len(opcode)):
+        opcode[i] = int(opcode[i])
+    return opcode
+        
 
 def opcode_v2(opcodes_list):
     '''
@@ -12,18 +28,40 @@ def opcode_v2(opcodes_list):
     V1:
     Opcode = 0, 1, or 99
     Index = The index position of the opcode. Used to find the other parameters based on their relation to the index number
-
     V2:
     Add support for: 
     Opcode 3 (takes a single integer as input and saves it to the position given by its only parameter), 4 (outputs the value of its only parameter)
-
     Modes: 
     Current opcode program is functioning in mode 0, position mode. If parameter is 50, the actual value of the parameter is *stored* at memmory position 50.
     Add support for mode 1 (immediate mode): If parameter is 50, its value is 50.
     Mode is stored in same value as opcode. Opcode is two-digit num in ones and tens place. Parameter modes are read R->L and each one digit number effects a single parameter.
-
     '''
-    # need to add preceding 0s to opcodes of less than 5 digits.
+    # turn array elements into intergers
+    for i in range(len(opcodes_list)):
+        opcode = int(opcode[i])
+    #iterate through opcode list
+    for opcode in opcodes_list:
+        # need to add preceding 0s to opcodes of less than 5 digits.
+        opcode = list(str(opcode))
+        if len(opcode) < 5:
+            for i in range(5-len(opcode)):
+                opcode.insert(0,"0")
+        for i in range(len(opcode)):
+            opcode[i] = int(opcode[i])
+        return opcode
+
+        if opcode[-1] == 1:
+            #stuff
+            break
+        if opcode[-1] == 2:
+            #stuff
+            break
+        if opcode[-1] == 3:
+            #stuff
+            break
+        if opcode[-1] == 4:
+            #stuff
+            break
     # parse the 5 digits to find opcodes and modes
 
 
