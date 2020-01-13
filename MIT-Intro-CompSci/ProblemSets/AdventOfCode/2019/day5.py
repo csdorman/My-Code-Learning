@@ -1,7 +1,7 @@
 # https://www.reddit.com/r/adventofcode/comments/e6carb/2019_day_5_solutions/
 
 # open the diagnostic code file and load it into an array
-input1 = open("diagnostic-code.txt")
+input1 = open("diagnostic-code.txt", "r")
 code = input1.read()
 input1.close()
 code = code.split(",")
@@ -10,7 +10,7 @@ code = code.split(",")
 for i in range(len(code)):
     code[i] = int(code[i])
 
-# return a five-elemtn array to represent opcode
+# return a five-element array to represent opcode
 def opcodeArray(int1):
     opcode = list(str(int1))
     if len(opcode) < 5:
@@ -20,6 +20,24 @@ def opcodeArray(int1):
     for i in range(len(opcode)):
         opcode[i] = int(opcode[i])
     return opcode
+
+# find position of opcode to determine its function
+def opcode_pos(opcode):
+    for i in enumerate(opcode):
+        #pos 3&4 are 2-digit opcode
+        #pos 2 mode of param1
+        #pos 1 mode of param2
+        #pos 0 mode of param3
+        print(i)
+
+#define starting position
+pos = 0
+
+#keep going until opcode is 99
+while(code[pos] != 99):
+    num = opcodeArray(code[pos])
+    print(num)
+    pos += 1
         
 
 def opcode_v2(opcodes_list):
