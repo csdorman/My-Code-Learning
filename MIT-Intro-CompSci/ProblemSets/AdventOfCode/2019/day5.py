@@ -7,17 +7,21 @@ input1.close()
 code = code.split(",")
 
 # turn array elements into intergers
-for i in range(len(code)):
-    code[i] = int(code[i])
+#for i in range(len(code)):
+    #code[i] = int(code[i])
 
 # return a five-element array to represent opcode
 def opcodeArray(int1):
-    opcode = list(str(int1))
+    print(int1)
+    #opcode = list(str(int1))
+    opcode = list(map(int, int1))
+    print(opcode)
     if len(opcode) < 5:
         for i in range(5-(len(opcode))):
             opcode.insert(0,"0")
     # turn back into intergers
     for i in range(len(opcode)):
+        print(opcode[i])
         opcode[i] = int(opcode[i])
     return opcode
 
