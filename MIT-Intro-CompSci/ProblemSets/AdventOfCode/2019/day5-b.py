@@ -8,12 +8,12 @@ def engage_computer(raw_data):
 # define different opcode instructions
 def opcode_func(intcode_list):
     counter = 0
+    print(len(intcode_list))
     while counter < len(intcode_list):
         opcode = intcode_list[counter]
-        param1 = intcode_list[counter+1]
-        param2 = intcode_list[counter+2]
+        param1 = intcode_list[intcode_list[counter+1]]
+        param2 = intcode_list[intcode_list[counter+2]]
         dest = intcode_list[counter + 3]
-        print(counter, opcode, param1, param2, dest)
         if opcode == 1:
             # add params
             intcode_list[dest] = param1 + param2
@@ -33,7 +33,7 @@ def opcode_func(intcode_list):
             counter += 2
         else:
             break
-    return intcode_list
+        return intcode_list
 
 
 print(opcode_func(engage_computer("2,4,4,5,99,0")))
