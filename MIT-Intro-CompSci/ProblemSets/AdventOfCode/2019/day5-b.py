@@ -2,8 +2,12 @@
 
 # open opcodes file
 def engage_computer(raw_data):
+    raw_data = open(raw_data, "r")
+    raw_data = raw_data.read()
     intcode_list = map(int,raw_data.split(','))
     return list(intcode_list)
+
+#def param_mode(incode_list):
 
 # define different opcode instructions
 def opcode_func(intcode_list):
@@ -36,4 +40,4 @@ def opcode_func(intcode_list):
         return intcode_list
 
 
-print(opcode_func(engage_computer("2,4,4,5,99,0")))
+print(engage_computer("diagnostic-code.txt"))
