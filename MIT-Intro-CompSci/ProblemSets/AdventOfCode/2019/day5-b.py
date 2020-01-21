@@ -8,12 +8,16 @@ def engage_computer(raw_data):
     return list(intcode_list)
 
 def param_mode(intcode_list):
-    intcodes = list(map(str, intcode_list))
-    for code in intcodes:
-        print(len(code))
+    intcodes_list = list(map(str, intcode_list))
+    leading_zero = "0"
+    intcodes = []
+    for code in intcodes_list:
         if len(code) < 5:
-            #for i in range(5-len(code)):
-            intcodes.insert(0,"0")
+            #print(code, len(code), "Too short")
+            for i in range(5-len(code)):
+                code = leading_zero + code
+                #print(code)
+            intcodes.append(code)
     return(intcodes)
 
 # define different opcode instructions
