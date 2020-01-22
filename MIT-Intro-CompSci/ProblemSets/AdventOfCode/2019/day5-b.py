@@ -26,8 +26,8 @@ def opcode_func(intcode_list, input_inst):
     print(len(intcode_list))
     while counter < len(intcode_list):
         opcode = intcode_list[counter]
-        param1 = intcode_list[intcode_list[counter+1]]
-        param2 = intcode_list[intcode_list[counter+2]]
+        param1 = intcode_list[int(intcode_list[counter+1])]
+        param2 = intcode_list[int(intcode_list[counter+2])]
         param3 = intcode_list[counter + 3]
         if opcode == 1:
             # add params
@@ -51,4 +51,4 @@ def opcode_func(intcode_list, input_inst):
         return intcode_list
 
 
-print(param_mode(engage_computer("diagnostic-code.txt")))
+print(opcode_func(param_mode(engage_computer("diagnostic-code.txt")), 1))
