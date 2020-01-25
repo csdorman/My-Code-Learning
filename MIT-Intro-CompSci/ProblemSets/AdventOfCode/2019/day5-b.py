@@ -23,32 +23,42 @@ def param_mode(intcode_list):
 # define different opcode instructions
 def opcode_func(intcode_list, input_inst):
     counter = 0
-    print(len(intcode_list))
+    #print(len(intcode_list))
     while counter < len(intcode_list):
-        opcode = intcode_list[counter]
+        opcode_inst = intcode_list[counter]
         param1 = intcode_list[int(intcode_list[counter+1])]
         param2 = intcode_list[int(intcode_list[counter+2])]
         param3 = intcode_list[counter + 3]
-        if opcode == 1:
+        if opcode_inst[-1] == "1":
             # add params
+            param1 = int(param1)
+            param2 = int(param2)
             intcode_list[param3] = param1 + param2
-            print("Opcode 1 triggered")
+            #print("Opcode 1 triggered")
             counter += 4
-        elif opcode == 2:
+        elif opcode_inst[-1] == "2":
             # multiply params
+            param1 = int(param1)
+            param2 = int(param2)
             intcode_list[param3] = param1 * param2
             counter += 4
-        elif opcode == 3:
+        elif opcode_inst[-1] == "3":
             # take input and save to only parameter 
+            param1 = int(param1)
             intcode_list[param1] = input_inst
             counter += 2
-        elif opcode == 4:
+        elif opcode_inst[-1] == "4":
             # output the value of the only parameter
-            return intcode_list[param1]
+            #return intcode_list[param1]
+            param1 = int(param1)
+            input_inst = param1
             counter += 2
         else:
+            print("IF statements not reached")
             break
         return intcode_list
 
 
 print(opcode_func(param_mode(engage_computer("diagnostic-code.txt")), 1))
+
+#print(param_mode(engage_computer("diagnostic-code.txt")))
