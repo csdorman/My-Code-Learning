@@ -36,27 +36,36 @@ def opcode_func(intcode_list, input_inst):
         #go to counter index in intcode list
         #take incode as a 6-digit STR
         #look at final 2 positions - get opcode from this
-        for intcode in intcode_list:
+        #using enumerate to match index num with counter num
+        for (index, intcode) in enumerate(intcode_list):
             #print("intcode=",intcode)
-            intcode = str(intcode)
-            if str(intcode[-1]) == "1":
-                #add params
-                intcode_list[int(param3)] = int(param1) + int(param2)
-                #print("Opcode 1 triggered")
-                counter += 4
-            elif str(intcode[-1]) == "2":
-                # multiply params
-                intcode_list[int(param3)] = int(param1) * int(param2)
-                counter += 4
-            elif str(intcode[-1]) == "3":
-                # take input and save to only parameter 
-                intcode_list[int(param1)] = int(input_inst)
-                #print("Opcode 3 triggered")
-                counter += 2
-            elif str(intcode[-1]) == "4":
-                # output the value of the only parameter
-                input_inst = param1
-                counter += 2
+            if index == counter:
+                intcode = str(intcode)
+                print(counter, intcode)
+                if str(intcode[-1]) == "1":
+                    #add params
+                    intcode_list[int(param3)] = int(param1) + int(param2)
+                    #print("Opcode 1 triggered")
+                    counter += 5
+                elif str(intcode[-1]) == "2":
+                    # multiply params
+                    intcode_list[int(param3)] = int(param1) * int(param2)
+                    counter += 5
+                elif str(intcode[-1]) == "3":
+                    # take input and save to only parameter 
+                    intcode_list[int(param1)] = int(input_inst)
+                    #print("Opcode 3 triggered")
+                    counter += 2
+                elif str(intcode[-1]) == "4":
+                    # output the value of the only parameter
+                    input_inst = param1
+                    counter += 2
+                else:
+                    print("Counter:", counter, "Intcode:", intcode)
+                    print("IF statement not reached")
+                    counter += 1
+            else:
+                pass
     print(intcode_list[226])
     return intcode_list
    
