@@ -1,5 +1,3 @@
-
-
 # open opcodes file
 def engage_computer(raw_data):
     raw_data = open(raw_data, "r")
