@@ -46,11 +46,11 @@ def opcode_func(intcode_list, input_inst):
                     #add params
                     intcode_list[int(param3)] = int(param1) + int(param2)
                     #print("Opcode 1 triggered")
-                    counter += 5
+                    counter += 4
                 elif str(intcode[-1]) == "2":
                     # multiply params
                     intcode_list[int(param3)] = int(param1) * int(param2)
-                    counter += 5
+                    counter += 4
                 elif str(intcode[-1]) == "3":
                     # take input and save to only parameter 
                     intcode_list[int(param1)] = int(input_inst)
@@ -66,12 +66,12 @@ def opcode_func(intcode_list, input_inst):
                     counter += 1
             else:
                 pass
-    print(intcode_list[226])
+    #print(intcode_list[226])
     return intcode_list
    
 
 
-opcode_func(param_mode(engage_computer("diagnostic-code.txt")), 1)
+print(opcode_func(param_mode(engage_computer("diagnostic-code.txt")), 1))
 
 
 #print(param_mode(engage_computer("diagnostic-code.txt")))
