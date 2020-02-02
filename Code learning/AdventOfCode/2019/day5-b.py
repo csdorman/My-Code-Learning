@@ -1,11 +1,13 @@
 
 
-# open opcodes file
-def data(raw_data):
-    raw_data = open(raw_data, "r")
-    raw_data = raw_data.read()
-    intcode_list = map(int,raw_data.split(','))
-    return list(intcode_list)
+#open intcode file
+raw_data = open("diagnostic-code.txt", "r")
+raw_data = raw_data.read()
+print(raw_data)
+intcode_list = raw_data.split(',')
+#turn intcode strings into integers
+for i in range(len(intcode_list)):
+    intcode_list[i] = int(intcode_list[i])
 
 def intcode_modes(opcode):
     #intcodes_list = list(map(str, intcode_list))
@@ -19,14 +21,14 @@ def intcode_modes(opcode):
     intcode.append(opcode)
     return(opcode)
 
-def mode(mode,position,code):
+def mode(mode,position):
     val = 0
-    #parameter mode
-    if(mode == 0):
-        val = code[code[postion]]
     #immediate mode
+    if(mode == 1):
+        val = intcode_list[position]
+    #parameter mode
     else:
-        val = code[position]
+        val = intcode_list[intcode_list[position]]
     return val
 
 def intcode_computer(codes, input_num):
@@ -36,21 +38,21 @@ def intcode_computer(codes, input_num):
         if len(str(opcode)) < 5:
             opcode_inst = intcode_modes(opcode)
         print(opcode_inst, type(opcode_inst))
-        if opcode_inst[-1] == "1":
-            #print("Add")
+        print(counter)
+        if opcode_inst[4] == "1":
             param1 = counter+1
             param2 = counter+2
             param3 = codes[counter+3]
-            param3 = mode(opcode_inst[2],param1,codes) + mode(opcode_inst[1],param2,codes)
+            codes[param3] = mode(opcode_inst[2],param1) + mode(opcode_inst[1],param2)
             counter += 4
-        elif opcode_inst[-1] == "2":
+        elif opcode_inst[4] == "2":
             #print("Multiply")
             param1 = counter + 1
             param2 = counter + 2
             param3 = codes[counter + 3]
-            param3 = mode(opcode_inst[2],param1,codes) * mode(opcode_inst[1],param2,codes)
+            param3 = mode(opcode_inst[2],param1) * mode(opcode_inst[1],param2)
             counter += 4
-        elif opcode_inst[-1] == "3":
+        elif opcode_inst[4] == "3":
             #print(input)
             param1 = counter+1
             if opcode_inst[2] == "0":
@@ -58,7 +60,7 @@ def intcode_computer(codes, input_num):
             else:
                 codes[param1] = input_num
             counter += 2
-        elif opcode_inst[-1] == "4":
+        elif opcode_inst[4] == "4":
             #print("output")
             param1 = counter + 1
             print(mode(opcode_inst[2], param1))
@@ -108,8 +110,9 @@ def opcode_func(intcode_list, input_inst):
     return intcode_list
    
 
-print(data("diagnostic-code.txt"))
-intcode_computer(data("diagnostic-code.txt"), 1)
+#print(data("diagnostic-code.txt"))
+
+intcode_computer(intcode_list, 1)
 
 
 #print(param_mode(engage_computer("diagnostic-code.txt")))
