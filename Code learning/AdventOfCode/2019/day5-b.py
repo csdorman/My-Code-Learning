@@ -50,7 +50,7 @@ def intcode_computer(codes, input_num):
             param1 = counter + 1
             param2 = counter + 2
             param3 = codes[counter + 3]
-            param3 = mode(opcode_inst[2],param1) * mode(opcode_inst[1],param2)
+            codes[param3] = mode(opcode_inst[2],param1) * mode(opcode_inst[1],param2)
             counter += 4
         elif opcode_inst[4] == "3":
             #print(input)
