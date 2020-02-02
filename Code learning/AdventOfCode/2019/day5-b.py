@@ -39,6 +39,7 @@ def intcode_computer(codes, input_num):
             opcode_inst = intcode_modes(opcode)
         print(opcode_inst, type(opcode_inst))
         print(counter)
+        #
         if opcode_inst[4] == "1":
             param1 = counter+1
             param2 = counter+2
