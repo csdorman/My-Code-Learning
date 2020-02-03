@@ -66,6 +66,20 @@ def intcode_computer(codes, input_num):
             param1 = counter + 1
             print(mode(opcode_inst[2], param1))
             counter += 2
+        #Opcode 5 - jump-if-true
+            #if param1 != 0
+                #set counter to value from param2
+        #Opcode 6 - jump if false
+            #if param1 == 0
+                #set counter to vaalue from param2
+        #Opcode 7 - less than
+            #if param1 < param2
+                #param3 = 1
+            #else
+                #param3 = 0
+        #Opcode 8 - equals
+            #if param1 == param2
+                #param3 = 1
         else:
             print("IF statements not reached")
             #print(codes)
