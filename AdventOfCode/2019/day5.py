@@ -1,11 +1,12 @@
 #open intcode file
-raw_data = open("diagnostic-code.txt", "r")
+raw_data = open("test-data.txt", "r")
 raw_data = raw_data.read()
 intcode_list = raw_data.split(',')
 
 #turn intcode strings into integers
 for i in range(len(intcode_list)):
     intcode_list[i] = int(intcode_list[i])
+#print(intcode_list)
 
 #turn all opcodes into 5 digits
 def intcode_modes(opcode):
@@ -26,7 +27,7 @@ def mode(mode,position):
     #immediate mode
     if(mode == "1"):
         val = intcode_list[position]
-    #parameter mode
+    #position mode
     else:
         val = intcode_list[intcode_list[position]]
     return val
@@ -80,24 +81,26 @@ def intcode_computer(codes, input_num):
                 counter = codes[param2]
         elif opcode_inst[4] =="7":
             #less than
-            param1 = counter +1
-            param2 = counter +2
+            param1 = counter + 1
+            param2 = counter + 2
             param3 = codes[counter +3]
             if codes[param1] < codes[param2]:
                 codes[param3] = 1
             else:
                 codes[param3] = 0
+            counter += 4
         elif opcode_inst[4] =="8":
-            param1 = counter +1
-            param2 = counter +2
+            param1 = counter + 1
+            param2 = counter + 2
             param3 = codes[counter +3]
             #equals
             if codes[param1] == codes[param2]:
                 codes[param3] = 1
             else:
                 codes[param3] = 0
+            counter += 4
         else:
-            print("IF statements not reached")
+            #print("IF statements not reached")
             #print(codes)
             break
     
