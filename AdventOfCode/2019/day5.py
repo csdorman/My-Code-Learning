@@ -68,23 +68,31 @@ def intcode_computer(codes, input_num):
             counter += 2
         elif opcode_inst[4] =="5":
             #jump if true
-            if param1 != 0:
+            if codes[param1] != 0:
                 counter = codes[param2]
             else:
                 continue
         elif opcode_inst[4] =="6":
             #jump if false
-            if param1 == 0:
+            param1 = counter + 1
+            param2 = counter + 2
+            if codes[param1] == 0:
                 counter = codes[param2]
         elif opcode_inst[4] =="7":
             #less than
-            if param1 < param2:
+            param1 = counter +1
+            param2 = counter +2
+            param3 = codes[counter +3]
+            if codes[param1] < codes[param2]:
                 codes[param3] = 1
             else:
                 codes[param3] = 0
         elif opcode_inst[4] =="8":
+            param1 = counter +1
+            param2 = counter +2
+            param3 = codes[counter +3]
             #equals
-            if param1 == param2:
+            if codes[param1] == codes[param2]:
                 codes[param3] = 1
             else:
                 codes[param3] = 0
