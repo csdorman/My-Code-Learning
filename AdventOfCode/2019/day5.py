@@ -106,4 +106,4 @@ def intcode_computer(codes, input_num):
             #print(codes)
             break
     
-intcode_computer(intcode_list, 7)
+intcode_computer(intcode_list, 0)
