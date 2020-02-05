@@ -71,16 +71,16 @@ def intcode_computer(codes, input_num):
             #jump if true
             param1 = counter + 1
             param2 = counter + 2
-            if codes[param1] != 0:
-                counter = codes[param2]
+            if mode(opcode_inst[2],param1) != 0:
+                counter = mode(opcode_inst[2],param2)
             else:
                 continue
         elif opcode_inst[4] =="6":
             #jump if false
             param1 = counter + 1
             param2 = counter + 2
-            if codes[param1] == 0:
-                counter = codes[param2]
+            if mode(opcode_inst[2],param1) == 0:
+                counter = mode(opcode_inst[2],param2)
         elif opcode_inst[4] =="7":
             #less than
             param1 = counter + 1
@@ -106,4 +106,4 @@ def intcode_computer(codes, input_num):
             #print(codes)
             break
     
-intcode_computer(intcode_list, 8)
+intcode_computer(intcode_list, 7)
