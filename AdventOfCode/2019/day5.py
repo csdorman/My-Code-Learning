@@ -74,13 +74,15 @@ def intcode_computer(codes, input_num):
             if mode(opcode_inst[2],param1) != 0:
                 counter = mode(opcode_inst[2],param2)
             else:
-                continue
+                counter += 3
         elif opcode_inst[4] =="6":
             #jump if false
             param1 = counter + 1
             param2 = counter + 2
             if mode(opcode_inst[2],param1) == 0:
                 counter = mode(opcode_inst[2],param2)
+            else:
+                counter += 2
         elif opcode_inst[4] =="7":
             #less than
             param1 = counter + 1
