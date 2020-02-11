@@ -108,4 +108,4 @@ def intcode_computer(codes, input_num):
             #print(codes)
             break
     
-intcode_computer(intcode_list, 9)
+intcode_computer(intcode_list, 5)
