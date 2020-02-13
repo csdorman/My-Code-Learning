@@ -1,3 +1,4 @@
+
 #open intcode file
 raw_data = open("test-data.txt", "r")
 raw_data = raw_data.read()
