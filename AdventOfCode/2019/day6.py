@@ -12,10 +12,9 @@ def direct_orbit_count(orbit_data):
 
 def indirect_orbit_count(orbit_data):
     indirect_orbits = 0
+    orbit_num = 0
     for orbit in orbit_data:
-        orbit_num = 0
-        #if 3rd char of orbit x == 1st char of orbit x+1
-        if orbit_data[orbit_num][2] == orbit_data[orbit_num + 1][0]:
+        if orbit[2] == orbit_data[orbit_num][0]:
             indirect_orbits += 1
             orbit_num += 1
         else:
