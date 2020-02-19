@@ -18,12 +18,13 @@ def indirect_orbit_count(orbit_data):
     for orbit in orbit_data: 
         while orbit_compare < len(orbit_data):
             if orbit[-1] == orbit_data[orbit_compare][0]:
-                print(orbit_num, orbit_compare, len(orbit_data))
+                #print(orbit_num, orbit_compare, len(orbit_data))
                 indirect_orbits += 1
                 orbit_compare += 1
             else:
                 orbit_compare += 1
         orbit_num += 1
+        orbit_compare = orbit_num + 1
     return indirect_orbits
 
 #print orbit data
