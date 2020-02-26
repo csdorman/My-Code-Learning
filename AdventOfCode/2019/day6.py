@@ -13,20 +13,22 @@ def direct_orbit_count(orbit_data):
 def indirect_orbit_count_2(orbit_data):
    #NEED TO START AT BACK OF ORBIT DATA
     #find last item in list
-    item_num = len(orbit_data)-1
-    prev_item = item_num - 1
+    current_item = len(orbit_data)-1
+    prev_item = current_item - 1
     indirect_orbits = 0
-    print("Item#", item_num, "Prev#",prev_item)
-    while prev_item >= -1:
-        for orbit in orbit_data:
-            print(orbit_data[item_num], orbit_data[prev_item])
-            if orbit_data[item_num][0] == orbit_data[prev_item][-1]:
-                indirect_orbits += 1
-                item_num -= 1
-                prev_item -= 1
-            else:
-                item_num -= 1
-                prev_item -= 1
+    counter = 0
+    print("Item#", current_item, "Prev#",prev_item)
+    while prev_item > -1 & counter < len(orbit_data)-1:
+        #for orbit in orbit_data:
+        print(orbit_data[current_item], orbit_data[prev_item], counter)
+        if orbit_data[current_item][0] == orbit_data[prev_item][-1]:
+            indirect_orbits += 1
+            current_item -= 1
+            prev_item -= 1
+        else:
+            current_item -= 1
+            prev_item -= 1
+        counter += 1
     return(indirect_orbits)
 
 def indirect_orbit_count(orbit_data):
