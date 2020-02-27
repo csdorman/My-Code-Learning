@@ -34,17 +34,17 @@ def indirect_orbit_count_2(orbit_data):
                 else:
                     current_item -= 1
                     prev_item -= 1
-        counter -= 1
+            counter -= 1
         else:
             while prev_item > -1:
                 if orbit_data[current_item][0] == orbit_data[prev_item][-1]:
                         indirect_orbits += 1
                         current_item -= 1
                         prev_item -= 1
-                    else:
-                        current_item -= 1
-                        prev_item -= 1
-        counter -= 1
+                else:
+                    current_item -= 1
+                    prev_item -= 1
+            counter -= 1
     return(indirect_orbits)
 
 def indirect_orbit_count(orbit_data):
