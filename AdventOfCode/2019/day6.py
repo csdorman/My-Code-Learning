@@ -10,6 +10,11 @@ def direct_orbit_count(orbit_data):
         direct_orbits += 1
     return direct_orbits
 
+def find_orbit_sep(orbit1, orbit2):
+    orbit_loc1 = orbit1.find(')')
+    orbit_loc2 = orbit2.find(')')
+    return orbit_loc1, orbit_loc2
+
 def indirect_orbit_count(orbit_data):
    #NEED TO START AT BACK OF ORBIT DATA
     #current index item
@@ -24,14 +29,11 @@ def indirect_orbit_count(orbit_data):
     #print(counter, current_item)
     #initial comparison
     while counter > 0:
-        #print(orbit_data[counter][:3]) 
-        #print(orbit_data[prev_counter][-3:])
-        orbit_loc = orbit_data[counter].find(')')
-        orbit_loc_prev = orbit_data[prev_counter].find(')')
+        #find location of ')' orbit separator
+        orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[counter], orbit_data[prev_counter])
         if orbit_data[counter][:orbit_loc] == orbit_data[prev_counter][orbit_loc_prev+1:]:
             indirect_orbits += 1
-            orbit_loc = orbit_data[current_item].find(')')
-            orbit_loc_prev = orbit_data[prev_item].find(')')
+            orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[current_item], orbit_data[prev_item])
             if orbit_data[current_item][:orbit_loc] == orbit_data[prev_item][orbit_loc_prev+1:]:
                 #git print(current_item, prev_item)
                 indirect_orbits += 1
@@ -40,9 +42,9 @@ def indirect_orbit_count(orbit_data):
             else:
                 current_item -= 1
                 prev_item = current_item - 1
+            print(orbit_data[current_item][:orbit_loc], orbit_data[prev_item][orbit_loc_prev+1:])
         else:
-            orbit_loc = orbit_data[current_item].find(')')
-            orbit_loc_prev = orbit_data[prev_item].find(')')
+            orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[current_item], orbit_data[prev_item])
             while prev_item > -1:
                 if orbit_data[current_item][:orbit_loc] == orbit_data[prev_item][orbit_loc_prev+1:]:
                         indirect_orbits += 1
@@ -51,6 +53,7 @@ def indirect_orbit_count(orbit_data):
                 else:
                     current_item -= 1
                     prev_item = current_item - 1
+            print(orbit_data[current_item][:orbit_loc], orbit_data[prev_item][orbit_loc_prev+1:])
         print(orbit_data[counter][:orbit_loc], orbit_data[prev_counter][orbit_loc_prev+1:])
         counter -= 1
         prev_counter = counter - 1
