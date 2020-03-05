@@ -31,35 +31,55 @@ def indirect_orbit_count(orbit_data):
     while counter > 0:
         #find location of ')' orbit separator
         orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[counter], orbit_data[prev_counter])
+        #check if counter and prev_counter match
         if orbit_data[counter][:orbit_loc] == orbit_data[prev_counter][orbit_loc_prev+1:]:
+            #if the DO match add 1 to indirect orbit
             indirect_orbits += 1
-            orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[current_item], orbit_data[prev_item])
-            if orbit_data[current_item][:orbit_loc] == orbit_data[prev_item][orbit_loc_prev+1:]:
-                #git print(current_item, prev_item)
-                indirect_orbits += 1
-                current_item -= 1
-                prev_item = current_item - 1
-            else:
-                current_item -= 1
-                prev_item = current_item - 1
+            #iterate through all the list items under a specific counter
+            while prev_item > -1: #Do I need to also make current_item index a part of this?
+                #find location of orbit separator
+                #check if current_item and prev_item match
+                #print("Before IF")
+                #print(orbit_data[current_item][:orbit_loc], orbit_data[prev_item][orbit_loc_prev+1:])
+                #print(orbit_loc, orbit_loc_prev)
+                if orbit_data[current_item][:orbit_loc] == orbit_data[prev_item][orbit_loc_prev+1:]:
+                    #git print(current_item, prev_item)
+                    #if they do match
+                    indirect_orbits += 1
+                    #step back for previous item
+                    prev_item -= 1
+                    if current_item != prev_item + 1:
+                        current_item = prev_item +1
+                else:
+                    #current_item -= 1
+                    #move prev_item backwards through the list
+                    prev_item -= 1
+                orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[current_item], orbit_data[prev_item])
+                #print("After IF")
+                #print(orbit_data[current_item][:orbit_loc], orbit_data[prev_item][orbit_loc_prev+1:])
+                #print(orbit_loc, orbit_loc_prev)
             #print(orbit_data[current_item][:orbit_loc], orbit_data[prev_item][orbit_loc_prev+1:])
         else:
-            orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[current_item], orbit_data[prev_item])
             while prev_item > -1:
                 if orbit_data[current_item][:orbit_loc] == orbit_data[prev_item][orbit_loc_prev+1:]:
-                        indirect_orbits += 1
-                        current_item -= 1
-                        prev_item = current_item - 1 
+                    indirect_orbits += 1
+                    prev_item -= 1
+                    if current_item != prev_item + 1:
+                        current_item = prev_item +1
                 else:
-                    current_item -= 1
-                    prev_item = current_item - 1
+                    prev_item -=1
+                    #current_item -= 1
+                    #prev_item = current_item - 1
+                orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[current_item], orbit_data[prev_item])
             #print(orbit_data[current_item][:orbit_loc], orbit_data[prev_item][orbit_loc_prev+1:])
-        print(counter, indirect_orbits)
+        print(counter + 1, prev_item, indirect_orbits)
+        #print(orbit_data[current_item], orbit_data[prev_item])
         #print(orbit_data[counter][:orbit_loc], orbit_data[prev_counter][orbit_loc_prev+1:])
         counter -= 1
         prev_counter = counter - 1
         current_item = counter - 1
         prev_item = current_item - 1
+    indirect_orbits += len(orbit_data)
     return(indirect_orbits)
 
 #print orbit data
