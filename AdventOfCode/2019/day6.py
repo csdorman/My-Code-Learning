@@ -1,5 +1,5 @@
 #load orbit data
-raw_data = open("test-data6.txt", "r")
+raw_data = open("data6.txt", "r")
 raw_data = raw_data.read()
 orbit_data = raw_data.splitlines()
 
@@ -15,7 +15,7 @@ def find_orbit_sep(orbit1, orbit2):
     orbit_loc2 = orbit2.find(')')
     return orbit_loc1, orbit_loc2
 
-def indirect_orbit_count(orbit_data):
+def orbit_count(orbit_data):
    #NEED TO START AT BACK OF ORBIT DATA
     #current index item
     current_item = len(orbit_data)-2
@@ -79,9 +79,11 @@ def indirect_orbit_count(orbit_data):
         prev_counter = counter - 1
         current_item = counter - 1
         prev_item = current_item - 1
+    print("Direct",len(orbit_data))
+    print("Indirect",indirect_orbits)
     indirect_orbits += len(orbit_data)
     return(indirect_orbits)
 
 #print orbit data
 #print(direct_orbit_count(orbit_data)) #not needed now
-print(indirect_orbit_count(orbit_data))
+print(orbit_count(orbit_data))
