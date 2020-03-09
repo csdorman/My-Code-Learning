@@ -28,7 +28,7 @@ def orbit_count(orbit_data):
     indirect_orbits = 0
     #print(counter, current_item)
     #initial comparison
-    while counter > 0:
+    while counter > -1:
         #find location of ')' orbit separator
         orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[counter], orbit_data[prev_counter])
         #check if counter and prev_counter match
