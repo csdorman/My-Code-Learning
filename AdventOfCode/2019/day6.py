@@ -2,6 +2,9 @@
 raw_data = open("data6.txt", "r")
 raw_data = raw_data.read()
 orbit_data = raw_data.splitlines()
+orbits = []
+for i in range(len(orbit_data)):
+    orbit_data[i] = orbit_data[i].split(')')
 
 # direct_orbit_count not needed. Function duplicated in indirect_orbit_count
 def direct_orbit_count(orbit_data):
@@ -72,18 +75,37 @@ def orbit_count(orbit_data):
                     #prev_item = current_item - 1
                 orbit_loc, orbit_loc_prev = find_orbit_sep(orbit_data[current_item], orbit_data[prev_item])
             #print(orbit_data[current_item][:orbit_loc], orbit_data[prev_item][orbit_loc_prev+1:])
-        print(counter + 1, prev_item, indirect_orbits)
+        #print(counter + 1, prev_item, indirect_orbits)
         #print(orbit_data[current_item], orbit_data[prev_item])
         #print(orbit_data[counter][:orbit_loc], orbit_data[prev_counter][orbit_loc_prev+1:])
         counter -= 1
         prev_counter = counter - 1
         current_item = counter - 1
         prev_item = current_item - 1
-    print("Direct",len(orbit_data))
-    print("Indirect",indirect_orbits)
+    #print("Direct",len(orbit_data))
+    #print("Indirect",indirect_orbits)
     indirect_orbits += len(orbit_data)
     return(indirect_orbits)
 
-#print orbit data
-#print(direct_orbit_count(orbit_data)) #not needed now
-print(orbit_count(orbit_data))
+#placeholder
+list1 = []
+
+#Create list of all planets
+for x in range(len(orbit_data)):
+    for y in range(len(orbit_data[x])):
+        list1.append(orbit_data[x][y])
+
+#Create unordered list of planets with NO duplicates
+planets = list(set(list1))
+
+def orbit_count2(orbits, world, count):
+    for i in orbits:
+        localCount = count
+        checkEnd = i[0]
+        checkWorld = i[1]
+
+#print(orbit_count(orbit_data))
+#orbit_count2(orbit_data)
+print(list1)
+print(len(list1))
+#print(planets)
