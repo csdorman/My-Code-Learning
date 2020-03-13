@@ -1,10 +1,9 @@
 #load orbit data
 raw_data = open("data6.txt", "r")
-raw_data = raw_data.read()
-orbit_data = raw_data.splitlines()
-orbits = []
+orbit_data = raw_data.read()
+orbit_data = orbit_data.split("\n")
 for i in range(len(orbit_data)):
-    orbit_data[i] = orbit_data[i].split(')')
+    orbit_data[i] = orbit_data[i].split(")")
 
 # direct_orbit_count not needed. Function duplicated in indirect_orbit_count
 def direct_orbit_count(orbit_data):
@@ -87,7 +86,7 @@ def orbit_count(orbit_data):
     indirect_orbits += len(orbit_data)
     return(indirect_orbits)
 
-#placeholder
+#placeholder for planet list
 list1 = []
 
 #Create list of all planets
@@ -98,14 +97,51 @@ for x in range(len(orbit_data)):
 #Create unordered list of planets with NO duplicates
 planets = list(set(list1))
 
-def orbit_count2(orbits, world, count):
+for i in range(len(planets)- 1):
+    if(planets[i] == "COM"):
+        del planets[i]
+
+def orbit_counter_2(orbits, planets):
+    count = 0
+    for planet in planets:
+        for orbit in orbits:
+            for planet_orbit in orbit:
+                if planet == planet_orbit:
+                    count += 1
+    return count
+
+
+
+
+def orbit_counter(orbits, world, count):
+    #print(orbits)
+    print(orbits[0], orbits[1])
     for i in orbits:
+        #print(i)
         localCount = count
+        #check if we are at the beginning of orbit_data
         checkEnd = i[0]
         checkWorld = i[1]
+        if(checkWorld == world):
+            if(checkEnd != "COM"):
+                localCount += 1
+                returnVal = orbit_counter(orbits,checkEnd,localCount)
+            else:
+                localCount += 1
+                returnVal = localCount
+    return returnVal
 
+orbitCount = 0
 #print(orbit_count(orbit_data))
 #orbit_count2(orbit_data)
-print(list1)
-print(len(list1))
+#print(list1)
+#print(len(list1))
+
+print(planets)
+#print(len(planets))
+print(orbit_data)
+
+#for y in planets:
+#    print(orbit_counter(orbit_data, y, 0))
 #print(planets)
+print(orbit_counter_2(orbit_data,planets))
